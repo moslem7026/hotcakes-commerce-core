@@ -117,43 +117,40 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="PaymentCheck.Text" xml:space="preserve">
-    <value>Send a Check by Mail</value>
+  <data name="btnUpdate.Text" xml:space="preserve">
+    <value>Update</value>
   </data>
-  <data name="PaymentCashOnDelivery.Text" xml:space="preserve">
-    <value>Cash On Delivery</value>
+  <data name="lblAddress.Text" xml:space="preserve">
+    <value>Address:</value>
   </data>
-  <data name="PaymentCompanyAccount.Text" xml:space="preserve">
-    <value>Company Account</value>
+  <data name="lblCity.Text" xml:space="preserve">
+    <value>City:</value>
   </data>
-  <data name="PaymentCreditCard.Text" xml:space="preserve">
-    <value>Credit Card</value>
+  <data name="lblCompany.Text" xml:space="preserve">
+    <value>Company:</value>
   </data>
-  <data name="PaymentNoPaymentNeeded.Text" xml:space="preserve">
-    <value>No Payment Required.</value>
+  <data name="lblCountry.Text" xml:space="preserve">
+    <value>Country:</value>
   </data>
-  <data name="PaymentPayPalExpress.Text" xml:space="preserve">
-    <value>Pay Pal Express</value>
+  <data name="lblMyAffiliateId.Text" xml:space="preserve">
+    <value>My Affiliate ID:</value>
   </data>
-  <data name="PaymentPurchaseOrder.Text" xml:space="preserve">
-    <value>Purchase Order</value>
+  <data name="lblPhone.Text" xml:space="preserve">
+    <value>Phone:</value>
   </data>
-  <data name="PaymentTelephone.Text" xml:space="preserve">
-    <value>Call us after placing your order to arrange payment.</value>
+  <data name="lblReferralAffiliateId.Text" xml:space="preserve">
+    <value>Referral Affiliate ID:</value>
   </data>
-  <data name="PayPalInfo.Text" xml:space="preserve">
-    <value>Save time.  Checkout securely. &lt;br/&gt; Pay without sharing your financial information.</value>
+  <data name="lblState.Text" xml:space="preserve">
+    <value>State:</value>
   </data>
-  <data name="PaymentMoneris.Text" xml:space="preserve">
-    <value>Moneris Hosted Paypage</value>
+  <data name="lblZip.Text" xml:space="preserve">
+    <value>Zip:</value>
   </data>
-  <data name="PaymentOgone.Text" xml:space="preserve">
-    <value>Ogone Payment Page</value>
+  <data name="NotSelectedItem.Text" xml:space="preserve">
+    <value>- Not Selected -</value>
   </data>
-  <data name="PaymentMellat.Text" xml:space="preserve">
-    <value>Bank Mellat</value>
-  </data>
-  <data name="PaymentZarinpal.Text" xml:space="preserve">
-    <value>Zarinpal</value>
+  <data name="ValMessage_AffiliateIDInvalid.Text" xml:space="preserve">
+    <value>Alpha-numeric and '-', '_' symbols allowed only</value>
   </data>
 </root>

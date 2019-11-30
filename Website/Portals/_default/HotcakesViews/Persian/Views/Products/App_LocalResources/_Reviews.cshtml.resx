@@ -117,43 +117,70 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="PaymentCheck.Text" xml:space="preserve">
-    <value>Send a Check by Mail</value>
+  <data name="AddBookmark.Text" xml:space="preserve">
+    <value>Bookmark this</value>
   </data>
-  <data name="PaymentCashOnDelivery.Text" xml:space="preserve">
-    <value>Cash On Delivery</value>
+  <data name="AddToCart.Text" xml:space="preserve">
+    <value>Add to Cart</value>
   </data>
-  <data name="PaymentCompanyAccount.Text" xml:space="preserve">
-    <value>Company Account</value>
+  <data name="AddToWishlist.Text" xml:space="preserve">
+    <value>Add to Wishlist</value>
   </data>
-  <data name="PaymentCreditCard.Text" xml:space="preserve">
-    <value>Credit Card</value>
+  <data name="Details.Text" xml:space="preserve">
+    <value>Details</value>
   </data>
-  <data name="PaymentNoPaymentNeeded.Text" xml:space="preserve">
-    <value>No Payment Required.</value>
+  <data name="Dimensions.Text" xml:space="preserve">
+    <value>Dimensions</value>
   </data>
-  <data name="PaymentPayPalExpress.Text" xml:space="preserve">
-    <value>Pay Pal Express</value>
+  <data name="LikeThis.Text" xml:space="preserve">
+    <value>Like this</value>
   </data>
-  <data name="PaymentPurchaseOrder.Text" xml:space="preserve">
-    <value>Purchase Order</value>
+  <data name="ProductDetails.Text" xml:space="preserve">
+    <value>Product Details</value>
   </data>
-  <data name="PaymentTelephone.Text" xml:space="preserve">
-    <value>Call us after placing your order to arrange payment.</value>
+  <data name="Quantity.Text" xml:space="preserve">
+    <value>Quantity</value>
   </data>
-  <data name="PayPalInfo.Text" xml:space="preserve">
-    <value>Save time.  Checkout securely. &lt;br/&gt; Pay without sharing your financial information.</value>
+  <data name="Rating.Text" xml:space="preserve">
+    <value>Rating</value>
   </data>
-  <data name="PaymentMoneris.Text" xml:space="preserve">
-    <value>Moneris Hosted Paypage</value>
+  <data name="ReadAllReviews.Text" xml:space="preserve">
+    <value>Read All Reviews</value>
   </data>
-  <data name="PaymentOgone.Text" xml:space="preserve">
-    <value>Ogone Payment Page</value>
+  <data name="RelatedProducts.Text" xml:space="preserve">
+    <value>Related Products</value>
   </data>
-  <data name="PaymentMellat.Text" xml:space="preserve">
-    <value>Bank Mellat</value>
+  <data name="RemoveBookmark.Text" xml:space="preserve">
+    <value>Remove bookmark</value>
   </data>
-  <data name="PaymentZarinpal.Text" xml:space="preserve">
-    <value>Zarinpal</value>
+  <data name="Reviews.Text" xml:space="preserve">
+    <value>Reviews</value>
+  </data>
+  <data name="Star.Text" xml:space="preserve">
+    <value>Star</value>
+  </data>
+  <data name="Stars.Text" xml:space="preserve">
+    <value>Stars</value>
+  </data>
+  <data name="Submit.Text" xml:space="preserve">
+    <value>Submit</value>
+  </data>
+  <data name="Subscribe.Text" xml:space="preserve">
+    <value>Subscribe to this</value>
+  </data>
+  <data name="UnlikeThis.Text" xml:space="preserve">
+    <value>Unlike this</value>
+  </data>
+  <data name="Unsubscribe.Text" xml:space="preserve">
+    <value>Unsubscribe</value>
+  </data>
+  <data name="WriteReview.Text" xml:space="preserve">
+    <value>Write A Review</value>
+  </data>
+  <data name="WriteReviewFor.Text" xml:space="preserve">
+    <value>Write A Review For:</value>
+  </data>
+  <data name="YourReview.Text" xml:space="preserve">
+    <value>Your Review</value>
   </data>
 </root>

@@ -117,43 +117,34 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="PaymentCheck.Text" xml:space="preserve">
-    <value>Send a Check by Mail</value>
+  <data name="affiliate_AffiliateAlreadyRegistered" xml:space="preserve">
+    <value>Affiliate already registered for current user</value>
   </data>
-  <data name="PaymentCashOnDelivery.Text" xml:space="preserve">
-    <value>Cash On Delivery</value>
+  <data name="affiliate_ConfirmAffiliateTerms" xml:space="preserve">
+    <value>Please confirm Affiliate Terms</value>
   </data>
-  <data name="PaymentCompanyAccount.Text" xml:space="preserve">
-    <value>Company Account</value>
+  <data name="affiliate_ReferralAffiliateIDInvalid" xml:space="preserve">
+    <value>Referral Affiliate ID can not be recognized</value>
   </data>
-  <data name="PaymentCreditCard.Text" xml:space="preserve">
-    <value>Credit Card</value>
+  <data name="checkout_LoggedIn" xml:space="preserve">
+    <value>You are logged into your account. Thank You.</value>
   </data>
-  <data name="PaymentNoPaymentNeeded.Text" xml:space="preserve">
-    <value>No Payment Required.</value>
+  <data name="checkout_LoginFailed" xml:space="preserve">
+    <value>Login failed. Please try again.</value>
   </data>
-  <data name="PaymentPayPalExpress.Text" xml:space="preserve">
-    <value>Pay Pal Express</value>
+  <data name="checkout_PleaseLogin" xml:space="preserve">
+    <value>We found an account for this email address. Are you sure you don't want to login?</value>
   </data>
-  <data name="PaymentPurchaseOrder.Text" xml:space="preserve">
-    <value>Purchase Order</value>
+  <data name="checkout_SetPasswordSuccess" xml:space="preserve">
+    <value>Your password is now set. Thank You!</value>
   </data>
-  <data name="PaymentTelephone.Text" xml:space="preserve">
-    <value>Call us after placing your order to arrange payment.</value>
+  <data name="checkout_SummaryIsLoading" xml:space="preserve">
+    <value>Order summary is loading...</value>
   </data>
-  <data name="PayPalInfo.Text" xml:space="preserve">
-    <value>Save time.  Checkout securely. &lt;br/&gt; Pay without sharing your financial information.</value>
+  <data name="common_AjaxError" xml:space="preserve">
+    <value>Ajax error. Contact administrator</value>
   </data>
-  <data name="PaymentMoneris.Text" xml:space="preserve">
-    <value>Moneris Hosted Paypage</value>
-  </data>
-  <data name="PaymentOgone.Text" xml:space="preserve">
-    <value>Ogone Payment Page</value>
-  </data>
-  <data name="PaymentMellat.Text" xml:space="preserve">
-    <value>Bank Mellat</value>
-  </data>
-  <data name="PaymentZarinpal.Text" xml:space="preserve">
-    <value>Zarinpal</value>
+  <data name="miniCart_SubTotal" xml:space="preserve">
+    <value>Sub Total</value>
   </data>
 </root>

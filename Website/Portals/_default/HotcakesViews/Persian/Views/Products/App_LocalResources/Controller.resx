@@ -117,43 +117,49 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="PaymentCheck.Text" xml:space="preserve">
-    <value>Send a Check by Mail</value>
+  <data name="AddFailed.Text" xml:space="preserve">
+    <value>Failed to add product to cart</value>
   </data>
-  <data name="PaymentCashOnDelivery.Text" xml:space="preserve">
-    <value>Cash On Delivery</value>
+  <data name="AllSelectionsError.Text" xml:space="preserve">
+    <value>Please make all selections before adding to cart.</value>
   </data>
-  <data name="PaymentCompanyAccount.Text" xml:space="preserve">
-    <value>Company Account</value>
+  <data name="EnterProperQty.Text" xml:space="preserve">
+    <value>Please enter number only in quantity.</value>
   </data>
-  <data name="PaymentCreditCard.Text" xml:space="preserve">
-    <value>Credit Card</value>
+  <data name="GiftCardAmountInvalid.Text" xml:space="preserve">
+    <value>Amount containes invalid value.</value>
   </data>
-  <data name="PaymentNoPaymentNeeded.Text" xml:space="preserve">
-    <value>No Payment Required.</value>
+  <data name="GiftCardAmountTooBig.Text" xml:space="preserve">
+    <value>Amount can not be greater than {0}</value>
   </data>
-  <data name="PaymentPayPalExpress.Text" xml:space="preserve">
-    <value>Pay Pal Express</value>
+  <data name="GiftCardAmountTooSmall.Text" xml:space="preserve">
+    <value>Amount can not be smaller than {0}</value>
   </data>
-  <data name="PaymentPurchaseOrder.Text" xml:space="preserve">
-    <value>Purchase Order</value>
+  <data name="GiftCardEmailInvalid.Text" xml:space="preserve">
+    <value>Please enter valid Recipient Email</value>
   </data>
-  <data name="PaymentTelephone.Text" xml:space="preserve">
-    <value>Call us after placing your order to arrange payment.</value>
+  <data name="OptionsNotAvailable.Text" xml:space="preserve">
+    <value>The combination of options you've selected isn't available at the moment. Please select different options.</value>
   </data>
-  <data name="PayPalInfo.Text" xml:space="preserve">
-    <value>Save time.  Checkout securely. &lt;br/&gt; Pay without sharing your financial information.</value>
+  <data name="ProductMinimumQty.Text" xml:space="preserve">
+    <value>Product Has A Minimum Purchase Quantity of {0}</value>
   </data>
-  <data name="PaymentMoneris.Text" xml:space="preserve">
-    <value>Moneris Hosted Paypage</value>
+  <data name="ProductNotActive.Text" xml:space="preserve">
+    <value>This product is not currently available for sale.</value>
   </data>
-  <data name="PaymentOgone.Text" xml:space="preserve">
-    <value>Ogone Payment Page</value>
+  <data name="ProductNotEnoughPermission.Text" xml:space="preserve">
+    <value>Unfortunately this product or category is limited to certain roles on the site.</value>
   </data>
-  <data name="PaymentMellat.Text" xml:space="preserve">
-    <value>Bank Mellat</value>
+  <data name="ProductNotFound.Text" xml:space="preserve">
+    <value>Unfortunately we can't find the product specified. Probably it was removed or it's name was changed. Try to search it on our store.</value>
   </data>
-  <data name="PaymentZarinpal.Text" xml:space="preserve">
-    <value>Zarinpal</value>
+  <data name="RequiredOptions.Text" xml:space="preserve">
+    <value>Please make all selections before adding to cart.</value>
+  </data>
+  <data name="UserPriceInvalid.Text" xml:space="preserve">
+    <value>Price contains invalid value. </value>
+  </data>
+  <data name="UserPriceTooBig.Text" xml:space="preserve">
+    <value>Price can not be greater than 99,999,999</value>
   </data>
 </root>

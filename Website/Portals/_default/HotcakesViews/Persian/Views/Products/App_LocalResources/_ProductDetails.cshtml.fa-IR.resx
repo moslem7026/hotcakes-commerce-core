@@ -117,43 +117,55 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="PaymentCheck.Text" xml:space="preserve">
-    <value>Send a Check by Mail</value>
+  <data name="AddToCart.Text" xml:space="preserve">
+    <value>افزودن به سبد خرید </value>
   </data>
-  <data name="PaymentCashOnDelivery.Text" xml:space="preserve">
-    <value>Cash On Delivery</value>
+  <data name="AddToWishlist.Text" xml:space="preserve">
+    <value>افزودن به علاقه مندی ها</value>
   </data>
-  <data name="PaymentCompanyAccount.Text" xml:space="preserve">
-    <value>Company Account</value>
+  <data name="ListPrice.Text" xml:space="preserve">
+    <value>قیمت فروش :</value>
   </data>
-  <data name="PaymentCreditCard.Text" xml:space="preserve">
-    <value>Credit Card</value>
+  <data name="ProductDetails.Text" xml:space="preserve">
+    <value>جزئیات محصول</value>
   </data>
-  <data name="PaymentNoPaymentNeeded.Text" xml:space="preserve">
-    <value>No Payment Required.</value>
+  <data name="Quantity.Text" xml:space="preserve">
+    <value>تعداد</value>
   </data>
-  <data name="PaymentPayPalExpress.Text" xml:space="preserve">
-    <value>Pay Pal Express</value>
+  <data name="SitePrice.Text" xml:space="preserve">
+    <value>قیمت</value>
   </data>
-  <data name="PaymentPurchaseOrder.Text" xml:space="preserve">
-    <value>Purchase Order</value>
+  <data name="SKU.Text" xml:space="preserve">
+    <value>کد انبار</value>
   </data>
-  <data name="PaymentTelephone.Text" xml:space="preserve">
-    <value>Call us after placing your order to arrange payment.</value>
+  <data name="YouSave.Text" xml:space="preserve">
+    <value>تخفیف شما</value>
   </data>
-  <data name="PayPalInfo.Text" xml:space="preserve">
-    <value>Save time.  Checkout securely. &lt;br/&gt; Pay without sharing your financial information.</value>
+  <data name="UserPrice.Text" xml:space="preserve">
+    <value>قیمت پیشنهادی شما:</value>
   </data>
-  <data name="PaymentMoneris.Text" xml:space="preserve">
-    <value>Moneris Hosted Paypage</value>
+  <data name="ValMessage_GiftCardAmount.Text" xml:space="preserve">
+    <value>لطفا یک مبلغ صحیح وارد نمایید.</value>
   </data>
-  <data name="PaymentOgone.Text" xml:space="preserve">
-    <value>Ogone Payment Page</value>
+  <data name="GiftCardAmount.Text" xml:space="preserve">
+    <value>مبلغ :</value>
   </data>
-  <data name="PaymentMellat.Text" xml:space="preserve">
-    <value>Bank Mellat</value>
+  <data name="GiftCardEmail.Text" xml:space="preserve">
+    <value>پست الکنرونیکی :</value>
   </data>
-  <data name="PaymentZarinpal.Text" xml:space="preserve">
-    <value>Zarinpal</value>
+  <data name="GiftCardName.Text" xml:space="preserve">
+    <value>نام دریافت کننده :</value>
+  </data>
+  <data name="ValMessage_GiftCardEmailInvalid.Text" xml:space="preserve">
+    <value>لطفا یک آدرس ایمیل معتبر وارد نمایید </value>
+  </data>
+  <data name="Description.Text" xml:space="preserve">
+    <value>توضیحات :</value>
+  </data>
+  <data name="CartNotEnoughQuantity.Text" xml:space="preserve">
+    <value>فقط {1} از {0} برای فروش موجود می باشد.لطفا تعداد درخواستی را کاهش داده و سبد خردی را بروز نمایید</value>
+  </data>
+  <data name="CartOutOfStock.Text" xml:space="preserve">
+    <value>{0} فاقد موجودی می باشد . لطفا آن را حذف نمایید</value>
   </data>
 </root>

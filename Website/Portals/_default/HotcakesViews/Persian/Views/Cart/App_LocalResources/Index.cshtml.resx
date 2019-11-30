@@ -117,43 +117,64 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="PaymentCheck.Text" xml:space="preserve">
-    <value>Send a Check by Mail</value>
+  <data name="AddCoupon.Text" xml:space="preserve">
+    <value>Apply</value>
   </data>
-  <data name="PaymentCashOnDelivery.Text" xml:space="preserve">
-    <value>Cash On Delivery</value>
+  <data name="AddPromoCode.Text" xml:space="preserve">
+    <value>Add a Promotional Code:</value>
   </data>
-  <data name="PaymentCompanyAccount.Text" xml:space="preserve">
-    <value>Company Account</value>
+  <data name="BeforeDiscounts.Text" xml:space="preserve">
+    <value>Before Discounts</value>
   </data>
-  <data name="PaymentCreditCard.Text" xml:space="preserve">
-    <value>Credit Card</value>
+  <data name="CartEmpty.Text" xml:space="preserve">
+    <value>Your shopping cart is empty!</value>
   </data>
-  <data name="PaymentNoPaymentNeeded.Text" xml:space="preserve">
-    <value>No Payment Required.</value>
+  <data name="EstimateShipping.Text" xml:space="preserve">
+    <value>Calculate My Shipping</value>
   </data>
-  <data name="PaymentPayPalExpress.Text" xml:space="preserve">
-    <value>Pay Pal Express</value>
+  <data name="Item.Text" xml:space="preserve">
+    <value>Item</value>
   </data>
-  <data name="PaymentPurchaseOrder.Text" xml:space="preserve">
-    <value>Purchase Order</value>
+  <data name="ItemsInCart.Text" xml:space="preserve">
+    <value>Items in Cart</value>
   </data>
-  <data name="PaymentTelephone.Text" xml:space="preserve">
-    <value>Call us after placing your order to arrange payment.</value>
+  <data name="KeepShopping.Text" xml:space="preserve">
+    <value>Keep Shopping</value>
   </data>
-  <data name="PayPalInfo.Text" xml:space="preserve">
-    <value>Save time.  Checkout securely. &lt;br/&gt; Pay without sharing your financial information.</value>
+  <data name="RemoveFreeItem.Text" xml:space="preserve">
+    <value>This is a free product as part of a promotion, and can't be removed from the cart.</value>
   </data>
-  <data name="PaymentMoneris.Text" xml:space="preserve">
-    <value>Moneris Hosted Paypage</value>
+  <data name="OR.Text" xml:space="preserve">
+    <value>- OR -</value>
   </data>
-  <data name="PaymentOgone.Text" xml:space="preserve">
-    <value>Ogone Payment Page</value>
+  <data name="PayPalExpressCheckout.Text" xml:space="preserve">
+    <value>PayPal Express Checkout</value>
   </data>
-  <data name="PaymentMellat.Text" xml:space="preserve">
-    <value>Bank Mellat</value>
+  <data name="Price.Text" xml:space="preserve">
+    <value>Price</value>
   </data>
-  <data name="PaymentZarinpal.Text" xml:space="preserve">
-    <value>Zarinpal</value>
+  <data name="Quantity.Text" xml:space="preserve">
+    <value>Quantity</value>
+  </data>
+  <data name="RemoveCoupon.Text" xml:space="preserve">
+    <value>Remove</value>
+  </data>
+  <data name="RemoveItem.Text" xml:space="preserve">
+    <value>Remove</value>
+  </data>
+  <data name="SecureCheckout.Text" xml:space="preserve">
+    <value>Secure Checkout</value>
+  </data>
+  <data name="ShoppingCart.Text" xml:space="preserve">
+    <value>Shopping Cart</value>
+  </data>
+  <data name="SubTotal.Text" xml:space="preserve">
+    <value>Subtotal</value>
+  </data>
+  <data name="Total.Text" xml:space="preserve">
+    <value>Total</value>
+  </data>
+  <data name="UpdateItem.Text" xml:space="preserve">
+    <value>Update</value>
   </data>
 </root>

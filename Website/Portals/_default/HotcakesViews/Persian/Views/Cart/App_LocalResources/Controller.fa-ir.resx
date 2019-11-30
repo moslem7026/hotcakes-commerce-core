@@ -117,43 +117,28 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="PaymentCheck.Text" xml:space="preserve">
-    <value>Send a Check by Mail</value>
+  <data name="CheckoutFailed.Text" xml:space="preserve">
+    <value>پرداخت نهایی ناموفق بود ، لطفا مجدد سعی نمایید . در صوتی که مجدد موفق نشدید  لطفا با پشتیبان تماس بگیرید.</value>
   </data>
-  <data name="PaymentCashOnDelivery.Text" xml:space="preserve">
-    <value>Cash On Delivery</value>
+  <data name="CoponInvalid.Text" xml:space="preserve">
+    <value>کوپن  '{0}' موجود نیست.</value>
   </data>
-  <data name="PaymentCompanyAccount.Text" xml:space="preserve">
-    <value>Company Account</value>
+  <data name="CouponDoNotCombine.Text" xml:space="preserve">
+    <value>کوپن '{0}' نمی تواند با دیگر تخفیف ها همراه شود</value>
   </data>
-  <data name="PaymentCreditCard.Text" xml:space="preserve">
-    <value>Credit Card</value>
+  <data name="CouponInactive.Text" xml:space="preserve">
+    <value>کوپن '{0}' فعال نمی باشد</value>
   </data>
-  <data name="PaymentNoPaymentNeeded.Text" xml:space="preserve">
-    <value>No Payment Required.</value>
+  <data name="ParamsCountMismatch.Text" xml:space="preserve">
+    <value>AddSKU and AddSKUQTY has different length. Handling of parameters was skipped.</value>
   </data>
-  <data name="PaymentPayPalExpress.Text" xml:space="preserve">
-    <value>Pay Pal Express</value>
+  <data name="FreeProductIsOut.Text" xml:space="preserve">
+    <value>You qualified to received {0} for free. Unfortunately, we don’t currently have it in stock. Please contact the store if this is an issue.</value>
   </data>
-  <data name="PaymentPurchaseOrder.Text" xml:space="preserve">
-    <value>Purchase Order</value>
+  <data name="QuantityParsingError.Text" xml:space="preserve">
+    <value>نمی توان تعداد ارسالی شما را شناسایی کرد. لطفا عدد را صحیح وارد نمایید: {0}</value>
   </data>
-  <data name="PaymentTelephone.Text" xml:space="preserve">
-    <value>Call us after placing your order to arrange payment.</value>
-  </data>
-  <data name="PayPalInfo.Text" xml:space="preserve">
-    <value>Save time.  Checkout securely. &lt;br/&gt; Pay without sharing your financial information.</value>
-  </data>
-  <data name="PaymentMoneris.Text" xml:space="preserve">
-    <value>Moneris Hosted Paypage</value>
-  </data>
-  <data name="PaymentOgone.Text" xml:space="preserve">
-    <value>Ogone Payment Page</value>
-  </data>
-  <data name="PaymentMellat.Text" xml:space="preserve">
-    <value>Bank Mellat</value>
-  </data>
-  <data name="PaymentZarinpal.Text" xml:space="preserve">
-    <value>Zarinpal</value>
+  <data name="SKUNotExists.Text" xml:space="preserve">
+    <value>Can't find product with SKU: {0}</value>
   </data>
 </root>

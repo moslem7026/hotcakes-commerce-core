@@ -117,43 +117,85 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="PaymentCheck.Text" xml:space="preserve">
-    <value>Send a Check by Mail</value>
+  <data name="AffiliateId.Text" xml:space="preserve">
+    <value>Affiliate ID</value>
   </data>
-  <data name="PaymentCashOnDelivery.Text" xml:space="preserve">
-    <value>Cash On Delivery</value>
+  <data name="AffiliatesHeader.Text" xml:space="preserve">
+    <value>Affiliate</value>
   </data>
-  <data name="PaymentCompanyAccount.Text" xml:space="preserve">
-    <value>Company Account</value>
+  <data name="BillingAddress.Text" xml:space="preserve">
+    <value>آدرس پرداخت کننده</value>
   </data>
-  <data name="PaymentCreditCard.Text" xml:space="preserve">
-    <value>Credit Card</value>
+  <data name="BillingAddressInvalid.Text" xml:space="preserve">
+    <value>آدرس پرداخت کننده نامعتبر است.</value>
   </data>
-  <data name="PaymentNoPaymentNeeded.Text" xml:space="preserve">
-    <value>No Payment Required.</value>
+  <data name="BillingAddressIsSame.Text" xml:space="preserve">
+    <value>آدرس و مشخصات پستی و پرداخت کننده یکسان می باشد.</value>
   </data>
-  <data name="PaymentPayPalExpress.Text" xml:space="preserve">
-    <value>Pay Pal Express</value>
+  <data name="Cancel.Text" xml:space="preserve">
+    <value>انصراف</value>
   </data>
-  <data name="PaymentPurchaseOrder.Text" xml:space="preserve">
-    <value>Purchase Order</value>
+  <data name="Checkout.Text" xml:space="preserve">
+    <value>پرداخت</value>
   </data>
-  <data name="PaymentTelephone.Text" xml:space="preserve">
-    <value>Call us after placing your order to arrange payment.</value>
+  <data name="Close.Text" xml:space="preserve">
+    <value>بستن</value>
   </data>
-  <data name="PayPalInfo.Text" xml:space="preserve">
-    <value>Save time.  Checkout securely. &lt;br/&gt; Pay without sharing your financial information.</value>
+  <data name="ConfirmMessage.Text" xml:space="preserve">
+    <value>You will be charged {Amount} now. Do you wish to proceed?</value>
   </data>
-  <data name="PaymentMoneris.Text" xml:space="preserve">
-    <value>Moneris Hosted Paypage</value>
+  <data name="ConfirmOrderTitle.Text" xml:space="preserve">
+    <value>تایید سفارش</value>
   </data>
-  <data name="PaymentOgone.Text" xml:space="preserve">
-    <value>Ogone Payment Page</value>
+  <data name="DeliveryOptions.Text" xml:space="preserve">
+    <value>نحوه ارسال</value>
   </data>
-  <data name="PaymentMellat.Text" xml:space="preserve">
-    <value>Bank Mellat</value>
+  <data name="DontUsePoints.Text" xml:space="preserve">
+    <value>نمی خواهم از پاداش امتیازاتم استفاده کنم</value>
   </data>
-  <data name="PaymentZarinpal.Text" xml:space="preserve">
-    <value>Zarinpal</value>
+  <data name="EnterShippingAddress.Text" xml:space="preserve">
+    <value>ابتدا یک آدرس وارد نمایید</value>
+  </data>
+  <data name="GiftCard.Text" xml:space="preserve">
+    <value>کارت هدیه </value>
+  </data>
+  <data name="Loading.Text" xml:space="preserve">
+    <value>در حال بارگزاری ...</value>
+  </data>
+  <data name="LoggedIn.Text" xml:space="preserve">
+    <value>شما به حسابتان وارد شدید.</value>
+  </data>
+  <data name="MessageAffiliateInvalid.Text" xml:space="preserve">
+    <value>Affiliate ID can not be recognized</value>
+  </data>
+  <data name="OrderSummary.Text" xml:space="preserve">
+    <value>خلاصه سفارش شما</value>
+  </data>
+  <data name="PaymentMethod.Text" xml:space="preserve">
+    <value>روش پرداخت</value>
+  </data>
+  <data name="PlaceOrder.Text" xml:space="preserve">
+    <value>انجام سفارش</value>
+  </data>
+  <data name="ShippingAddress.Text" xml:space="preserve">
+    <value>آدرس ارسال کالا</value>
+  </data>
+  <data name="ShippingAddressInvalid.Text" xml:space="preserve">
+    <value>آدرس ارسال کالا نامعتبر می باشد</value>
+  </data>
+  <data name="SpecialInstructions.Text" xml:space="preserve">
+    <value>دستورالعمل شما</value>
+  </data>
+  <data name="Subscriptions.Text" xml:space="preserve">
+    <value>Subscriptions</value>
+  </data>
+  <data name="UsePoints.Text" xml:space="preserve">
+    <value>Use Points</value>
+  </data>
+  <data name="View.Text" xml:space="preserve">
+    <value>مشاهده</value>
+  </data>
+  <data name="Wait.Text" xml:space="preserve">
+    <value>لطفا صبر کنید ...</value>
   </data>
 </root>

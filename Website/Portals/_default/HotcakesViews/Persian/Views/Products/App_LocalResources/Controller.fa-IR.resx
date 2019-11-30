@@ -117,43 +117,49 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="PaymentCheck.Text" xml:space="preserve">
-    <value>Send a Check by Mail</value>
+  <data name="AddFailed.Text" xml:space="preserve">
+    <value>افزودن به کارت ناموفق بود</value>
   </data>
-  <data name="PaymentCashOnDelivery.Text" xml:space="preserve">
-    <value>Cash On Delivery</value>
+  <data name="AllSelectionsError.Text" xml:space="preserve">
+    <value>لطفا تمام انتخاب ها را قبل از افزودن به سبد خرید تکمیل نمایید</value>
   </data>
-  <data name="PaymentCompanyAccount.Text" xml:space="preserve">
-    <value>Company Account</value>
+  <data name="EnterProperQty.Text" xml:space="preserve">
+    <value>لطفا در قسمت تعداد فقط عدد وارد نمایید</value>
   </data>
-  <data name="PaymentCreditCard.Text" xml:space="preserve">
-    <value>Credit Card</value>
+  <data name="GiftCardAmountInvalid.Text" xml:space="preserve">
+    <value>مبلغ نامعتبر است.</value>
   </data>
-  <data name="PaymentNoPaymentNeeded.Text" xml:space="preserve">
-    <value>No Payment Required.</value>
+  <data name="GiftCardAmountTooBig.Text" xml:space="preserve">
+    <value>قیمت نمی تواند بیشتر از  {0} باشد</value>
   </data>
-  <data name="PaymentPayPalExpress.Text" xml:space="preserve">
-    <value>Pay Pal Express</value>
+  <data name="GiftCardAmountTooSmall.Text" xml:space="preserve">
+    <value>قیمت نمی تواند کمتر از  {0} باشد</value>
   </data>
-  <data name="PaymentPurchaseOrder.Text" xml:space="preserve">
-    <value>Purchase Order</value>
+  <data name="GiftCardEmailInvalid.Text" xml:space="preserve">
+    <value>لطفا ایمیل دریافت کننده را صحیح وارد نمایید</value>
   </data>
-  <data name="PaymentTelephone.Text" xml:space="preserve">
-    <value>Call us after placing your order to arrange payment.</value>
+  <data name="OptionsNotAvailable.Text" xml:space="preserve">
+    <value>ترکب مدل انتخاب شده موجود نمی باشد. لطفا حالت دیگری را انتخاب نمایید.</value>
   </data>
-  <data name="PayPalInfo.Text" xml:space="preserve">
-    <value>Save time.  Checkout securely. &lt;br/&gt; Pay without sharing your financial information.</value>
+  <data name="ProductMinimumQty.Text" xml:space="preserve">
+    <value>این محصول محدودیت خرید حداقل  {0} را دارد.</value>
   </data>
-  <data name="PaymentMoneris.Text" xml:space="preserve">
-    <value>Moneris Hosted Paypage</value>
+  <data name="ProductNotActive.Text" xml:space="preserve">
+    <value>این محصول در حال حاضر برای فروش موجود نمی باشد.</value>
   </data>
-  <data name="PaymentOgone.Text" xml:space="preserve">
-    <value>Ogone Payment Page</value>
+  <data name="ProductNotEnoughPermission.Text" xml:space="preserve">
+    <value>متاسفانه این گروه از محصول برای گروهی خاص از خریداران موجود می باشد.</value>
   </data>
-  <data name="PaymentMellat.Text" xml:space="preserve">
-    <value>Bank Mellat</value>
+  <data name="ProductNotFound.Text" xml:space="preserve">
+    <value>متاسفانه محصول درخواستی یافت نشد. یا این محصول از فروشگاه حذف شده است و یا تغییر نام داده شده است. </value>
   </data>
-  <data name="PaymentZarinpal.Text" xml:space="preserve">
-    <value>Zarinpal</value>
+  <data name="RequiredOptions.Text" xml:space="preserve">
+    <value>لطفا آپشن ها و ترکیب ها را قبل از افزودن به سبد خرید مشخص نمایید.</value>
+  </data>
+  <data name="UserPriceInvalid.Text" xml:space="preserve">
+    <value>قیمت وارد شده صحیح نمی باشد.</value>
+  </data>
+  <data name="UserPriceTooBig.Text" xml:space="preserve">
+    <value>قیمت نمی تواند بیشتر از 99,999,999 باشد.</value>
   </data>
 </root>

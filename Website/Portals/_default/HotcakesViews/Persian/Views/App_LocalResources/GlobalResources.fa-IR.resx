@@ -117,43 +117,133 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="PaymentCheck.Text" xml:space="preserve">
-    <value>Send a Check by Mail</value>
+  <data name="AccountLocked.Text" xml:space="preserve">
+    <value>حساب کاربری شما قفل شده است. با مدیر فروشگاه تماس بگیرید.</value>
   </data>
-  <data name="PaymentCashOnDelivery.Text" xml:space="preserve">
-    <value>Cash On Delivery</value>
+  <data name="Backordered.Text" xml:space="preserve">
+    <value>عقب مانده </value>
   </data>
-  <data name="PaymentCompanyAccount.Text" xml:space="preserve">
-    <value>Company Account</value>
+  <data name="BeforeDiscounts.Text" xml:space="preserve">
+    <value>قبل از تخفیف</value>
   </data>
-  <data name="PaymentCreditCard.Text" xml:space="preserve">
-    <value>Credit Card</value>
+  <data name="CartNotEnoughQuantity.Text" xml:space="preserve">
+    <value>تنها{1} از {0} برای سفارش موجود می باشد. لطفا تعداد درخواستی را کاهش دهید و مجدد درخواست خود را بفرستید</value>
   </data>
-  <data name="PaymentNoPaymentNeeded.Text" xml:space="preserve">
-    <value>No Payment Required.</value>
+  <data name="CartOutOfStock.Text" xml:space="preserve">
+    <value>{0} در انبار موجود نمی باشد. لطفا آن را حذف نمایید.</value>
   </data>
-  <data name="PaymentPayPalExpress.Text" xml:space="preserve">
-    <value>Pay Pal Express</value>
+  <data name="FreeShipping.Text" xml:space="preserve">
+    <value>بارگیری رایگان</value>
   </data>
-  <data name="PaymentPurchaseOrder.Text" xml:space="preserve">
-    <value>Purchase Order</value>
+  <data name="GiftCards.Text" xml:space="preserve">
+    <value>کارت هدیه</value>
   </data>
-  <data name="PaymentTelephone.Text" xml:space="preserve">
-    <value>Call us after placing your order to arrange payment.</value>
+  <data name="Handling.Text" xml:space="preserve">
+    <value>بسته بندی</value>
   </data>
-  <data name="PayPalInfo.Text" xml:space="preserve">
-    <value>Save time.  Checkout securely. &lt;br/&gt; Pay without sharing your financial information.</value>
+  <data name="Home.Text" xml:space="preserve">
+    <value>صفحه اصلی</value>
   </data>
-  <data name="PaymentMoneris.Text" xml:space="preserve">
-    <value>Moneris Hosted Paypage</value>
+  <data name="InStock.Text" xml:space="preserve">
+    <value>موجود </value>
   </data>
-  <data name="PaymentOgone.Text" xml:space="preserve">
-    <value>Ogone Payment Page</value>
+  <data name="InStockLabel.Text" xml:space="preserve">
+    <value>در انبار</value>
   </data>
-  <data name="PaymentMellat.Text" xml:space="preserve">
-    <value>Bank Mellat</value>
+  <data name="InStockWithInventoryLevel.Text" xml:space="preserve">
+    <value>در انبار - (موجودی  {0})</value>
   </data>
-  <data name="PaymentZarinpal.Text" xml:space="preserve">
-    <value>Zarinpal</value>
+  <data name="ListPrice.Text" xml:space="preserve">
+    <value>لیست قیمت</value>
+  </data>
+  <data name="LoginIncorrect.Text" xml:space="preserve">
+    <value>ورود ناموفق بود، لطفا مجدد تلاش نمایید. لطفا با مسئول فروشگاه تماس بگیرید.</value>
+  </data>
+  <data name="MaxOrderMessage.Text" xml:space="preserve">
+    <value>سفارش شما واقعا زیاد می باشد . </value>
+  </data>
+  <data name="MonerisCheckoutError.Text" xml:space="preserve">
+    <value>An error occurred while trying to checkout through Moneris. Please try again. If the problem persists, please contact technical support.</value>
+  </data>
+  <data name="NoShippingRequired.Text" xml:space="preserve">
+    <value>بارگیری لازم نمی باشد.</value>
+  </data>
+  <data name="NotSelected.Text" xml:space="preserve">
+    <value>- انتخاب نشده -</value>
+  </data>
+  <data name="OgoneCheckoutError.Text" xml:space="preserve">
+    <value>An error occurred while trying to checkout through Ogone. Please try again. If the problem persists, please contact technical support.</value>
+  </data>
+  <data name="OrderAlreadyPlaced.Text" xml:space="preserve">
+    <value>سفارش شما قبلا انجام شده است. کارت خریدی موجود نمی باشد</value>
+  </data>
+  <data name="OutOfStock.Text" xml:space="preserve">
+    <value>این آیتم در انبار موجود نمی باشد.</value>
+  </data>
+  <data name="OutOfStockLabel.Text" xml:space="preserve">
+    <value>عدم موجودی در انبار</value>
+  </data>
+  <data name="PaypalCheckoutCustomerError.Text" xml:space="preserve">
+    <value>An error occurred while trying to checkout through Paypal. Please try again. If the problem persists, please contact technical support.</value>
+  </data>
+  <data name="ProductNotAvailable.Text" xml:space="preserve">
+    <value>{0} در دسترس نمی باشد</value>
+  </data>
+  <data name="RecentlyViewedItems.Text" xml:space="preserve">
+    <value>آیتم های اخیرا مشاهده شدهو</value>
+  </data>
+  <data name="RewardPoints.Text" xml:space="preserve">
+    <value>پاداش امتیازات</value>
+  </data>
+  <data name="Shipping.Text" xml:space="preserve">
+    <value>بسته بندی/حمل و نقل</value>
+  </data>
+  <data name="ShippingBeforeVAT.Text" xml:space="preserve">
+    <value>بسته بندی/حمل و نقل قبل از ارزش افزوده</value>
+  </data>
+  <data name="ShippingHandlingBeforeDiscounts.Text" xml:space="preserve">
+    <value>بسته بندی/حمل و نقل قبل از تخفیف</value>
+  </data>
+  <data name="SitePrice.Text" xml:space="preserve">
+    <value>قیمت برای شما</value>
+  </data>
+  <data name="SkippingReceiveFreeProduct.Text" xml:space="preserve">
+    <value>Skipping receive free product {0}({1}) to a cart because out of stock.</value>
+  </data>
+  <data name="SubTotal.Text" xml:space="preserve">
+    <value>جمع کل</value>
+  </data>
+  <data name="SubtotalBeforeVAT.Text" xml:space="preserve">
+    <value>جمع کل قبل از خدمات ارزش افزوده</value>
+  </data>
+  <data name="Tax.Text" xml:space="preserve">
+    <value>مالیات</value>
+  </data>
+  <data name="ToBeDetermined.Text" xml:space="preserve">
+    <value>جهت  اطلاع با مدیر فروشگاه تماس بگیرید.</value>
+  </data>
+  <data name="Total.Text" xml:space="preserve">
+    <value>جمع کل</value>
+  </data>
+  <data name="TotalBeforeVAT.Text" xml:space="preserve">
+    <value>جمع کل قبل از خدمات ارزش افزوده</value>
+  </data>
+  <data name="TotalDue.Text" xml:space="preserve">
+    <value>مبلغ قابل پرداخت</value>
+  </data>
+  <data name="TotalGrand.Text" xml:space="preserve">
+    <value>جمع نهایی</value>
+  </data>
+  <data name="UserCommentObsolete.Text" xml:space="preserve">
+    <value>Obsolete E-Mail Token. Please use [[User.Notes]] instead.</value>
+  </data>
+  <data name="VAT.Text" xml:space="preserve">
+    <value>ارزش افزوده</value>
+  </data>
+  <data name="VolumeDiscount.Text" xml:space="preserve">
+    <value>تخفیف گروهی</value>
+  </data>
+  <data name="YouSave.Text" xml:space="preserve">
+    <value>تخفیف شما</value>
   </data>
 </root>

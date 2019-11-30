@@ -1,0 +1,198 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{EC0B519D-7404-4DB5-8BDA-CAC481F5B3B1}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Hotcakes.Shetab</RootNamespace>
+    <AssemblyName>Hotcakes.Shetab</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Hotcakes.Commerce">
+      <HintPath>..\..\Website\bin\Hotcakes.Commerce.dll</HintPath>
+    </Reference>
+    <Reference Include="Hotcakes.Commerce.Dnn, Version=3.2.3.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\Website\bin\Hotcakes.Commerce.Dnn.dll</HintPath>
+    </Reference>
+    <Reference Include="Hotcakes.Modules">
+      <HintPath>..\..\Website\bin\Hotcakes.Modules.dll</HintPath>
+    </Reference>
+    <Reference Include="Hotcakes.Payment">
+      <HintPath>..\..\Website\bin\Hotcakes.Payment.dll</HintPath>
+    </Reference>
+    <Reference Include="Hotcakes.Web">
+      <HintPath>..\..\Website\bin\Hotcakes.Web.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Mvc">
+      <HintPath>..\..\Website\bin\System.Web.Mvc.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+    <Reference Include="Telerik.Web.UI">
+      <HintPath>..\..\Website\bin\Telerik.Web.UI.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="DesktopModules\Hotcakes\Core\Admin\Parts\PaymentMethods\Mellat\Constants.cs" />
+    <Compile Include="DesktopModules\Hotcakes\Core\Admin\Parts\PaymentMethods\Mellat\Edit.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DesktopModules\Hotcakes\Core\Admin\Parts\PaymentMethods\Mellat\Mellat.cs" />
+    <Compile Include="DesktopModules\Hotcakes\Core\Admin\Parts\PaymentMethods\Mellat\MellatCheckoutController.cs" />
+    <Compile Include="DesktopModules\Hotcakes\Core\Admin\Parts\PaymentMethods\Mellat\MellatSettings.cs" />
+    <Compile Include="DesktopModules\Hotcakes\Core\Admin\Parts\PaymentMethods\Mellat\Poster.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DesktopModules\Hotcakes\Core\Admin\Parts\PaymentMethods\Mellat\StartMellatCheckout.cs" />
+    <Compile Include="DesktopModules\Hotcakes\Core\Admin\Parts\PaymentMethods\Zarinpal\Constants.cs" />
+    <Compile Include="DesktopModules\Hotcakes\Core\Admin\Parts\PaymentMethods\Zarinpal\Edit.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DesktopModules\Hotcakes\Core\Admin\Parts\PaymentMethods\Zarinpal\StartZarinpalCheckout.cs" />
+    <Compile Include="DesktopModules\Hotcakes\Core\Admin\Parts\PaymentMethods\Zarinpal\Zarinpal.cs" />
+    <Compile Include="DesktopModules\Hotcakes\Core\Admin\Parts\PaymentMethods\Zarinpal\ZarinpalCheckoutController.cs" />
+    <Compile Include="DesktopModules\Hotcakes\Core\Admin\Parts\PaymentMethods\Zarinpal\ZarinpalSettings.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <DependentUpon>Settings.settings</DependentUpon>
+    </Compile>
+    <Compile Include="Web References\com.zarinpal.de\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+    <Compile Include="Web References\com.zarinpal.ir\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+    <Compile Include="Web References\ir.shaparak.bpm\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+    <Compile Include="WorkFlow.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="DesktopModules\Hotcakes\Core\Admin\App_LocalResources\PaymentMethods.fa-IR.resx" />
+    <EmbeddedResource Include="DesktopModules\Hotcakes\Core\Admin\App_LocalResources\PaymentMethods.resx" />
+    <EmbeddedResource Include="Portals\_default\HotcakesViews\Persian\Views\Checkout\App_LocalResources\_DisplayPaymentMethods.cshtml.fa-IR.resx" />
+    <EmbeddedResource Include="Portals\_default\HotcakesViews\Persian\Views\Checkout\App_LocalResources\_DisplayPaymentMethods.cshtml.resx" />
+    <EmbeddedResource Include="Portals\_default\HotcakesViews\Persian\Views\MellatCheckout\App_LocalResources\Controller.resx" />
+    <EmbeddedResource Include="Portals\_default\HotcakesViews\Persian\Views\MellatCheckout\App_LocalResources\Index.cshtml.resx" />
+    <EmbeddedResource Include="Portals\_default\HotcakesViews\Persian\Views\ZarinpalCheckout\App_LocalResources\Controller.resx" />
+    <EmbeddedResource Include="Portals\_default\HotcakesViews\Persian\Views\ZarinpalCheckout\App_LocalResources\Index.cshtml.resx" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+    <None Include="Portals\_default\HotcakesViews\Persian\Views\MellatCheckout\Index.cshtml" />
+    <None Include="Portals\_default\HotcakesViews\Persian\Views\ZarinpalCheckout\Index.cshtml" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Web References\com.zarinpal.de\PaymentGatewayImplementationService.wsdl" />
+    <None Include="Web References\com.zarinpal.de\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Web References\com.zarinpal.ir\PaymentGatewayImplementationService.wsdl" />
+    <None Include="Web References\com.zarinpal.ir\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Web References\ir.shaparak.bpm\IPaymentGateway.wsdl" />
+    <None Include="Web References\ir.shaparak.bpm\PaymentGatewayImplService.wsdl" />
+    <None Include="Web References\ir.shaparak.bpm\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="DesktopModules\Hotcakes\Core\Admin\Parts\PaymentMethods\Mellat\Edit.ascx" />
+    <Content Include="DesktopModules\Hotcakes\Core\Admin\Parts\PaymentMethods\Mellat\Poster.aspx" />
+    <Content Include="DesktopModules\Hotcakes\Core\Admin\Parts\PaymentMethods\Zarinpal\Edit.ascx" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Connected Services\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WebReferences Include="Web References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WebReferenceUrl Include="https://bpm.shaparak.ir/pgwchannel/services/pgw%3fwsdl">
+      <UrlBehavior>Dynamic</UrlBehavior>
+      <RelPath>Web References\ir.shaparak.bpm\</RelPath>
+      <UpdateFromURL>https://bpm.shaparak.ir/pgwchannel/services/pgw%3fwsdl</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
+      <CachedSettingsPropName>Hotcakes_Shetab_ir_shaparak_bpm_PaymentGatewayImplService</CachedSettingsPropName>
+    </WebReferenceUrl>
+    <WebReferenceUrl Include="https://de.zarinpal.com/pg/services/WebGate/wsdl">
+      <UrlBehavior>Dynamic</UrlBehavior>
+      <RelPath>Web References\com.zarinpal.de\</RelPath>
+      <UpdateFromURL>https://de.zarinpal.com/pg/services/WebGate/wsdl</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
+      <CachedSettingsPropName>Hotcakes_Shetab_com_zarinpal_de_PaymentGatewayImplementationService</CachedSettingsPropName>
+    </WebReferenceUrl>
+    <WebReferenceUrl Include="https://ir.zarinpal.com/pg/services/WebGate/wsdl">
+      <UrlBehavior>Dynamic</UrlBehavior>
+      <RelPath>Web References\com.zarinpal.ir\</RelPath>
+      <UpdateFromURL>https://ir.zarinpal.com/pg/services/WebGate/wsdl</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
+      <CachedSettingsPropName>Hotcakes_Shetab_com_zarinpal_ir_PaymentGatewayImplementationService</CachedSettingsPropName>
+    </WebReferenceUrl>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <PostBuildEvent>xcopy "D:\HotCake\GatWayShaparak\GatWayShaparak\bin\Debug\*" "D:\HotCake\Website\bin\" /y /s /e
+xcopy "D:\HotCake\GatWayShaparak\GatWayShaparak\DesktopModules\*" "D:\HotCake\Website\DesktopModules\" /y /s /e
+xcopy "D:\HotCake\GatWayShaparak\GatWayShaparak\Portals\*" "D:\HotCake\Website\Portals\" /y /s /e</PostBuildEvent>
+  </PropertyGroup>
+</Project>

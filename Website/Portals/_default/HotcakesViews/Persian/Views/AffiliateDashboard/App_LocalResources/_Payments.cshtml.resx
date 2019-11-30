@@ -117,43 +117,55 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="PaymentCheck.Text" xml:space="preserve">
-    <value>Send a Check by Mail</value>
+  <data name="Amount.Text" xml:space="preserve">
+    <value>Amount </value>
   </data>
-  <data name="PaymentCashOnDelivery.Text" xml:space="preserve">
-    <value>Cash On Delivery</value>
+  <data name="lblDate.Text" xml:space="preserve">
+    <value>Date Range:</value>
   </data>
-  <data name="PaymentCompanyAccount.Text" xml:space="preserve">
-    <value>Company Account</value>
+  <data name="Memo.Text" xml:space="preserve">
+    <value>Memo</value>
   </data>
-  <data name="PaymentCreditCard.Text" xml:space="preserve">
-    <value>Credit Card</value>
+  <data name="PaymentsAmount.Text" xml:space="preserve">
+    <value>Amount Paid</value>
   </data>
-  <data name="PaymentNoPaymentNeeded.Text" xml:space="preserve">
-    <value>No Payment Required.</value>
+  <data name="PaymentsCount.Text" xml:space="preserve">
+    <value>Number of Payments</value>
   </data>
-  <data name="PaymentPayPalExpress.Text" xml:space="preserve">
-    <value>Pay Pal Express</value>
+  <data name="AllDates.Text" xml:space="preserve">
+    <value>All Dates</value>
   </data>
-  <data name="PaymentPurchaseOrder.Text" xml:space="preserve">
-    <value>Purchase Order</value>
+  <data name="Last120Days.Text" xml:space="preserve">
+    <value>Last 120 Days</value>
   </data>
-  <data name="PaymentTelephone.Text" xml:space="preserve">
-    <value>Call us after placing your order to arrange payment.</value>
+  <data name="Last31Days.Text" xml:space="preserve">
+    <value>Last 31 Days</value>
   </data>
-  <data name="PayPalInfo.Text" xml:space="preserve">
-    <value>Save time.  Checkout securely. &lt;br/&gt; Pay without sharing your financial information.</value>
+  <data name="Last60Days.Text" xml:space="preserve">
+    <value>Last 60 Days</value>
   </data>
-  <data name="PaymentMoneris.Text" xml:space="preserve">
-    <value>Moneris Hosted Paypage</value>
+  <data name="LastMonth.Text" xml:space="preserve">
+    <value>Last Month</value>
   </data>
-  <data name="PaymentOgone.Text" xml:space="preserve">
-    <value>Ogone Payment Page</value>
+  <data name="LastWeek.Text" xml:space="preserve">
+    <value>Last Week</value>
   </data>
-  <data name="PaymentMellat.Text" xml:space="preserve">
-    <value>Bank Mellat</value>
+  <data name="LastYear.Text" xml:space="preserve">
+    <value>Last Year</value>
   </data>
-  <data name="PaymentZarinpal.Text" xml:space="preserve">
-    <value>Zarinpal</value>
+  <data name="ThisMonth.Text" xml:space="preserve">
+    <value>This Month</value>
+  </data>
+  <data name="ThisWeek.Text" xml:space="preserve">
+    <value>This Week</value>
+  </data>
+  <data name="Today.Text" xml:space="preserve">
+    <value>Today</value>
+  </data>
+  <data name="YearToDate.Text" xml:space="preserve">
+    <value>Year To Date</value>
+  </data>
+  <data name="Yesterday.Text" xml:space="preserve">
+    <value>Yesterday</value>
   </data>
 </root>

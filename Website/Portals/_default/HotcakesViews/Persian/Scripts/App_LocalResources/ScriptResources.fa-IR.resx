@@ -117,43 +117,34 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="PaymentCheck.Text" xml:space="preserve">
-    <value>Send a Check by Mail</value>
+  <data name="affiliate_AffiliateAlreadyRegistered" xml:space="preserve">
+    <value>بازاریابی با این حساب کاربری ثبت نام شده است.</value>
   </data>
-  <data name="PaymentCashOnDelivery.Text" xml:space="preserve">
-    <value>Cash On Delivery</value>
+  <data name="affiliate_ConfirmAffiliateTerms" xml:space="preserve">
+    <value>لطفا توافق نامه بازاریابی را تایید نمایید</value>
   </data>
-  <data name="PaymentCompanyAccount.Text" xml:space="preserve">
-    <value>Company Account</value>
+  <data name="affiliate_ReferralAffiliateIDInvalid" xml:space="preserve">
+    <value>آی دی بازایاب وارد شده شناسایی نشد.</value>
   </data>
-  <data name="PaymentCreditCard.Text" xml:space="preserve">
-    <value>Credit Card</value>
+  <data name="checkout_LoggedIn" xml:space="preserve">
+    <value>شما به حساب کاربری وارد شده اید. </value>
   </data>
-  <data name="PaymentNoPaymentNeeded.Text" xml:space="preserve">
-    <value>No Payment Required.</value>
+  <data name="checkout_LoginFailed" xml:space="preserve">
+    <value>ورود ناموفق بود. لطفا مجدد سعی نمایید</value>
   </data>
-  <data name="PaymentPayPalExpress.Text" xml:space="preserve">
-    <value>Pay Pal Express</value>
+  <data name="checkout_PleaseLogin" xml:space="preserve">
+    <value>ما یک حسا کاربری با این آدرس ایمیل پیدا کرده ایم. آیا واقعا نمی خواهید وارد سیستم شوید.</value>
   </data>
-  <data name="PaymentPurchaseOrder.Text" xml:space="preserve">
-    <value>Purchase Order</value>
+  <data name="checkout_SetPasswordSuccess" xml:space="preserve">
+    <value>پسورد شما تنظیم شد. متشکریم.</value>
   </data>
-  <data name="PaymentTelephone.Text" xml:space="preserve">
-    <value>Call us after placing your order to arrange payment.</value>
+  <data name="checkout_SummaryIsLoading" xml:space="preserve">
+    <value>خلاصه سفارش در حال بارگزاری می باشد.</value>
   </data>
-  <data name="PayPalInfo.Text" xml:space="preserve">
-    <value>Save time.  Checkout securely. &lt;br/&gt; Pay without sharing your financial information.</value>
+  <data name="common_AjaxError" xml:space="preserve">
+    <value>خطای آژاکسی پیش آمد. با مدیر فروشگاه تماس بگیرید.</value>
   </data>
-  <data name="PaymentMoneris.Text" xml:space="preserve">
-    <value>Moneris Hosted Paypage</value>
-  </data>
-  <data name="PaymentOgone.Text" xml:space="preserve">
-    <value>Ogone Payment Page</value>
-  </data>
-  <data name="PaymentMellat.Text" xml:space="preserve">
-    <value>Bank Mellat</value>
-  </data>
-  <data name="PaymentZarinpal.Text" xml:space="preserve">
-    <value>Zarinpal</value>
+  <data name="miniCart_SubTotal" xml:space="preserve">
+    <value>جمع کل</value>
   </data>
 </root>

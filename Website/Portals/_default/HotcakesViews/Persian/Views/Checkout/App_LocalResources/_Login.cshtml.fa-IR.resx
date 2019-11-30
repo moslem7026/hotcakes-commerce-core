@@ -117,43 +117,49 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="PaymentCheck.Text" xml:space="preserve">
-    <value>Send a Check by Mail</value>
+  <data name="Close.Text" xml:space="preserve">
+    <value>بستن</value>
   </data>
-  <data name="PaymentCashOnDelivery.Text" xml:space="preserve">
-    <value>Cash On Delivery</value>
+  <data name="ConfirmPassword.Text" xml:space="preserve">
+    <value>تاییدیه پسورد</value>
   </data>
-  <data name="PaymentCompanyAccount.Text" xml:space="preserve">
-    <value>Company Account</value>
+  <data name="ConfirmPassword_Error.Text" xml:space="preserve">
+    <value>پسورد ها مطابقت ندارند</value>
   </data>
-  <data name="PaymentCreditCard.Text" xml:space="preserve">
-    <value>Credit Card</value>
+  <data name="Email.Text" xml:space="preserve">
+    <value>ایمیل</value>
   </data>
-  <data name="PaymentNoPaymentNeeded.Text" xml:space="preserve">
-    <value>No Payment Required.</value>
+  <data name="EmailAddress.Text" xml:space="preserve">
+    <value>آدرس ایمیل</value>
   </data>
-  <data name="PaymentPayPalExpress.Text" xml:space="preserve">
-    <value>Pay Pal Express</value>
+  <data name="EnterPassword.Text" xml:space="preserve">
+    <value>پسورد را وارد نمایید</value>
   </data>
-  <data name="PaymentPurchaseOrder.Text" xml:space="preserve">
-    <value>Purchase Order</value>
+  <data name="ForgotPassword.Text" xml:space="preserve">
+    <value>فراموشی رمز عبور</value>
   </data>
-  <data name="PaymentTelephone.Text" xml:space="preserve">
-    <value>Call us after placing your order to arrange payment.</value>
+  <data name="GuestCheckout.Text" xml:space="preserve">
+    <value>پرداخت به عنوان میهمان</value>
   </data>
-  <data name="PayPalInfo.Text" xml:space="preserve">
-    <value>Save time.  Checkout securely. &lt;br/&gt; Pay without sharing your financial information.</value>
+  <data name="Loading.Text" xml:space="preserve">
+    <value>در حال بارگزاری ...</value>
   </data>
-  <data name="PaymentMoneris.Text" xml:space="preserve">
-    <value>Moneris Hosted Paypage</value>
+  <data name="Login.Text" xml:space="preserve">
+    <value>ورود به سیستم</value>
   </data>
-  <data name="PaymentOgone.Text" xml:space="preserve">
-    <value>Ogone Payment Page</value>
+  <data name="NewAccount.Text" xml:space="preserve">
+    <value>حساب کاربری جدید</value>
   </data>
-  <data name="PaymentMellat.Text" xml:space="preserve">
-    <value>Bank Mellat</value>
+  <data name="Password.Text" xml:space="preserve">
+    <value>پسورد</value>
   </data>
-  <data name="PaymentZarinpal.Text" xml:space="preserve">
-    <value>Zarinpal</value>
+  <data name="Username.Text" xml:space="preserve">
+    <value>نام کاربری</value>
+  </data>
+  <data name="Username_Required.Text" xml:space="preserve">
+    <value>لطفا نام کاربری را وارد نمایید</value>
+  </data>
+  <data name="Wait.Text" xml:space="preserve">
+    <value>لطفا صبر کنید</value>
   </data>
 </root>
