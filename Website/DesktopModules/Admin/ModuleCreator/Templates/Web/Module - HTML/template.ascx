@@ -1,6 +1,6 @@
-// 
-// *NOTE: Please manage your content in the  associated _CONTROL_.html file in this folder
-// 
+<!--
+    *NOTE: Please manage your content in the  associated _CONTROL_.html file in this folder
+--> 
 
 <%@ Control Language="C#" ClassName="_OWNER_._MODULE_._CONTROL_" Inherits="DotNetNuke.Entities.Modules.PortalModuleBase" %>
 
@@ -9,46 +9,50 @@
 <script runat="server">
 
 
-	#region Copyright
+    #region Copyright
 
-	// 
-	// Copyright (c) _YEAR_
-	// by _OWNER_
-	// 
+    // 
+    // Copyright (c) _YEAR_
+    // by _OWNER_
+    // 
 
-	#endregion
+    #endregion
 
-	#region Event Handlers
+    #region Event Handlers
 
-	protected override void OnInit(EventArgs e)
-	{
-		base.OnInit(e);
+    protected override void OnInit(EventArgs e)
+    {
+        base.OnInit(e);
 
-                //Only required if the HTML content uses jQuery or the Services Framework
-                jQuery.RequestRegistration();
-                ServicesFramework.Instance.RequestAjaxScriptSupport();
-	}
+        //Only required if the HTML content uses jQuery or the Services Framework
+        jQuery.RequestRegistration();
+        ServicesFramework.Instance.RequestAjaxScriptSupport();
+    }
 
-	protected override void OnLoad(EventArgs e)
-	{
-		base.OnLoad(e);
-			
-		if (!Page.IsPostBack)
-		{
-                        //Load the HTML file
-			var path = Server.MapPath(ModulePath) + "_CONTROL_.html";
-			if (File.Exists(path))
-			{
-  			    var content = Null.NullString;
-            		    TextReader tr = new StreamReader(path);
-			    content = tr.ReadToEnd();
-            		    tr.Close();
-                            ctlContent.Text = content;
-                        }
-		}
-	}
+    protected override void OnLoad(EventArgs e)
+    {
+        base.OnLoad(e);
 
-	#endregion
+        const string ModulePath = @"DesktopModules\_OWNER_\_MODULE_";
+
+        if (!Page.IsPostBack)
+        {
+            //Load the HTML file
+            var path = Path.Combine(Server.MapPath(ModulePath), "_CONTROL_.html");
+            if (File.Exists(path))
+            {
+                var content = string.Empty;
+                using (TextReader tr = new StreamReader(path))
+                {
+                    content = tr.ReadToEnd();
+                    tr.Close();
+                }
+                ctlContent.Text = content;
+            }
+        }
+    }
+
+    #endregion
 
 </script>
 

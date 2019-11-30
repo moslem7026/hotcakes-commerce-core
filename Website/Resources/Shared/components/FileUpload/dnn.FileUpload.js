@@ -1,7 +1,7 @@
 ﻿; if (typeof window.dnn === "undefined" || window.dnn === null) { window.dnn = {}; }; //var dnn = dnn || {};
 
 // DotNetNuke® - http://www.dotnetnuke.com
-// Copyright (c) 2002-2014
+// Copyright (c) 2002-2018
 // by DotNetNuke Corporation
 // All Rights Reserved
 
@@ -346,6 +346,7 @@
             var message;
 
             // Empty file upload does not be supported in IE10
+            this._enableBrowserDetection();
             if (data.files[0].size == 0 && $.browser.msie && $.browser.version == "10.0") {
                 message = this.options.resources.emptyFileUpload;
             }
@@ -363,6 +364,48 @@
             }
 
             setTimeout(function () { data.submit(); }, 25);
+        },
+
+        _enableBrowserDetection: function () {
+            (function ($) {
+                if (typeof $.uaMatch === "undefined") {
+                    $.uaMatch = function (ua) {
+                        ua = ua.toLowerCase();
+
+                        var match = /(chrome)[ \/]([\w.]+)/.exec(ua) ||
+                            /(webkit)[ \/]([\w.]+)/.exec(ua) ||
+                            /(opera)(?:.*version|)[ \/]([\w.]+)/.exec(ua) ||
+                            /(msie) ([\w.]+)/.exec(ua) ||
+                            ua.indexOf("compatible") < 0 && /(mozilla)(?:.*? rv:([\w.]+)|)/.exec(ua) ||
+                            [];
+
+                        return {
+                            browser: match[1] || "",
+                            version: match[2] || "0"
+                        };
+                    };
+                }
+                
+                // Don't clobber any existing jQuery.browser in case it's different
+                if (typeof $.browser === "undefined") {
+                    var matched = jQuery.uaMatch(navigator.userAgent);
+                    var browser = {};
+
+                    if (matched.browser) {
+                        browser[matched.browser] = true;
+                        browser.version = matched.version;
+                    }
+
+                    // Chrome is Webkit, but Webkit is also Safari.
+                    if (browser.chrome) {
+                        browser.webkit = true;
+                    } else if (browser.webkit) {
+                        browser.safari = true;
+                    }
+
+                    $.browser = browser;
+                }
+            })(jQuery);
         },
 
         _getInitializedStatusElement: function(data) {
@@ -453,6 +496,10 @@
             $img.removeClass().addClass(result.orientation === 1 ? "pt" : "ls");
             var path = result.path;
             if (this._isValidExtension(result.fileName, [".bmp", ".gif", ".png", ".jpg", ".jpeg"])) {
+                if (result.fileId) {
+                    var thumbnailImage = dnn.getVar("sf_siteRoot", "/") + 'DnnImageHandler.ashx?mode=securefile&fileId=' + result.fileId + '&MaxWidth=74&MaxHeight=42';
+                    path = thumbnailImage;
+                }
                 $img.prop("src", path);
             }
             else {
@@ -501,6 +548,7 @@
                 url: this._uploadFromLocalUrl(),
                 beforeSend: $.dnnSF(this.options.moduleId).setModuleHeaders,
                 dropZone: this._$dragAndDropArea,
+                pasteZone: null,
                 sequentialUpload: true,
                 progressInterval: 20,
                 autoUpload: false
@@ -586,6 +634,7 @@
             this._$fileUploadStatuses = this._$fileUploadStatusesContainer.find('.fu-fileupload-statuses').empty();
             this._$dragAndDropArea = this.$element.find('.fu-dialog-drag-and-drop-area');
             this._$inputFileControl = $element("input", { type: 'file', name: 'postfile', multiple: isMultiple, "data-text": this.options.resources.dragAndDropAreaTitle });
+            this._$inputFileControl.attr('aria-label', 'File');
             this._$extract = this.$element.find("." + "fu-dialog-content-header").find("input");
 
             this._$inputFileControl.appendTo(this._$dragAndDropArea.find('.fu-dialog-drag-and-drop-area-message')).dnnFileInput(
@@ -634,6 +683,33 @@
         this.init();
     };
 
+    var fuDialogWidth;
+    var setFileUploadDialogWidth = function () {
+        var fuScreenWidth = $(window).width();
+        switch (true) {
+            case (fuScreenWidth < 400):
+                fuDialogWidth = 350;
+                break;
+            case (fuScreenWidth < 480):
+                fuDialogWidth = 400;
+                break;
+            case (fuScreenWidth < 600):
+                fuDialogWidth = 500;
+                break;
+            case (fuScreenWidth < 800):
+                fuDialogWidth = 780;
+                break;
+            default:
+                fuDialogWidth = 780;
+                break;
+        }
+    };
+
+    $(window).resize(function () {
+        setFileUploadDialogWidth();
+    });
+    setFileUploadDialogWidth();
+    
     FileUploadDialog.prototype = {
         constructor: FileUploadDialog,
 
@@ -668,7 +744,7 @@
                 dialogClass: "dnnFormPopup " + this.options.dialogCss,
                 title: this.options.resources.title,
                 resizable: false,
-                width: this.options.width,
+                width: fuDialogWidth,
                 height: this.options.height,
                 close: $.proxy(function() {
                     $panel.empty().remove();
@@ -686,7 +762,7 @@
 
     FileUploadDialog._defaults = {
         dialogCss: "fu-dialog",
-        width: 780,
+        width: fuDialogWidth,
         height: 630
     };
 

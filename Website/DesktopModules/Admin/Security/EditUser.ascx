@@ -10,6 +10,25 @@
 
 <%@ Import Namespace="DotNetNuke.UI.Utilities" %>
 
+<%
+  var confirmText = ClientAPI.GetSafeJSString(LocalizeString("UnregisterUser"));
+  if (PortalSettings.DataConsentActive && User.UserID == UserInfo.UserID)
+  {
+    switch (PortalSettings.DataConsentUserDeleteAction)
+      {
+        case PortalSettings.UserDeleteAction.Manual:
+          confirmText = ClientAPI.GetSafeJSString(Localization.GetString("ManualDelete.Confirm", "~/DesktopModules/Admin/Security/App_LocalResources/DataConsent.ascx.resx"));
+          break;
+        case PortalSettings.UserDeleteAction.DelayedHardDelete:
+          confirmText = ClientAPI.GetSafeJSString(Localization.GetString("DelayedHardDelete.Confirm", "~/DesktopModules/Admin/Security/App_LocalResources/DataConsent.ascx.resx"));
+          break;
+        case PortalSettings.UserDeleteAction.HardDelete:
+          confirmText = ClientAPI.GetSafeJSString(Localization.GetString("HardDelete.Confirm", "~/DesktopModules/Admin/Security/App_LocalResources/DataConsent.ascx.resx"));
+          break;
+      }
+  }
+%>
+
 <script language="javascript" type="text/javascript">
     /*globals jQuery, window, Sys */
     (function ($, Sys) {
@@ -17,7 +36,7 @@
             $('#dnnEditUser').dnnTabs().dnnPanels();
             //DNN-26777
             $('#<%= cmdDelete.ClientID %>').dnnConfirm({
-                text: '<%= ClientAPI.GetSafeJSString(LocalizeString("UnregisterUser")) %>',
+                text: '<%= confirmText %>',
                             yesText: '<%= Localization.GetSafeJSString("Yes.Text", Localization.SharedResourceFile) %>',
                             noText: '<%= Localization.GetSafeJSString("No.Text", Localization.SharedResourceFile) %>',
                             title: '<%= Localization.GetSafeJSString("Confirm.Text", Localization.SharedResourceFile) %>',
@@ -131,7 +150,7 @@
                         <asp:Label runat="server" ID="VanityUrlHeader" CssClass="NormalBold" resourcekey="VanityUrlHeader"/>
                         <div>
                             <asp:Label runat="server" ID="VanityUrlAlias" />
-                            <asp:TextBox CssClass="dnnUserVanityUrl" runat="server" ID="VanityUrlTextBox" />
+                            <asp:TextBox CssClass="dnnUserVanityUrl" runat="server" ID="VanityUrlTextBox" aria-label="Vanity Url" />
                             <a id="updateProfileUrl" href="#" class="dnnSecondaryAction"><%=LocalizeString("cmdUpdate")%></a>
                         </div>
                     </div>

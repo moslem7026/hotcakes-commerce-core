@@ -116,7 +116,7 @@ dnnModule.digitalAssets = function ($, $find, $telerik, dnnModal) {
         if (selectedTab != NaN && selectedTab != null) options.selected = selectedTab;
         $('#' + controls.scopeWrapperId)
             .dnnTabs(options)
-            .bind("tabsactivate", function (event, ui) {
+            .on("tabsactivate", function (event, ui) {
                 currentTab = ui.newTab.index();
                 controller.leftPaneTabActivated(ui.newPanel[0].id);
                 if (currentTab == 0) {
@@ -166,7 +166,20 @@ dnnModule.digitalAssets = function ($, $find, $telerik, dnnModal) {
             var label = labels.eq(i);
             currentTool.is(':visible') ? label.show() : label.hide();
             if (nextTool.length > 0) {
-                label.width(nextTool.position().left - currentTool.position().left);
+                //START persian-dnnsoftware
+                if ($('body').hasClass('r' + 't' + 'l')) {
+                    label.width(currentTool.position().left - nextTool.position().left);
+                } else {
+                    label.width(nextTool.position().left - currentTool.position().left);
+                }
+                //END persian-dnnsoftware
+
+                //START persian-dnnsoftware  set buttom default image
+                if ($('body').hasClass('r' + 't' + 'l')) {
+                    var toggleButton = $("#DigitalAssetsToggleLeftPaneBtnId span", "#" + controls.scopeWrapperId);
+                    toggleButton.css("background-image", "url(" + settings.toggleLeftPaneShowImageUrl + ")");
+                }
+                //END persian-dnnsoftware
             }
         }
     }
@@ -341,18 +354,33 @@ dnnModule.digitalAssets = function ($, $find, $telerik, dnnModal) {
         var loadingPanel = $(".dnnModuleDigitalAssetsMainLoading", "#" + controls.scopeWrapperId);
         var left;
 
-        if (!leftPane.is(":visible")) {
-            toggleButton.css("background-image", "url(" + settings.toggleLeftPaneHideImageUrl + ")");
-            leftPane.animate({ width: 'toggle' }, 500, treeViewRefreshScrollbars);
-            left = 220;
+        //START persian-dnnsoftware
+        if ($('body').hasClass('r' + 't' + 'l')) {
+            if (!leftPane.is(":visible")) {
+                toggleButton.css("background-image", "url(" + settings.toggleLeftPaneShowImageUrl + ")");
+                leftPane.animate({ width: 'toggle' }, 500, treeViewRefreshScrollbars);
+                left = 220;
+            } else {
+                toggleButton.css("background-image", "url(" + settings.toggleLeftPaneHideImageUrl + ")");
+                leftPane.animate({ width: 'toggle' }, 500);
+                left = 0;
+            }
+            contentPane.animate({ 'margin-right': left }, 500, 'swing', moreItemsHint);
+            loadingPanel.css({ 'right': left });
         } else {
-            toggleButton.css("background-image", "url(" + settings.toggleLeftPaneShowImageUrl + ")");
-            leftPane.animate({ width: 'toggle' }, 500);
-            left = 0;
+            if (!leftPane.is(":visible")) {
+                toggleButton.css("background-image", "url(" + settings.toggleLeftPaneHideImageUrl + ")");
+                leftPane.animate({ width: 'toggle' }, 500, treeViewRefreshScrollbars);
+                left = 220;
+            } else {
+                toggleButton.css("background-image", "url(" + settings.toggleLeftPaneShowImageUrl + ")");
+                leftPane.animate({ width: 'toggle' }, 500);
+                left = 0;
+            }
+            contentPane.animate({ 'margin-left': left }, 500, 'swing', moreItemsHint);
+            loadingPanel.css({ 'left': left });
         }
-
-        contentPane.animate({ 'margin-left': left }, 500, 'swing', moreItemsHint);
-        loadingPanel.css({ 'left': left });
+        //END persian-dnnsoftware
     }
 
     function moreItemsHint() {
@@ -1540,8 +1568,8 @@ dnnModule.digitalAssets = function ($, $find, $telerik, dnnModal) {
         grid.dataBind();
 
         $("#" + controls.gridId + " tbody input[type='checkbox']").dnnCheckbox()
-            .unbind('click', gridSelectionCheckboxClick)
-            .bind('click', gridSelectionCheckboxClick);
+            .off('click', gridSelectionCheckboxClick)
+            .on('click', gridSelectionCheckboxClick);
         gridSelectUnselectAll.prop("checked", false);
 
         if (settings.isFilteredContent === false) {
@@ -1567,8 +1595,8 @@ dnnModule.digitalAssets = function ($, $find, $telerik, dnnModal) {
 
         listView.set_dataSource(prepareListViewData(data));
         listView.dataBind();
-        $("#dnnModuleDigitalAssetsListView .dnnModuleDigitalAssetsListViewItem .dnnModuleDigitalAssetsListViewItemLinkName").bind("click", clickOnListViewItemNameLink);
-        $("#dnnModuleDigitalAssetsListViewToolbar input[type=checkbox]", '#' + controls.scopeWrapperId).unbind("click", listviewSelectAllOnClick).bind("click", listviewSelectAllOnClick);
+        $("#dnnModuleDigitalAssetsListView .dnnModuleDigitalAssetsListViewItem .dnnModuleDigitalAssetsListViewItemLinkName").on("click", clickOnListViewItemNameLink);
+        $("#dnnModuleDigitalAssetsListViewToolbar input[type=checkbox]", '#' + controls.scopeWrapperId).off("click", listviewSelectAllOnClick).on("click", listviewSelectAllOnClick);
         listViewInitialize();
 
         if (settings.isFilteredContent === false) {
@@ -1813,7 +1841,7 @@ dnnModule.digitalAssets = function ($, $find, $telerik, dnnModal) {
         var node = treeView.get_nodes().getItem(0);
         node.expand();
         var p = path.split('/');
-        for (var i = 0; i < p.length; i++) {
+        for (var i = 1; i < p.length; i++) {
             var name = p[i];
             if (name != '') {
                 var nodes = node.get_nodes();
