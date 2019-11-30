@@ -1,0 +1,357 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="ViewShop.Text" xml:space="preserve">
+    <value>مشاهده فروشگاه</value>
+  </data>
+  <data name="Dashboard.Text" xml:space="preserve">
+    <value>پیشخوان</value>
+  </data>
+  <data name="Catalog.Text" xml:space="preserve">
+    <value>کاتالوگ</value>
+  </data>
+  <data name="Products.Text" xml:space="preserve">
+    <value>محصولات</value>
+  </data>
+  <data name="Categories.Text" xml:space="preserve">
+    <value>دسته بندی ها</value>
+  </data>
+  <data name="Category Performance.Text" xml:space="preserve">
+    <value>عملکرد دسته بندی ها </value>
+  </data>
+  <data name="Name, Description.Text" xml:space="preserve">
+    <value>نام و توضیحات</value>
+  </data>
+  <data name="Select Products.Text" xml:space="preserve">
+    <value>انتحاب محصولات</value>
+  </data>
+  <data name="Roles.Text" xml:space="preserve">
+    <value>نقش ها </value>
+  </data>
+  <data name="Content Columns.Text" xml:space="preserve">
+    <value>ستون های محتوا</value>
+  </data>
+  <data name="Shared Choices.Text" xml:space="preserve">
+    <value>انتخاب های اشتراکی</value>
+  </data>
+  <data name="Product Types.Text" xml:space="preserve">
+    <value>نوع محصول</value>
+  </data>
+  <data name="Product Type Properties.Text" xml:space="preserve">
+    <value>انواع خصوصیت های نوع محصول</value>
+  </data>
+  <data name="Membership Product Types.Text" xml:space="preserve">
+    <value>نوع محصولات برای اعضای خاص</value>
+  </data>
+  <data name="Reviews.Text" xml:space="preserve">
+    <value>نقد و بررسی ها</value>
+  </data>
+  <data name="File Vault.Text" xml:space="preserve">
+    <value>بانک فایل های فروشی</value>
+  </data>
+  <data name="Marketing.Text" xml:space="preserve">
+    <value>بازاریابی</value>
+  </data>
+  <data name="Promotion.Text" xml:space="preserve">
+    <value>فروش های ویژه</value>
+  </data>
+  <data name="Reward Points.Text" xml:space="preserve">
+    <value>امتیاز گیری</value>
+  </data>
+  <data name="People.Text" xml:space="preserve">
+    <value>مشتریان و بازدیدکنندگان</value>
+  </data>
+  <data name="Customers.Text" xml:space="preserve">
+    <value>مشتریان</value>
+  </data>
+  <data name="Profile.Text" xml:space="preserve">
+    <value>پروفایل</value>
+  </data>
+  <data name="Address Book.Text" xml:space="preserve">
+    <value>دفترچه آدرس ها </value>
+  </data>
+  <data name="Price Groups.Text" xml:space="preserve">
+    <value>گروه قیمت ها </value>
+  </data>
+  <data name="Manufacturers.Text" xml:space="preserve">
+    <value>تولید کننده ها</value>
+  </data>
+  <data name="Vendors.Text" xml:space="preserve">
+    <value>تامین کنندگان</value>
+  </data>
+  <data name="Orders.Text" xml:space="preserve">
+    <value>سفارش ها</value>
+  </data>
+  <data name="Order Manager.Text" xml:space="preserve">
+    <value>مدیریت سفارشات</value>
+  </data>
+  <data name="Add Order.Text" xml:space="preserve">
+    <value>افزودن سفارش جدید</value>
+  </data>
+  <data name="New.Text" xml:space="preserve">
+    <value>جدید</value>
+  </data>
+  <data name="On Hold.Text" xml:space="preserve">
+    <value>در انتظار</value>
+  </data>
+  <data name="Ready for Payment.Text" xml:space="preserve">
+    <value>آماده برای پرداخت</value>
+  </data>
+  <data name="Ready for Shipping.Text" xml:space="preserve">
+    <value>آماده برای بارگیری</value>
+  </data>
+  <data name="Completed.Text" xml:space="preserve">
+    <value>کامل شده ها</value>
+  </data>
+  <data name="Cancelled.Text" xml:space="preserve">
+    <value>انصرافی ها </value>
+  </data>
+  <data name="All Orders.Text" xml:space="preserve">
+    <value>تمام سفارشات</value>
+  </data>
+  <data name="Reports.Text" xml:space="preserve">
+    <value>گزارشات</value>
+  </data>
+  <data name="Summary Report.Text" xml:space="preserve">
+    <value>خلاصه گزارش</value>
+  </data>
+  <data name="Transactions by Day.Text" xml:space="preserve">
+    <value>تراکنش بر اساس روز</value>
+  </data>
+  <data name="Product Sales.Text" xml:space="preserve">
+    <value>فروش های محصولات</value>
+  </data>
+  <data name="Orders by Date.Text" xml:space="preserve">
+    <value>سفارشات بر اساس تاریخ</value>
+  </data>
+  <data name="Credit Card Activity.Text" xml:space="preserve">
+    <value>فعالیت های کارت های اعتباری</value>
+  </data>
+  <data name="Affiliate Report.Text" xml:space="preserve">
+    <value>گزارش زیر مجموعه ها</value>
+  </data>
+  <data name="Affiliate Payments.Text" xml:space="preserve">
+    <value>پرداخت زیرمجموعه ها</value>
+  </data>
+  <data name="Sales by Coupon.Text" xml:space="preserve">
+    <value>فروش بر اساس کوپن</value>
+  </data>
+  <data name="Sales Tax Report.Text" xml:space="preserve">
+    <value>گزارش مالیات بر فروش</value>
+  </data>
+  <data name="Top Products.Text" xml:space="preserve">
+    <value>محصولات برتر</value>
+  </data>
+  <data name="Abandoned Carts.Text" xml:space="preserve">
+    <value>سبد خرید های رها شده</value>
+  </data>
+  <data name="Gift Cards.Text" xml:space="preserve">
+    <value>کارت هدیه ها </value>
+  </data>
+  <data name="Admin.Text" xml:space="preserve">
+    <value>مدیر</value>
+  </data>
+  <data name="Affiliates.Text" xml:space="preserve">
+    <value>زیر مجموعه ها </value>
+  </data>
+  <data name="Analytics.Text" xml:space="preserve">
+    <value>سیستم های آنالیز</value>
+  </data>
+  <data name="API.Text" xml:space="preserve">
+    <value>API</value>
+  </data>
+  <data name="Address Validation.Text" xml:space="preserve">
+    <value>اعتبارسنجی آدرس</value>
+  </data>
+  <data name="E-Mail Templates.Text" xml:space="preserve">
+    <value>قالب های ایمیل</value>
+  </data>
+  <data name="Fraud Screening.Text" xml:space="preserve">
+    <value>اعمال متقلبانه در فروشگاه</value>
+  </data>
+  <data name="Shipping Methods.Text" xml:space="preserve">
+    <value>روش های حمل و نقل</value>
+  </data>
+  <data name="Shipping Zones.Text" xml:space="preserve">
+    <value>منطقه های حمل و نقلی</value>
+  </data>
+  <data name="Shipping and Handling.Text" xml:space="preserve">
+    <value>حمل و نقل و بسته بندی</value>
+  </data>
+  <data name="Extensibility.Text" xml:space="preserve">
+    <value>توسعه پذیری</value>
+  </data>
+  <data name="Views Manager.Text" xml:space="preserve">
+    <value>مدیریت قالب ها</value>
+  </data>
+  <data name="Role Administration.Text" xml:space="preserve">
+    <value>نقش مدیران</value>
+  </data>
+  <data name="Gift Card Settings.Text" xml:space="preserve">
+    <value>تنظیمات کارت هدیه</value>
+  </data>
+  <data name="Setup Wizard.Text" xml:space="preserve">
+    <value>تنظیمات سریع </value>
+  </data>
+  <data name="Settings.Text" xml:space="preserve">
+    <value>تنظیمات</value>
+  </data>
+  <data name="Store Name and Logo" xml:space="preserve">
+    <value>نام فروشگاه و لوگو</value>
+  </data>
+  <data name="Store's Address.Text" xml:space="preserve">
+    <value>آدرس فروشگاه</value>
+  </data>
+  <data name="Geo Location.Text" xml:space="preserve">
+    <value>مکان های جغرافیایی</value>
+  </data>
+  <data name="Countries.Text" xml:space="preserve">
+    <value>استان ها</value>
+  </data>
+  <data name="E-Mail Addresses.Text" xml:space="preserve">
+    <value>آدرس های ایمیل</value>
+  </data>
+  <data name="Payment Methods.Text" xml:space="preserve">
+    <value>متد های پرداخت</value>
+  </data>
+  <data name="Product Reviews.Text" xml:space="preserve">
+    <value>نقدهای محصولات</value>
+  </data>
+  <data name="Social Media.Text" xml:space="preserve">
+    <value>شبکه های اجتماعی</value>
+  </data>
+  <data name="Taxes.Text" xml:space="preserve">
+    <value>مالیات</value>
+  </data>
+  <data name="Caching.Text" xml:space="preserve">
+    <value>کش </value>
+  </data>
+  <data name="Page Configuration.Text" xml:space="preserve">
+    <value>تنظیم صفحات فروشگاه</value>
+  </data>
+  <data name="Help.Text" xml:space="preserve">
+    <value>راهنما</value>
+  </data>
+  <data name="LogOut.Text" xml:space="preserve">
+    <value>خروج از سیستم</value>
+  </data>
+  <data name="superuser.Text" xml:space="preserve">
+    <value>مدیر ارشد </value>
+  </data>
+</root>

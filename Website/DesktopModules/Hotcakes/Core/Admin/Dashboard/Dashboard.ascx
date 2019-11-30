@@ -123,14 +123,14 @@
     <div class="hcBlock hcSalesBlock">
         <div class="hcBlockContent50p hcSalesChart">
             <h3><%=Localization.GetString("SalesOverTime") %> -</h3>
-            <asp:DropDownList ID="ddlRow1Period" runat="server" CssClass="hcPeriodSelector hcSelectionList">
+            <asp:DropDownList ID="ddlRow1Period" runat="server" CssClass="hcPeriodSelector hcSelectionList" style="width: 80px; text-align:center;">
                 <asp:ListItem resourcekey="Range_Year" Value="1" />
                 <asp:ListItem resourcekey="Range_Quarter" Value="2" />
                 <asp:ListItem resourcekey="Range_Month" Value="3" />
                 <asp:ListItem resourcekey="Range_Week" Value="4" />
             </asp:DropDownList>
-			<div id="hcPSalesPerformanceChart" style="width:750px; height:330px;">
-				<canvas id="hcDashboardSalesOverTimeChart" class="" width="750" height="330"></canvas>
+			<div id="hcPSalesPerformanceChart">
+				<canvas id="hcDashboardSalesOverTimeChart" class="" style="width:100%" ;height="330"></canvas>
 			</div>
         </div>
 
@@ -189,7 +189,7 @@
     <div class="hcBlock hcChartArea">
         <div class="hcBlockContent75p hcLeftChartArea">
             <h3><%=Localization.GetString("ProductPerformance") %> -</h3>
-            <asp:DropDownList ID="ddlRow2Period" runat="server" CssClass="hcPeriodSelector hcSelectionList">
+            <asp:DropDownList ID="ddlRow2Period" runat="server" CssClass="hcPeriodSelector hcSelectionList"  style="width: 80px; text-align:center;">
                 <asp:ListItem resourcekey="Range_Year" Value="1" />
                 <asp:ListItem resourcekey="Range_Quarter" Value="2" />
                 <asp:ListItem resourcekey="Range_Month" Value="3" />

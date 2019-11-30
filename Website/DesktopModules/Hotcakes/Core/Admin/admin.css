@@ -2000,7 +2000,7 @@ body > form {
 .hcNavContent .hcNavContentBody .hcNavMenu {
   border: none;
   margin: 0;
-  padding-top: 40px;
+  padding: 40px 0;
 }
 .hcNavContent .hcNavContentBody .hcBlock {
   padding-top: 20px;

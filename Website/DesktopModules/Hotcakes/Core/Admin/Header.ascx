@@ -1,4 +1,4 @@
-<%@ Control Language="C#" AutoEventWireup="True" Inherits="Hotcakes.Modules.Core.Admin.Header" CodeBehind="Header.ascx.cs" %>
+﻿<%@ Control Language="C#" AutoEventWireup="True" Inherits="Hotcakes.Modules.Core.Admin.Header" CodeBehind="Header.ascx.cs" %>
 <%@ Register Src="Controls/Menu.ascx" TagName="Menu" TagPrefix="hcc" %>
 <%@ Register Src="Controls/Languages.ascx" TagPrefix="hcc" TagName="Languages" %>
 <%@ Register Src="/DesktopModules/Hotcakes/ControlPanel/AdminControlBar.ascx" TagPrefix="hcc" TagName="AdminControlBar" %>
@@ -11,10 +11,10 @@
 <div id="branding">
 	<div class="hcQuickLinks">
 		<hcc:Languages runat="server" ID="ucLanguages" />
-		<a runat="server" id="aHostAdmin">Superuser Admin</a>
-		<a href="https://hotcakes.org/Community" target="_blank">Help</a>
-		<a href="<%=HccUrlBuilder.RouteHccUrl(HccRoute.Logoff) %>">Log Out</a>
-		<a href="<%=HccUrlBuilder.RouteHccUrl(HccRoute.Home) %>">Go To Store</a>
+		<a runat="server" id="aHostAdmin">مدیر ارشد</a>
+		<a href="https://hotcakes.org/Community" target="_blank">راهنما</a>
+		<a href="<%=HccUrlBuilder.RouteHccUrl(HccRoute.Logoff) %>">خروج از سیستم</a>
+		<a href="<%=HccUrlBuilder.RouteHccUrl(HccRoute.Home) %>">مشاهده فروشگاه</a>
 	</div>
 </div>
 
