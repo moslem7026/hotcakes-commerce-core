@@ -707,11 +707,11 @@ namespace Hotcakes.Modules.Core.Admin.Orders
         {
             if (result)
             {
-                ucMessageBox.ShowInformation("&laquo; Transaction Processed at " + DateTime.Now);
+                ucMessageBox.ShowInformation("&laquo; تراکنش ثبت شد ، تاریخ ثبت :  " + DateTime.Now);
             }
             else
             {
-                ucMessageBox.ShowWarning("Could not record transaction. See Administrator!");
+                ucMessageBox.ShowWarning("تراکنش ضبط نشد، با مدیر تماس بگیرید.!");
             }
             TransactionEvent();
         }

@@ -31,7 +31,7 @@
 <div class="hc-checkout">
        @Html.Raw((string)TempData["messages"])
     <div class="row-fluid">
-        <div class="span7 dnnForm">
+        <div class="col-md-7 dnnForm">
             @using (Html.BeginHccForm())
             {
                 <div class="hc-login-section" id="hcLoginSection">
@@ -195,7 +195,7 @@
             }
         </div>
 
-        <div class="span5 dnnForm">
+        <div class="col-md-5 dnnForm">
             <div class="hc-cart-section">
                 <h3>@Localization.GetString("OrderSummary")</h3>
                 @Html.Partial("_ViewOrderItems", Model.CurrentOrder.Items)

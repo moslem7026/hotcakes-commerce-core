@@ -433,7 +433,4 @@
   <data name="Description.Text" xml:space="preserve">
     <value>Description</value>
   </data>
-  <data name="ModuleHelp.Text1" xml:space="preserve">
-    <value />
-  </data>
 </root>

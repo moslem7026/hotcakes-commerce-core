@@ -193,13 +193,4 @@
   <data name="VisitWebsite.Text" xml:space="preserve">
     <value>مشاهده وب سایت</value>
   </data>
-  <data name="UpgradeStarted.Text">
-    <value>Upgrade Started at</value>
-  </data>
-  <data name="VersionsMatch.Text">
-    <value>نسخه نرم‌افزار با پایگاه‌داده مطابقت دارد - هیچ چیزی برای ارتقا وجو ندارد.</value>
-  </data>
-  <data name="VersionsMatchButIncrementalExists.Text">
-    <value>نسخه نرم‌افزار با پایگاه‌داده مطابقت دارد - شما می‌توانید به یک نسخه افزایشی ارتقاء دهید.</value>
-  </data>
 </root>

@@ -1,0 +1,27 @@
+﻿<div class="form-group">
+    <label for="usr">Url:</label>
+    <input type="text" class="form-control" ng-model="img.url">
+</div>
+<div class="form-group">
+    <label for="usr">Description:</label>
+    <input type="text" class="form-control" ng-model="img.description">
+</div>
+<div class="form-group">
+    <label for="unit">Unit:</label>
+    <select class="form-control" name="repeatSelect" id="repeatSelect" ng-model="img.unit.value">
+        <option ng-repeat="option in img.unit.options" value="{{option.value}}">{{option.name}}</option>
+    </select>
+</div>
+<div class="form-group">
+    <label for="usr">Width:</label>
+    <input type="number" class="form-control" ng-model="img.width">
+</div>
+<div class="form-group">
+    <label for="usr">Height:</label>
+    <input type="number" class="form-control" ng-model="img.height">
+</div>
+
+<div class="form-group">
+    <label class="checkbox-inline">
+    <input type="checkbox" ng-model="img.keepAspectRatio" ng-change="img.keepAspectRatio && (img.height = img.width / img.aspectRatio)">Keep Aspect Ratio</label>
+</div>

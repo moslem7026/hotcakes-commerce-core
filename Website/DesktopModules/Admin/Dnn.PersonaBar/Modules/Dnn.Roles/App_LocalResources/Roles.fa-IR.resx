@@ -785,7 +785,4 @@
   <data name="RoleUpdated.SystemRoleError" xml:space="preserve">
     <value>نقش امنیتی سیستمی قابل ویرایش نمی باشد.</value>
   </data>
-  <data name="Prompt_RoleFound.Text" xml:space="preserve">
-    <value>نقش ' {0} ' پیدا شده است.</value>
-  </data>
 </root>

@@ -1,0 +1,406 @@
+<div class="panel-heading btn-link-animate-trigger" ng-class="{deleted: item.IsDeleted}">
+
+    <button class="btn btn-link btn-sm btn-link-animate show-70 pull-right" type="button" data-link-animate="danger" style="margin: -4px 6px 0 0;" ng-click="item.IsDeleted = !item.IsDeleted;" title="Note that the field is not actually deleted until you click the save button." ng-if="!item.isConfiguredThroughPlantAnApp">
+        <i class="glyphicon glyphicon-trash"></i>
+    </button>
+
+    <button class="btn btn-link btn-sm btn-link-animate show-70 pull-right" type="button" data-link-animate="info" style="margin: -4px 6px 0 0;" ng-click="cloneField(item);" title="Clone field" ng-if="!item.isConfiguredThroughPlantAnApp">
+        <i class="glyphicon glyphicon-duplicate"></i>
+    </button>
+
+    <button class="btn btn-link btn-sm btn-link-animate show-70 pull-right" type="button" data-link-animate="info" style="margin: -4px 6px 0 0;" ng-click="copyFieldId(item.BoundName);" title="Copy Field ID as token" ng-if="!item.isConfiguredThroughPlantAnApp">
+        <i class="glyphicon glyphicon-copy"></i>
+    </button>
+    <span class="tooltiptext" ng-if="showCopy[item.BoundName]">Copied FileId to clipboard</span>
+
+    <a class="accordion-toggle"
+       data-toggle="collapse"
+       href="#collapse{{item.$_uid}}"
+       ng-click="item.$_isLoaded = true;">
+        <span ng-if="!item.AutoName">
+            <strong>{{item.Title}}</strong>
+            <small style="color: #777;"> ( <strong>Token:</strong> <span id="{{item.BoundName}}">{{item.BoundName}}</span>, <strong>FieldType: </strong> {{fieldDefs[item.InputTypeStr].Title}} )</small>
+        </span>
+        <span ng-if="item.AutoName">
+            <span id="{{item.BoundName}}">{{item.BoundName}}</span>
+            <small style="color: #777;">({{fieldDefs[item.InputTypeStr].Title}})</small>
+        </span>
+    </a>
+    <span class="label label-warning" ng-if="item.isConfiguredThroughPlantAnApp">This field is configured  through Plant an App.</span>
+    <span class="label" ng-class="item.isConfiguredThroughPlantAnApp ? 'label-default' : 'label-warning'" ng-if="isDuplicate(item)" title="This field has the same ID like another field. If this is intended, please ignore this warning.">Duplicate ID</span>
+    <span class="label" ng-class="item.isConfiguredThroughPlantAnApp ? 'label-default' : 'label-danger'" ng-if="!item.BoundName || item.BoundName == ''">ID field must not be empty</span>
+    <span class="label" ng-class="item.isConfiguredThroughPlantAnApp ? 'label-default' : 'label-danger'" ng-if="item.$_invalidCharacters && item.BoundName">ID field must only contain latin characters and numbers</span>
+    <span class="label" ng-class="item.isConfiguredThroughPlantAnApp ? 'label-default' : 'label-danger'" ng-if="item.$_nonLatin && item.BoundName">ID field must start with a latin character</span>
+    <span class="label" ng-class="item.isConfiguredThroughPlantAnApp ? 'label-default' : 'label-warning'" ng-if="item.EnableCondition || item.ShowCondition" data-ng-attr-title="{{item.ShowCondition ? 'Show: ' + item.ShowCondition : ''}} {{item.EnableCondition ? 'Enable: ' + item.EnableCondition : '' }}">Enable/Show Conditions</span>
+    <span class="label" ng-class="item.isConfiguredThroughPlantAnApp ? 'label-default' : 'label-success'" ng-if="item.BindEnable || item.BindShow || item.BindValue" data-ng-attr-title="{{item.BindShow ? 'Show: ' + item.BindShow : ''}} {{item.BindEnable ? 'Enable: ' + item.BindEnable : ''}} {{item.BindValue ? 'Value: ' + item.BindValue : ''}}">Bindings</span>
+    <span class="label" ng-class="item.isConfiguredThroughPlantAnApp ? 'label-default' : 'label-success'" ng-if="item.BindOnChange && item.BindOnChange.trim()" data-ng-attr-title="On Change/Click: {{item.BindOnChange}}">OnChange/OnClick</span>
+    <span class="label" ng-class="item.isConfiguredThroughPlantAnApp ? 'label-default' : 'label-success'" ng-if="item.LabelCssClass || item.LabelCssStyles || item.CssClass || item.CssStyles">Custom CSS</span>
+    <span class="label" ng-class="item.isConfiguredThroughPlantAnApp ? 'label-default' : 'label-primary'" ng-if="item.ValidationCondition || item.IsRequired || item.CustomValidator1 || item.CustomValidator2 || item.ValidationGroup" data-ng-attr-title="{{item.ValidationCondition ? 'Condition: ' + item.ValidationCondition : ''}} {{item.IsRequired ? '| Required ' : ''}} {{item.CustomValidator1? '| Custom Validator #1: ' + item.CustomValidator1 : ''}} {{item.CustomValidator2 ? '| Custom Validator #2: ' + item.CustomValidator2 : ''}} {{item.ValidationGroup ? '| Group Validation: ' + item.ValidationGroup : ''}}">Validators</span>
+</div>
+
+<div id="collapse{{item.$_uid}}" class="panel-collapse collapse" ng-class="{in: item.$_isOpen}">
+    <div class="panel-body" ng-if="item.$_isLoaded">
+        <p class="text-muted" ng-bind-html="localize(fieldDefs[item.InputTypeStr].HelpText)"></p>
+        <div class="form-group" ng-if="item.isConfiguredThroughPlantAnApp">
+            <p style="margin-left:15px;"><strong>This field is controlled by Plant an App.</strong></p>
+        </div>
+        <div ng-class="{'grayscale-form-fields': item.isConfiguredThroughPlantAnApp}">
+            <div ng-class="{'overlay-form-fields': item.isConfiguredThroughPlantAnApp}">
+                <div class="form-group">
+                    <label class="col-sm-2 control-label">Type</label>
+                    <div class="col-sm-10">
+                        <div class="btn-group">
+                            <button class="btn btn-info dropdown-toggle " data-toggle="dropdown">
+                                {{fieldDefs[item.InputTypeStr].Title}} <span class="caret"></span>
+                            </button>
+                            <ul class="dropdown-menu">
+                                <li ng-repeat="(key, def) in fieldDefGroups | toArray | orderBy:'$key'" class="dropdown-submenu">
+                                    <a href="#" onclick="return false;">{{def.$key}}</a>
+                                    <ul class="dropdown-menu">
+                                        <li ng-repeat="fieldDef in def | orderBy:'Title'"><a ng-click="changeFieldType(item, fieldDef);">{{fieldDef.Title}}</a></li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label class="col-sm-2 control-label">Title</label>
+                    <div class="col-sm-3">
+                        <input type="text" class="form-control title-input" ng-model="item.Title" ng-change="computeName(item)" />
+                        <p class="text-muted">Displayed on front-end, if you use tokens the ID must be set manually.</p>
+                    </div>
+                    <div class="col-sm-6">
+                        <label class="col-sm-1 control-label">ID</label>
+                        <div class="col-sm-7">
+                            <input type="text" class="form-control" ng-model="item.BoundName" ng-disabled="item.AutoName"
+                                   ng-change="computeName(item)" />
+                            <p class="label label-danger" ng-show="!item.BoundName || item.BoundName == ''">ID field cannot be empty</p>
+                            <p class="label label-danger" ng-show="item.$_invalidCharacters && item.BoundName">ID field must only contain latin characters and numbers</p>
+                            <span class="label label-danger" ng-show="item.$_nonLatin && item.BoundName">ID field must start with a latin character</span>
+                        </div>
+                        <div class="col-sm-3">
+                            <label class="checkbox-inline" style="margin-left: 20px;">
+                                <input class="ng-pristine ng-valid" type="checkbox" ng-model="item.AutoName" ng-change="computeName(item)" />
+                                Auto
+                            </label>
+                        </div>
+                        <div class="col-sm-11 col-sm-offset-1">
+                            <p class="text-muted">
+                                Used to reference fields using [ID] syntax.
+                                This field supports <a href="http://www.dnnsharp.com/dnn/modules/my-custom-tokens" target="_blank" tabindex="-1">My Tokens</a>.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="col-sm-2 control-label">Show Conditionally</label>
+                    <div class="col-sm-10">
+                        <input type="text" class="form-control" ng-model="item.ShowCondition" placeholder="e.g. [FirstName] == &quot;John&quot;" />
+                        <p class="text-muted help">
+                            This boolean expression is used to determine if this field will be used in the form. Note that this is not the same as hiding it visually.
+                            This is evaluated both initially and after submit.
+                            It supports C# syntax.
+                            A common example is [SomeField] == "Some Value" or [SomeField].IndexOf("something") == 0.
+                            This field supports <a href="http://www.dnnsharp.com/dnn/modules/my-custom-tokens" target="_blank" tabindex="-1">My Tokens</a>.
+                            See <a href="http://action-form.dnnsharp.com/conditions" target="_blank" tabindex="-1">More examples</a>.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label class="col-sm-2 control-label">Enable Conditionally</label>
+                    <div class="col-sm-10">
+                        <input type="text" class="form-control" ng-model="item.EnableCondition" placeholder="e.g. [LastName] == &quot;Doe&quot;" />
+                        <p class="text-muted help">
+                            This boolean expression is used to determine if this field will be enabled (accepting input) in the form.
+                            If specified, this field overrides the Enabled flag below.
+                            It supports C# syntax.
+                            A common example [SomeField] == "Some Value" or [SomeField].IndexOf("something") == 0..
+                            This field supports <a href="http://www.dnnsharp.com/dnn/modules/my-custom-tokens" target="_blank" tabindex="-1">My Tokens</a>.
+                            See <a href="http://action-form.dnnsharp.com/conditions" target="_blank" tabindex="-1">More examples</a>.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label class="col-sm-2 control-label">Short Description</label>
+                    <div class="col-sm-10">
+                        <input type="text" class="form-control" ng-model="item.ShortDesc" placeholder="e.g. Hello world" />
+                        <p class="text-muted">This is a tooltip or placeholder that helps users fill the form. Supports <a href="http://www.dnnsharp.com/dnn/modules/my-custom-tokens" target="_blank" tabindex="-1">My Tokens</a></p>
+                    </div>
+                </div>
+
+                <div class="form-group" style="padding-top:10px;">
+                    <label class="col-sm-2 control-label" style="padding-top:0;">Custom Attributes</label>
+                    <div class="col-sm-10" style="padding-bottom:10px;">
+                        <div class="row">
+                            <label class="col-sm-4 control-label" style="text-align: left;">Attribute Name</label>
+                            <label class="col-sm-4 control-label" style="text-align: left;">Attribute Value</label>
+                        </div>
+
+                        <div ng-repeat="nameValue in item.CustomAttributes" class="row" style="margin-bottom: 3px;">
+                            <div class="col-sm-4">
+                                <input type="text" class="form-control text" ng-model="nameValue.name" />
+                            </div>
+                            <div class="col-sm-6">
+                                <input type="text" class="form-control text" ng-model="nameValue.value" />
+                            </div>
+                            <div class="col-sm-2">
+                                <button class="btn btn-link" type="button" ng-click="item.CustomAttributes.splice($index, 1)"><i class="glyphicon glyphicon-trash"></i></button>
+                            </div>
+                        </div>
+
+                        <button class="btn btn-info btn-sm" type="button" ng-click="item.CustomAttributes = item.CustomAttributes || []; item.CustomAttributes.push({'name':'','value':''});">
+                            <span>Add new attribute</span>
+                        </button>
+                        <p class="text-muted">These attributes are inserted onto the field's html tag (input,select,etc) and can be used by javascript libraries or CSS.</p>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label class="col-sm-2 control-label">Other Options</label>
+                    <div class="col-sm-10">
+                        <button type="button" class="btn btn-default btn-sm" data-toggle="button" ng-model="item.IsEnabled" data-dnnsf-checkbox="">Enabled</button>
+                        <button type="button" class="btn btn-default btn-sm" data-toggle="button" ng-model="item.DisableAutocomplete" data-dnnsf-checkbox="">Disable Auto Complete</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!--Render parameters-->
+        <div ng-class="{'grayscale-form-fields': item.isConfiguredThroughPlantAnApp}">
+            <div ng-class="{'overlay-form-fields': item.isConfiguredThroughPlantAnApp}">
+                <div data-dnnsf-params="fieldDefs[item.InputTypeStr].Parameters"
+                     data-dnnsf-item="item"
+                     data-dnnsf-fields="sharedData.form.Fields">
+                </div>
+            </div>
+        </div>
+
+        <!--<div class="form-group">
+            <div class="col-sm-6 col-sm-offset-2">
+                <label class="checkbox-inline">
+                    <input type="checkbox" ng-model="item.SaveFieldToReports" />
+                    {{item.SaveFieldToReports}}
+                    Save Field to Reports
+                </label>
+            </div>
+        </div>-->
+        <!--<div ng-repeat="p in fieldDefs[item.InputTypeStr].Parameters" ng-include="'static/dnnsf/tpl/parameter.html?v=' + sharedData.resourceVersion">
+        </div>-->
+
+        <div class="panel-group" role="tablist" aria-multiselectable="true">
+
+            <div class="panel panel-default">
+                <div class="panel-heading" role="tab">
+                    <h4 class="panel-title">
+                        <a role="button" data-toggle="collapse" ng-click="bindExpanded[item.FormFieldId || item.$_uid] = !bindExpanded[item.FormFieldId || item.$_uid]" href="#bind{{item.FormFieldId || item.$_uid}}">
+                            <span class="plus glyphicon glyphicon-{{bindExpanded[item.FormFieldId || item.$_uid] ? 'minus' : 'plus'}}" aria-hidden="true"></span>Bind Expressions
+                        </a>
+                    </h4>
+                </div>
+                <div id="bind{{item.FormFieldId || item.$_uid}}" class="panel-collapse collapse" role="tabpanel">
+                    <div class="panel-body">
+                        <p class="text-muted" style="margin-bottom: 12px;">
+                            These expressions run on the client side to dynamically control fields.
+                            Reference fields by their token syntax, for example [FirstName].
+                            If you want to evaluate your tokens against a boolean value, for example [TextBox]=="True",
+                            please take into consideration the fact that the values inside the token will be replaced with the JavaScript boolean values.
+                            Because of this, the correct syntax to evaluate against a boolean value is [TextBox]==true / [TextBox]==false.
+                        </p>
+                        <div ng-class="{'grayscale-form-fields': item.isConfiguredThroughPlantAnApp}">
+                            <div ng-class="{'overlay-form-fields': item.isConfiguredThroughPlantAnApp}">
+                                <div class="form-group">
+                                    <label class="col-sm-2 control-label">Show</label>
+                                    <div class="col-sm-10">
+                                        <input type="text" class="form-control" ng-model="item.BindShow" placeholder="e.g. [Price] == &quot;25&quot;" />
+                                        <p class="text-muted help">
+                                            Dynamically show or hide this field. This must be a boolean expression.
+                                            Use standard javascript boolean operators (==, !=, <,>
+                                                , !).
+                                                For example, use <em>[PaymentMethod] == 'CreditCard'</em> to show the credit card field only when the Payment Method is set accordingly.
+                                        </p>
+                                    </div>
+                                </div>
+
+                                <div class="form-group">
+                                    <label class="col-sm-2 control-label">Enable</label>
+                                    <div class="col-sm-10">
+                                        <input type="text" class="form-control" ng-model="item.BindEnable" placeholder="e.g. [Price] == &quot;25&quot;" />
+                                        <p class="text-muted help">
+                                            Dynamically enable or disable this field. This must be a boolean expression.
+                                            Use standard javascript boolean operators (==, !=, <,>
+                                                , !).
+                                                For example, use <em>[PaymentMethod] == 'CreditCard'</em> to enable the credit card field only when the Payment Method is set accordingly.
+                                        </p>
+                                    </div>
+                                </div>
+
+                                <div class="form-group">
+                                    <div class="col-sm-6 col-sm-offset-2">
+                                        <label class="checkbox-inline">
+                                            <input type="checkbox" ng-model="item.BindPreserveLayout" />
+                                            Preserve Layout
+                                        </label>
+                                    </div>
+                                </div>
+
+                                <div class="form-group">
+                                    <label class="col-sm-2 control-label">Value</label>
+                                    <div class="col-sm-10">
+                                        <input type="text" class="form-control" ng-model="item.BindValue" placeholder="e.g. [Price] * 3" />
+                                        <p class="text-muted help">
+                                            Dynamically compute the value of this field. So when other fields change this fields updates automatically.
+                                            Use standard javascript operators where needed (+, -, *, /).
+                                            For example, use [FirstName] + ' ' + [LastName] to automatically fill the Display Name field.
+                                            Note that once the value is edited manually, the automatic synchronization stops.
+                                        </p>
+                                    </div>
+                                </div>
+
+                                <div class="form-group">
+                                    <label class="col-sm-2 control-label">On Change/Click</label>
+                                    <div class="col-sm-10">
+                                        <textarea class="form-control" codemirror="javascript" ng-model="item.BindOnChange" placeholder="e.g. [TextBox] == &lsquo;[DateTime:Now]&lsquo;" rows="5"></textarea>
+                                        <p class="text-muted help">
+                                            Bind some javascript code to execute when the value in this field changes or when a button is clicked.
+                                            Access the form fields by using syntax [FieldId] which maps to the js object form.fields.<em>FieldId</em>.value.
+                                            For buttons, you can "return false;" to prevent the form from submitting.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="panel panel-default" ng-if="fieldDefs[item.InputTypeStr].Settings.HasUi != 'false'">
+                <div class="panel-heading" role="tab">
+                    <h4 class="panel-title">
+                        <a role="button" data-toggle="collapse" href="#uisettings{{item.FormFieldId || item.$_uid}}" ng-click="uiExpanded[item.FormFieldId || item.$_uid] = !uiExpanded[item.FormFieldId || item.$_uid]">
+                            <span class="plus glyphicon glyphicon-{{uiExpanded[item.FormFieldId || item.$_uid] ? 'minus' : 'plus'}}"></span>UI Settings
+                        </a>
+                    </h4>
+                </div>
+                <div id="uisettings{{item.FormFieldId || item.$_uid}}" class="panel-collapse collapse" role="tabpanel">
+                    <div class="panel-body">
+                        <div ng-class="{'grayscale-form-fields': item.isConfiguredThroughPlantAnApp}">
+                            <div ng-class="{'overlay-form-fields': item.isConfiguredThroughPlantAnApp}">
+                                <div class="form-group">
+                                    <label class="col-sm-2 control-label">Label CSS Classes</label>
+                                    <div class="col-sm-3">
+                                        <input type="text" class="form-control" ng-model="item.LabelCssClass" />
+                                        <p class="text-muted">Supports <a href="http://www.dnnsharp.com/dnn/modules/my-custom-tokens" target="_blank" tabindex="-1">My Tokens</a></p>
+                                    </div>
+                                    <label class="col-sm-1 control-label">Styles</label>
+                                    <div class="col-sm-5 ">
+                                        <input type="text" class="form-control" ng-model="item.LabelCssStyles" />
+                                        <p class="text-muted">Additional CSS styles. Supports <a href="http://www.dnnsharp.com/dnn/modules/my-custom-tokens" target="_blank" tabindex="-1">My Tokens</a></p>
+                                    </div>
+                                </div>
+
+                                <div class="form-group">
+                                    <label class="col-sm-2 control-label">Control CSS Classes</label>
+                                    <div class="col-sm-3">
+                                        <input type="text" class="form-control" ng-model="item.CssClass" />
+                                        <p class="text-muted">Supports <a href="http://www.dnnsharp.com/dnn/modules/my-custom-tokens" target="_blank" tabindex="-1">My Tokens</a></p>
+                                    </div>
+                                    <label class="col-sm-1 control-label">Styles</label>
+                                    <div class="col-sm-5">
+                                        <input type="text" class="form-control" ng-model="item.CssStyles" />
+                                        <p class="text-muted">Additional CSS styles. Supports <a href="http://www.dnnsharp.com/dnn/modules/my-custom-tokens" target="_blank" tabindex="-1">My Tokens</a></p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="panel panel-default" ng-if="fieldDefs[item.InputTypeStr].Settings.HasInputValidation != 'false'">
+                <div class="panel-heading" role="tab">
+                    <h4 class="panel-title">
+                        <a role="button" data-toggle="collapse" href="#validation{{item.FormFieldId || item.$_uid}}" ng-click="validationExpanded[item.FormFieldId || item.$_uid] = !validationExpanded[item.FormFieldId || item.$_uid]">
+                            <span class="plus glyphicon glyphicon-{{validationExpanded[item.FormFieldId || item.$_uid] ? 'minus' : 'plus'}}"></span>Validation
+                        </a>
+                    </h4>
+                </div>
+                <div id="validation{{item.FormFieldId || item.$_uid}}" class="panel-collapse collapse" role="tabpanel">
+                    <div class="panel-body">
+                        <div ng-class="{'grayscale-form-fields': item.isConfiguredThroughPlantAnApp}">
+                            <div ng-class="{'overlay-form-fields': item.isConfiguredThroughPlantAnApp}">
+                                <div class="form-group">
+                                    <label class="col-sm-2 control-label">Condition</label>
+                                    <div class="col-sm-10">
+                                        <input type="text" class="form-control" ng-model="item.ValidationCondition" placeholder="" />
+                                        <p class="text-muted help">
+                                            This boolean expression is used to determine if this field validation will execute.
+                                            It supports C# syntax.
+                                            A common example is [SomeField] == "Some Value" or [SomeField].IndexOf("something") == 0.
+                                            This field supports <a href="http://www.dnnsharp.com/dnn/modules/my-custom-tokens" target="_blank" tabindex="-1">My Tokens</a>.
+                                            See <a href="http://action-form.dnnsharp.com/conditions" target="_blank" tabindex="-1">More examples</a>.
+                                        </p>
+                                    </div>
+                                </div>
+
+                                <div class="form-group">
+                                    <div class="col-sm-6 col-sm-offset-2">
+                                        <label class="checkbox-inline">
+                                            <input type="checkbox" ng-model="item.IsRequired" />
+                                            Required
+                                        </label>
+                                    </div>
+                                </div>
+
+                                <div class="form-group">
+                                    <label class="col-sm-2 control-label">Custom Validator #1</label>
+                                    <div class="col-sm-4">
+                                        <select class="form-control" ng-model="item.CustomValidator1">
+                                            <option value="">-- No Validator --</option>
+                                            <option ng-repeat="validator in validatorDefs | toArray | orderBy:'Title'">{{validator.Title}}</option>
+                                        </select>
+                                    </div>
+
+                                    <label class="col-sm-2 control-label">Custom Validator #2</label>
+                                    <div class="col-sm-4 ">
+                                        <select class="form-control" ng-model="item.CustomValidator2">
+                                            <option value="">-- No Validator --</option>
+                                            <option ng-repeat="validator in validatorDefs | toArray | orderBy:'Title'">{{validator.Title}}</option>
+                                        </select>
+                                    </div>
+                                </div>
+
+                                <div class="form-group">
+                                    <label class="col-sm-2 control-label">Group Validation</label>
+                                    <div class="col-sm-4">
+                                        <select class="form-control" ng-model="item.ValidationGroup">
+                                            <option value="">- No group validation -</option>
+                                            <option>group1</option>
+                                            <option>group2</option>
+                                            <option>group3</option>
+                                            <option>group4</option>
+                                            <option>group5</option>
+                                            <option>group6</option>
+                                            <option>group7</option>
+                                            <option>group8</option>
+                                            <option>group9</option>
+                                        </select>
+                                    </div>
+
+                                    <div class="col-sm-6" ng-show="item.ValidationGroup">
+                                        <select ng-options="k as k for (k, o) in groupValidatorDefs" class="form-control" ng-model="item.GroupValidator">
+                                            <option value="">-- No Validator --</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

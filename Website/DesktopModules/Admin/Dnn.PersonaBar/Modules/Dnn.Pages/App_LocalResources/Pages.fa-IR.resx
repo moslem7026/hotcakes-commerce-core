@@ -877,13 +877,13 @@
     <value>صفحه ای پیدا نشد..</value>
   </data>
   <data name="Prompt_PageCreated.Text" xml:space="preserve">
-    <value>صفحه ایجاد شده است</value>
+    <value>The page has been created</value>
   </data>
   <data name="Prompt_PageCreateFailed.Text" xml:space="preserve">
-    <value>ایجاد صفحه جدید امکان پذیر نیست</value>
+    <value>Unable to create the new page</value>
   </data>
   <data name="Prompt_FlagRequired.Text" xml:space="preserve">
-    <value>--{0} واجب است.</value>
+    <value>--{0} is required.</value>
   </data>
   <data name="Prompt_TrueFalseRequired.Text" xml:space="preserve">
     <value>You must pass True or False for the --{0} flag.</value>
@@ -1714,20 +1714,11 @@
   <data name="Continue.Text" xml:space="preserve">
     <value>ادامه</value>
   </data>
+  <data name="UpdateLocalizationWarning.Text" xml:space="preserve">
+    <value>به روز رسانی محلی سازی بسته به تعداد ماژول‌های ممکن است چند دقیقه طول بکشد. لطفا منتظر باشید تا مراحل به  طور کامل به اتمام برسد.</value>
+  </data>
   <data name="UpdateLocalizationSuccess.Text" xml:space="preserve">
-    <value>تمام!</value>
-  </data>
-  <data name="CustomUrlPortalAlias.Error" xml:space="preserve">
-    <value>لطفاً یک نام مستعار معتبر را برای این آدرس اینترنتی سفارشی انتخاب کنید.</value>
-  </data>
-  <data name="SharedModule.Text" xml:space="preserve">
-    <value>اشتراک ماژول: بله</value>
-  </data>
-  <data name="IsNotSharedModule.Text" xml:space="preserve">
-    <value>اشتراک ماژول: خیر</value>
-  </data>
-  <data name="GlobalGroups.Text" xml:space="preserve">
-    <value>[Global Roles]</value>
+    <value>پایان!</value>
   </data>
   <data name="Prompt_PageFound.Text" xml:space="preserve">
     <value>صفحه یافت شد</value>
@@ -1735,20 +1726,29 @@
   <data name="EditContent.Text" xml:space="preserve">
     <value>ویرایش محتوا</value>
   </data>
+  <data name="IconFile.Text" xml:space="preserve">
+    <value>آیکون کوچک</value>
+  </data>
+  <data name="IconFileLarge.Text" xml:space="preserve">
+    <value>آیکون بزرگ</value>
+  </data>
+  <data name="CustomUrlPortalAlias.Error" xml:space="preserve">
+    <value>لطفا یکی از آدرس های سایت را برای این آدرس سفارشی انتخاب کنید.</value>
+  </data>
+  <data name="SharedModule.Text" xml:space="preserve">
+    <value>اشتراک ماژول: بله</value>
+  </data>
+  <data name="IsNotSharedModule.Text" xml:space="preserve">
+    <value>اشتراک ماژول: خیر</value>
+  </data>
   <data name="DeleteTranslationConfirm.Text" xml:space="preserve">
     <value>شما در حال &lt;b&gt;حذف&lt;/b&gt;  این '&lt;b&gt;{0}&lt;/b&gt;' صفحه از ترجمه هستید. آیا از حذف این صفحه مطمئن هستید ؟</value>
   </data>
   <data name="IconFile.Help" xml:space="preserve">
     <value>آیکون صفحه تصویری است که ممکن است توسط پوسته یا منوی شما برای هر صفحه استفاده شود</value>
   </data>
-  <data name="IconFile.Text" xml:space="preserve">
-    <value>آیکون کوچک</value>
-  </data>
   <data name="IconFileLarge.Help" xml:space="preserve">
     <value>آیکون صفحه تصویری است که ممکن است توسط پوسته یا منوی شما برای هر صفحه استفاده شود</value>
-  </data>
-  <data name="IconFileLarge.Text" xml:space="preserve">
-    <value>آیکون بزرگ</value>
   </data>
   <data name="ClickToLocalizeModule_tooltip.Text" xml:space="preserve">
     <value>برای فعال کردن بومی سازی این ماژول کلیک کنید</value>

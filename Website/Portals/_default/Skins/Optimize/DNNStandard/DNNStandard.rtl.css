@@ -1,0 +1,211 @@
+.dnnMenu { float:right;}
+
+.dnnMenu .breadcrumb {
+    padding: inherit;
+    margin: inherit;
+    list-style: outside none none;
+    background:none;
+    border-radius: 0;
+}
+.dnnMenu .topLevel {
+  position: relative;
+  margin:0;
+  padding: 0;
+}
+.dnnMenu .topLevel li {
+    float: right;
+    list-style-type: none;
+    position: relative;
+    margin: 0;
+	padding:0;
+	
+}
+.dnnMenu .topLevel li a {
+  display: block;
+  color: #FFF;
+  line-height: 65px;
+  font-size: 14px;
+  text-transform: capitalize;
+  /*font-family: open sans;*/
+  margin: 0px;
+  font-weight:600;
+}
+
+.dnnMenu .topLevel li.haschild a span:after {
+    content: "\f0d7";
+    font-family: FontAwesome;
+    padding: 0px 7px 0px 0px;
+    font-size: 14px;
+    font-weight: normal;
+	line-height: 1;
+}
+
+
+.dnnMenu .topLevel li a span {
+    padding:0px 20px;
+    display: block;
+}
+
+.dnnMenu .topLevel li a div {
+  display: block;
+  line-height: 33px;
+  margin: 0;
+  padding: 0;
+}
+
+
+.dnnMenu .subLevel {
+    position: absolute;
+    width: auto;
+    margin: 0px;
+    padding:0;
+    z-index: 1210;
+    background:#fff;
+    display: none;
+    min-width: 200px;
+	text-align:right;
+	box-shadow:0 0 1px #bbb;
+	
+}
+
+.dnnMenu .topLevel li.hover .subLevel{display:block; }
+.dnnMenu .subLevel ul{margin:0;padding:0;position:relative;z-index:1200;}
+.dnnMenu .subLevel li {
+    float: none;
+    clear: both;
+    width: auto;
+	margin:0;
+	border:none!important;
+}
+.dnnMenu .subLevel li:last-child a{
+    border-bottom: none;
+}
+.dnnMenu .subLevel li:last-child li a{
+    border-bottom: 1px solid #eee;
+}
+.dnnMenu .subLevel li:last-child li:last-child a{
+    border-bottom: none;
+}
+.dnnMenu .subLevel li:last-child li:last-child li a{
+    border-bottom: 1px solid #eee;
+}
+
+
+.dnnMenu .subLevel li a {
+    text-transform: capitalize;
+    color: #AAA;
+    font-weight: 400;
+	position:relative;
+	font-size: 13px;
+    transition: none;
+	border-bottom: 1px solid #EEE;
+}
+
+/*submenu Level2*/
+.dnnMenu .topLevel li.haschild li a span:after { content:"";}
+.dnnMenu .topLevel li.haschild li.haschild a span:after{
+  content: "\f104";
+  font-family: FontAwesome;
+  padding:0;
+  font-size: 14px;
+  font-weight: normal;
+  position:absolute;
+  left:15px;
+  line-height:inherit;
+}
+
+/*submenu Level3*/
+.dnnMenu .topLevel li.haschild li.haschild li a span:after { content:"";}
+.dnnMenu .topLevel li.haschild li.haschild li.haschild a span:after{
+  content: "\f105";
+  font-family: FontAwesome;
+  padding:0;
+  font-size: 14px;
+  font-weight: normal;
+  position:absolute;
+  left:15px;
+  line-height:inherit;
+}
+
+/*submenu Level4*/
+.dnnMenu .topLevel li.haschild li.haschild li.haschild li a span:after { content:"";}
+
+
+.dnnMenu .subLevel li.haschild li a { background:none;}
+
+.dnnMenu .subLevel li.item a div{ display:block; color: #444; }
+.dnnMenu .subLevel li.item a div img{ margin-left:.5em;width:16px;height:16px;vertical-align:middle;}
+.dnnMenu .subLevel li.item a div span {
+    padding: 4px 20px;
+	  position: relative;
+}
+.dnnMenu .subLevel li.item a:hover div { color:#fff;}
+
+.dnnMenu .subLevelRight {
+    display: none;
+    position: absolute;
+    right: 200px;
+    width: auto;
+    top: 0;
+    padding:0;
+    background: #fff;
+    min-width: 200px;
+	box-shadow:0 0 1px #bbb;
+	
+}
+.dnnMenu .subLevel li.hover > .subLevelRight{display:block;}
+.dnnMenu .subLevelRight ul{display:block;}
+.dnnMenu .subLevelRight ul li{position:relative;}
+.dnnMenu .subLevelRight ul li a{display:block;}
+.dnnMenu .subLevelRight ul li a div{display:block; }
+
+
+/*---Current & Selected---*/
+.dnnMenu .topLevel li.Current a {
+ background-color:rgba(0,0,0,0.12);
+}
+.dnnMenu .topLevel li.selected a {
+ background-color:rgba(0,0,0,0.12);
+}
+.dnnMenu .topLevel li.hover a, 
+.dnnMenu .topLevel li a:hover{
+	 background-color:rgba(0,0,0,0.12);
+}
+.dnnMenu .topLevel li.hover li a
+{
+	background:none;
+}
+
+.dnnMenu .topLevel li.selected .subLevel li a{
+	border-top: none;
+}
+.dnnMenu .subLevel li.selected li a div{ color: #444;}
+
+.dnnMenu .topLevel li.Current li a { border-top:none;}
+
+/*---isStuck---*/
+
+
+@media handheld, only screen and (max-width:1100px) {
+
+
+}
+@media handheld, only screen and (max-width:1024px) {
+
+}
+@media handheld, only screen and (max-width:880px) {
+.dnnMenu .topLevel li a span {
+    padding: 0px 13px;
+}
+}
+
+@media handheld, only screen and (max-width:767px) {
+.dnnMenu { display:none;}
+
+}
+
+
+
+
+
+

@@ -1,4 +1,4 @@
-<%@ Page Language="C#" MasterPageFile="../AdminNav.master" AutoEventWireup="True" Inherits="Hotcakes.Modules.Core.Admin.Orders.OrderPayments"
+﻿<%@ Page Language="C#" MasterPageFile="../AdminNav.master" AutoEventWireup="True" Inherits="Hotcakes.Modules.Core.Admin.Orders.OrderPayments"
     Title="Payments" Codebehind="OrderPayments.aspx.cs" %>
 
 <%@ Register Src="../Controls/MessageBox.ascx" TagName="MessageBox" TagPrefix="hcc" %>
@@ -21,7 +21,7 @@
     <table border="0" cellspacing="0" cellpadding="3" width="100%">
         <tr>
             <td width="50%" class="formfield">
-                <h1>Order <asp:Label ID="lblOrderNumber" runat="server" Text="000000"></asp:Label> Payments</h1>
+                <h1>پرداخت های سفارش شماره   <asp:Label ID="lblOrderNumber" runat="server" Text="000000"></asp:Label></h1>
             </td>
             <td align="left" valign="top">
                 <hcc:OrderStatusDisplay ID="ucOrderStatusDisplay" runat="server" /><br />
@@ -29,12 +29,12 @@
         </tr>
     </table>
     <div class="hcContentWrapper">
-        <h2>Actions</h2>
+        <h2>عملیات</h2>
         <hcc:ReceivePayments ID="ucReceivePayments" runat="server" />
         <hcc:RecurringPayments ID="ucRecurringPayments" runat="server" />
     </div>
     <div class="hcForm">
-        <h2>Transactions</h2>
+        <h2>تراکنش ها</h2>
 		<div class="hcPaymentTransaction">
 			<asp:Literal ID="litTransactions" runat="server" EnableViewState="false" />
 		</div>

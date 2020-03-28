@@ -1,0 +1,1 @@
+dnnsf.api.actionGrid.refresh(context.ModuleId);

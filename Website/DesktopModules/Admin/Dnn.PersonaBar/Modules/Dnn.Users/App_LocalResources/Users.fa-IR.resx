@@ -1257,10 +1257,7 @@
     <value>سوال امنیتی:</value>
   </data>
   <data name="cmUnlockUser.Text" xml:space="preserve">
-    <value>باز کردن کاربر</value>
-  </data>
-  <data name="Prompt_AddRoles_NotFound.Text" xml:space="preserve">
-    <value>Cannot find role{0} '{1}'. --roles parameter only accepts existent roles.</value>
+    <value>بازکردن قبل کاربر</value>
   </data>
   <data name="HasAgreedToTerms.Text" xml:space="preserve">
     <value>موافقت با شرایط</value>
@@ -1272,7 +1269,7 @@
     <value>درخواست حذف شده ها</value>
   </data>
   <data name="HasAgreedToTerms.title" xml:space="preserve">
-    <value>کاربر با شرایط استفاده موافقت کرده است</value>
+    <value>کاربر با شرایط استفاده موافقت نکرده است</value>
   </data>
   <data name="HasNotAgreedToTerms.title" xml:space="preserve">
     <value>کاربر با شرایط استفاده موافقت نکرده است</value>

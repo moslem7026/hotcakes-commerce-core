@@ -1206,18 +1206,18 @@
     <value>اتصالات</value>
   </data>
   <data name="BackToEditExtension.Text" xml:space="preserve">
-    <value>بازگشت به ویرایش {0} افزونه</value>
+    <value>بازگشت به ویرایش افزونه {0}</value>
   </data>
   <data name="ModuleUsageTitle.Text" xml:space="preserve">
-    <value>استفاده ماژول برای {0}</value>
+    <value>ماژول {0} استفاده شده است برای</value>
   </data>
   <data name="ModuleUsageDetail.Text" xml:space="preserve">
-    <value>این ماژول در صفحه (های) {0} {1} استفاده می شود:</value>
+    <value>این ماژول استفاده شده است در {0} {1} صفحه(ها)</value>
   </data>
   <data name="Loading.Text" xml:space="preserve">
-    <value>یک ثانیه ... ما در حال گسترش افزونه شما هستیم</value>
+    <value>چندلحظه صبر کنید... ما در حال واکشی افزونه‌های شما هستیم</value>
   </data>
   <data name="Loading.Tooltip" xml:space="preserve">
-    <value>افزونه شما فقط یک لحظه اینجا خواهد بود</value>
+    <value>افزونه‌های شما تا چند لحظه دیگر اینجا خواهند بود</value>
   </data>
 </root>

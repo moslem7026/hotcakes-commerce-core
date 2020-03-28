@@ -23,6 +23,14 @@ img {
     -ms-interpolation-mode: bicubic;
 }
 
+#hcProductActions li, #hcProductActions input {
+    width: 100%;
+}
+.hc-product h3, .hc-product h2{
+    border-bottom:1px solid;
+    margin:5px;
+}
+
 .row-fluid:before,
 .row-fluid:after {
     display: table;
@@ -1209,10 +1217,82 @@ span.dnnFormMessage.hcFormError {
     margin-top: 20px;
 }
 
+.c-product__usp {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    /* display: flex; */
+}
+.c-product__feature {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+}
+    .c-product__feature .o-grid, .c-product__feature .row {
+        width: 100%;
+    }
+    .c-product__feature .row {
+        -ms-flex-wrap: nowrap;
+        flex-wrap: nowrap;
+        margin-right: 0;
+        margin-left: 0;
+        -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+        justify-content: space-between;
+    }
+.c-product__feature-col {
+    -ms-flex: 0 0 20%;
+    -webkit-box-flex: 0;
+    flex: 0 0 20%;
+    max-width: 20%;
+    display: -webkit-inline-box;
+    display: -ms-inline-flexbox;
+    display: inline-flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+}
+.c-product__feature-item {
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    color: #9b9b9b;
+    font-size: .7rem;
+}
+
+.c-product__config-wrapper, .c-product__feature-item {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+}
+
+.c-product__feature {
+    border-top: 1px solid #f4f4f4;
+    width: 100%;
+    display: none;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -ms-flex-pack: distribute;
+    justify-content: space-around;
+    margin-top: auto;
+    font-size: 11px;
+    font-size: .786rem;
+    line-height: 2;
+}
+
+.c-product__feature, .c-semi-modal__body, .p-v-lg {
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+}
 .hc-product .hc-product-details {
     margin-left: 20px;
 }
-
+#hcProductDetails .bootstrap-touchspin-injected {
+    width: 60%;
+}
 .hc-product .hc-product-form {
     margin: 20px 0;
 }
@@ -1220,11 +1300,11 @@ span.dnnFormMessage.hcFormError {
     .hc-product .hc-product-form .dnnLabel {
         font-weight: bold;
         text-align: left;
-        width: 25%;
+
     }
 
     .hc-product .hc-product-form .hc-option {
-        width: 45%;
+        width: 60%;
         float: left;
     }
 

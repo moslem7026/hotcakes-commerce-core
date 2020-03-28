@@ -1,0 +1,475 @@
+﻿@inherits DotNetNuke.Web.Mvc.Framework.DnnWebViewPage<IEnumerable<Moslem7026.Modules.NeyrizanAds.Models.Item>>
+
+@using System.Text.RegularExpressions
+@using DotNetNuke.Web.Mvc.Helpers
+<script src="~/desktopmodules/mvc/NeyrizanAds/content/js/jquery.seat-charts.js"></script>
+<link href="~/desktopmodules/mvc/NeyrizanAds/content/jquery.seat-charts.css" rel="stylesheet" />
+<style>
+
+    .front-indicator {
+        width: 145px;
+        margin: 5px 32px 15px 32px;
+        background-color: #f6f6f6;
+        color: #adadad;
+        padding: 3px;
+        border-radius: 5px;
+    }
+
+    .wrapper {
+        width: 100%;
+    }
+
+    .container {
+        margin: 0 auto;
+    }
+
+    .booking-details {
+        float: left;
+        margin-left: 13px;
+        font-size: 12px;
+        position: relative;
+    }
+
+        .booking-details h2 {
+            margin: 25px 0 20px 0;
+            font-size: 17px;
+        }
+
+        .booking-details h3 {
+            margin: 5px 5px 0 0;
+            font-size: 14px;
+        }
+
+    div.seatCharts-cell {
+        color: #182C4E;
+        height: 25px;
+        width: 25px;
+        line-height: 25px;
+    }
+
+    div.seatCharts-seat {
+        color: #FFFFFF;
+        cursor: pointer;
+    }
+
+    div.seatCharts-row {
+        height: 35px;
+    }
+
+    div.seatCharts-seat.available {
+        background-color: #E6CAC4;
+    }
+
+        div.seatCharts-seat.available.first-class {
+            /* 	background: url(vip.png); */
+            background-color: #3a78c3;
+        }
+
+    div.seatCharts-seat.focused {
+        background-color: #76B474;
+    }
+
+    div.seatCharts-seat.selected {
+        background-color: #E6CAC4;
+    }
+
+    div.seatCharts-seat.unavailable {
+        background-color: #472B34;
+    }
+
+    div.seatCharts-container {
+        margin: 0 auto;
+        width: 300px;
+        padding: 20px;
+    }
+
+    div.seatCharts-legend {
+        padding-left: 0px;
+        /* position: absolute; */
+        bottom: 16px;
+        border: 0.5px solid;
+        margin: 36px 0;
+    }
+
+    ul.seatCharts-legendList {
+        padding-left: 0px;
+    }
+
+    span.seatCharts-legendDescription {
+        margin-left: 5px;
+        line-height: 30px;
+    }
+
+    .checkout-button {
+        display: block;
+        margin: 10px 0;
+        font-size: 14px;
+    }
+
+    #selected-seats {
+        width: 260px;
+        margin-top: 10px;
+    }
+
+        #selected-seats li {
+            line-height: 21px;
+        }
+</style>
+<div ng-app="angularFormsApp">
+    <div ng-controller="GiftCard" class="row">
+        <div class="panel panel-default">
+            <div class="panel-heading">مشخصات درخواست کننده آگهی</div>
+            <div class="panel-body">
+                <div class="form">
+                    <div class="form-group">
+                        <label for="txtCodeMelli" class="col-md-1 text-left">کد ملی :</label>
+                        <div class="col-md-2">
+                            <input type="text" id="txtCodeMelli" class="form-control " />
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="txtName" class="col-md-2 text-left">نام و نام خانوادگی :</label>
+                        <div class="col-md-3">
+                            <input type="text" id="txtName" class="form-control " />
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="txtMobile" class="col-md-1 text-left">شماره تماس : </label>
+                        <div class="col-md-2">
+                            <input type="text" id="txtMobile" class="form-control " />
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="txtMobile" class="col-md-1 text-left">شماره تماس دوم: </label>
+                        <div class="col-md-2">
+                            <input type="text" id="txtMobile" class="form-control " />
+                        </div>
+                    </div>
+                    <div class="col-md-1">
+                        <button class="btn btn-primary btn-block" type="button" ng-click="btnAdd()"> جدید</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="panel panel-default">
+            <div class="panel-heading">موقعیت</div>
+            <div class="panel-body">
+                <div>
+                    <div class="col-md-3">
+                        <div class="row">
+                            <label for="ddlNobat">نوبت چاپ</label>
+                            <select name="ddlNobat" id="ddlNobat" class="form-control ">
+                            </select>
+                        </div>
+                        <div class="row">
+                            <label for="ddlNumber">شماره صفحه</label>
+                            <select name="ddlNumber" id="ddlNumber" class="form-control ">
+                            </select>
+                        </div>
+                    </div>
+                    <div class="col-md-9">
+                        <p>
+                            تعداد کادر ها :
+                        </p>
+                        <div>
+                            <div class="jquery-script-clear"></div>
+                        </div>
+
+                        <div class="wrapper selectkardDiv">
+                            <div class="container">
+                                <div class="col-md-6">
+                                    <div id="seat-map">
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="booking-details">
+                                        <h3> تعداد کادر های انتخاب شده (<span id="counter">0</span>):</h3>
+                                        <ul id="selected-seats">
+                                        </ul>
+                                        جمع کل : <b> <span id="total">0</span> تومان</b>
+                                        <div id="legend"></div>
+                                    </div>
+                                    <button id="okReserve">ok</button>
+                                </div>
+                            </div>
+                            <div class="loadingPanel" style=" opacity: 0.8; position: absolute;text-align:center; font-size:20px; background: white; top: 0; left: 0; width: 100%; height: 100%;">
+                                <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" style="margin:auto;background:#fff;display:block;" width="200px" height="200px" viewBox="0 0 100 100" preserveAspectRatio="xMidYMid">
+                                    <defs>
+                                        <mask id="ldio-t7jxpdsoajh-mask"><circle cx="50" cy="50" r="45" fill="#fff"></circle></mask>
+                                        <pattern id="ldio-t7jxpdsoajh-pattern" patternUnits="userSpaceOnUse" x="0" y="0" width="100" height="100">
+                                            <g transform="translate(9.98382 0)">
+                                                <g transform="rotate(20 50 50) scale(1.2)">
+                                                    <rect x="-20" y="-10" width="10" height="120" fill="#e15b64"></rect>
+                                                    <rect x="-10" y="-10" width="10" height="120" fill="#f8b26a"></rect>
+                                                    <rect x="0" y="-10" width="10" height="120" fill="#e15b64"></rect>
+                                                    <rect x="10" y="-10" width="10" height="120" fill="#f8b26a"></rect>
+                                                    <rect x="20" y="-10" width="10" height="120" fill="#e15b64"></rect>
+                                                    <rect x="30" y="-10" width="10" height="120" fill="#f8b26a"></rect>
+                                                    <rect x="40" y="-10" width="10" height="120" fill="#e15b64"></rect>
+                                                    <rect x="50" y="-10" width="10" height="120" fill="#f8b26a"></rect>
+                                                    <rect x="60" y="-10" width="10" height="120" fill="#e15b64"></rect>
+                                                    <rect x="70" y="-10" width="10" height="120" fill="#f8b26a"></rect>
+                                                    <rect x="80" y="-10" width="10" height="120" fill="#e15b64"></rect>
+                                                    <rect x="90" y="-10" width="10" height="120" fill="#f8b26a"></rect>
+                                                    <rect x="100" y="-10" width="10" height="120" fill="#e15b64"></rect>
+                                                    <rect x="110" y="-10" width="10" height="120" fill="#e15b64"></rect>
+                                                </g>
+                                                <animateTransform attributeName="transform" type="translate" values="0 0;26 0" keyTimes="0;1" dur="1s" repeatCount="indefinite"></animateTransform>
+                                            </g>
+                                        </pattern>
+                                    </defs>
+                                    <circle cx="50" cy="50" r="45" fill="#abbd81"></circle>
+                                    <g mask="url(#ldio-t7jxpdsoajh-mask)">
+                                        <g transform="translate(50 50)">
+                                            <g transform="scale(0.8)">
+                                                <g transform="translate(-50 -50)">
+                                                    <path d="M 11.757359312880714 60.242640687119284 L 88.24264068711929 39.757359312880716 L 188.2426406871193 139.7573593128807 L 111.75735931288071 160.2426406871193 Z" fill="#7d924d"></path>
+                                                    <rect rx="6" ry="6" x="10" y="38" stroke-width="0" width="80" height="24" fill="url(#ldio-t7jxpdsoajh-pattern)"></rect>
+                                                </g>
+                                            </g>
+                                        </g>
+                                    </g>
+                                </svg>
+                                در حال بارگزاری
+                                ...
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<script language="javascript" type="text/javascript">
+    sf = $.ServicesFramework(@Dnn.ActiveModule.ModuleID)
+    $(document).ready(function () {
+
+        $.ajax({
+
+            /*=========================== Populating Parent Drop Down List ===================================*/
+            type: "POST",
+            url: "/DesktopModules/MVC/NeyrizanAds/Item/getNobats",
+            data: '',
+            contentType: "application/json; charset=utf-8",
+            dataType: "json",
+             beforeSend: sf.setModuleHeaders,
+            success: function (response) {
+               $("select[name$=ddlNobat]").empty().append($("<option></option>").val("[0]").html("لطفا نوبت چاپ را مشخص نمایید"));
+                for( var i = 0; i<response.length; i++){
+                            var id = response[i]['ID'];
+                            var name = response[i]['Title'];
+                        $("select[name$=ddlNobat]").append("<option value='"+id+"'>"+name+"</option>")
+
+                };
+
+            },
+            error: function () {
+                alert("An error has occurred during processing your request.");
+            }
+        });
+
+        /*=========================== Populating Child Drop Down List ===================================*/
+
+       $('select[name$=ddlNobat]').change(function() {
+    // create a serialized representation of the selected values
+    var data = $.param({ NobatID: $(this).val() }, true);
+           $('.loadingPanel').show();
+    $.ajax({
+        type: "POST",
+            url: "/DesktopModules/MVC/NeyrizanAds/Item/getPagesOfNobat",
+        data: '{NobatID:"'+$(this).val()+'"}',
+            contentType: "application/json; charset=utf-8",
+            dataType: "json",
+             beforeSend: sf.setModuleHeaders,
+            success: function (response) {
+
+           $("select[name$=ddlNumber]").empty().append($("<option></option>").val("[0]").html("لطفا شماره صفحه را مشخص نمایید   "));
+                for( var i = 0; i<response.length; i++){
+                            var id = response[i]['ID'];
+                            var name = response[i]['Title'];
+                        $("select[name$=ddlNumber]").append("<option value='"+id+"'>"+name+"</option>")
+
+                };
+
+        }
+    });
+           $('select[name$=ddlNumber]').change(function () {
+               var data = $.param({ NobatID: $(this).val() }, true);
+               $('.loadingPanel').show();
+                $.ajax({
+        type: "POST",
+            url: "/DesktopModules/MVC/NeyrizanAds/Item/getPagesOfNobat",
+        data: '{NobatID:"'+$(this).val()+'"}',
+            contentType: "application/json; charset=utf-8",
+            dataType: "json",
+             beforeSend: sf.setModuleHeaders,
+            success: function (response) {
+                $('.loadingPanel').hide();
+                $('#seat-map').seatCharts().find('selected').status('available');
+                $('#selected-seats').html("");
+                recalculateTotal($('#seat-map').seatCharts());
+                $('#seat-map').seatCharts().get(['1_2', '4_1', '7_1', '7_2']).status('unavailable');
+        }
+    });
+
+
+    });
+
+
+});
+
+        /*=========================== Add Dynamic Row to the Table ===================================*/
+
+        $("a#imgBtnAdd").click(function () {
+            $('#tblForm tbody>tr:last').clone(true, true).insertAfter('#tblForm tbody>tr:last');
+        });
+
+
+        /*================================= Delete Row ======================================================*/
+        $("a#btnDel").click(function () {
+            if (confirm("Are you sure to Delete this Item ?"))
+                $(this).closest("tr").remove(); // remove row
+        });
+
+        /*=========================== Save Table Data ==============================================*/
+        var total ='';
+        $("#okReserve").click(function () {
+            $('#seat-map').seatCharts().find('selected').each(function () {
+                total = this.settings.id + ',' + total;
+            });
+            alert(total);
+            return false;
+        });
+
+
+
+        /*=================================  Save Data function ==============================================*/
+        function saveData(strVal) {
+            $.ajax({
+                type: "POST",
+                url: "CascadingDropDown.aspx/SaveData",
+                data: "{valuePair: '" + strVal + "'}",
+                contentType: "application/json; charset=utf-8",
+                dataType: "json",
+                async: true,
+                success: function Success(data) {
+                    alert('Your Records have been saved properly');
+                },
+                error: function () {
+                    alert("An error has occurred during processing your request.");
+                }
+
+            });
+        }
+
+
+
+    });
+</script>
+
+
+<script src="jquery.seat-charts.js"></script>
+<script>
+    var firstSeatLabel = 1;
+    var sc;
+    $(document).ready(function () {
+        var $cart = $('#selected-seats'),
+            $counter = $('#counter'),
+            $total = $('#total'),
+            sc = $('#seat-map').seatCharts({
+                map: [
+                    'fffffff',
+                    'fffffff',
+                    'fffffff',
+                    'fffffff',
+                    'fffffff',
+                    'fffffff',
+
+                ],
+                seats: {
+                    f: {
+                        price: 5000,
+                        classes: 'first-class', //your custom CSS class
+                        category: 'کادر صفحه اول'
+                    }
+
+                },
+                naming: {
+                    top: false,
+                    getLabel: function (character, row, column) {
+                        return firstSeatLabel++;
+                    },
+                },
+                legend: {
+                    node: $('#legend'),
+                    items: [
+                        //['f', 'available', 'First Class'],
+                        ['e', 'available', 'انتخاب شده شما'],
+                        ['f', 'unavailable', 'قبلا رزرو شده است']
+                    ]
+                },
+                click: function () {
+                    if (this.status() == 'available') {
+                        //let's create a new <li> which we'll add to the cart items
+                        $('<li>' + this.data().category + ' کادر شماره  ' + this.settings.label + ': <b>' + this.data().price + '</b> <a href="#" class="cancel-cart-item">[حذف]</a></li>')
+                            .attr('id', 'cart-item-' + this.settings.id)
+                            .data('seatId', this.settings.id)
+                            .appendTo($cart);
+
+                        /*
+                         * Lets update the counter and total
+                         *
+                         * .find function will not find the current seat, because it will change its stauts only after return
+                         * 'selected'. This is why we have to add 1 to the length and the current seat price to the total.
+                         */
+                        $counter.text(sc.find('selected').length + 1);
+                        $total.text(recalculateTotal(sc) + this.data().price);
+
+                        return 'selected';
+                    } else if (this.status() == 'selected') {
+                        //update the counter
+                        $counter.text(sc.find('selected').length - 1);
+                        //and total
+                        $total.text(recalculateTotal(sc) - this.data().price);
+
+                        //remove the item from our cart
+                        $('#cart-item-' + this.settings.id).remove();
+
+                        //seat has been vacated
+                        return 'available';
+                    } else if (this.status() == 'unavailable') {
+                        //seat has been already booked
+                        return 'unavailable';
+                    } else {
+                        return this.style();
+                    }
+                }
+            });
+
+        //this will handle "[cancel]" link clicks
+        $('#selected-seats').on('click', '.cancel-cart-item', function () {
+            //let's just trigger Click event on the appropriate seat, so we don't have to repeat the logic here
+            sc.get($(this).parents('li:first').data('seatId')).click();
+            return false;
+        });
+
+        //let's pretend some seats have already been booked
+
+
+    });
+
+    function recalculateTotal(sc) {
+        var total = 0;
+
+        //basically find every selected seat and sum its price
+        sc.find('selected').each(function () {
+            total += this.data().price;
+        });
+
+        return total;
+    }
+
+</script>

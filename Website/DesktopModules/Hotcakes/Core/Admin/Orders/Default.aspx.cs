@@ -1,4 +1,4 @@
-#region License
+﻿#region License
 
 // Distributed under the MIT License
 // ============================================================
@@ -463,27 +463,27 @@ namespace Hotcakes.Modules.Core.Admin.Orders
 				case OrderStatusCode.Received:
 					lnkAcceptAll.Visible = true;
 					OrderManagerActions.Visible = true;
-					litH1.Text = "New Orders";
+					litH1.Text = "سفارشات جدید دریافت شده";
 					break;
 				case OrderStatusCode.Cancelled:
-					litH1.Text = "Cancelled Orders";
+					litH1.Text = "سفارشات کنسل شده";
 					break;
 				case OrderStatusCode.Completed:
-					litH1.Text = "Completed Orders";
+					litH1.Text = "سفارشات تکمیل شده";
 					break;
 				case OrderStatusCode.OnHold:
-					litH1.Text = "Orders On Hold";
+					litH1.Text = "سفارشات در انتظار";
 					break;
 				case OrderStatusCode.ReadyForPayment:
-					litH1.Text = "Orders Ready for Payment";
+					litH1.Text = "سفارشات آماده برای پرداخت";
 					lnkChargeAll.Visible = true;
 					OrderManagerActions.Visible = true;
 					break;
 				case OrderStatusCode.ReadyForShipping:
-					litH1.Text = "Orders Ready for Shipping";
+					litH1.Text = "سفارشات آماده برای بارگیری";
 					break;
 				default:
-					litH1.Text = "Order Manager";
+					litH1.Text = "مدیریت سفارشات";
 					break;
 			}
         }

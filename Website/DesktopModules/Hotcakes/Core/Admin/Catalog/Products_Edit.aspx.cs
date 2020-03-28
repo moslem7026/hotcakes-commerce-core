@@ -1,4 +1,4 @@
-#region License
+﻿#region License
 
 // Distributed under the MIT License
 // ============================================================
@@ -125,7 +125,7 @@ namespace Hotcakes.Modules.Core.Admin.Catalog
                     LoadProduct();
                     if (Request.QueryString["u"] == "1")
                     {
-                        ucMessageBox.ShowOk("Product Updated");
+                        ucMessageBox.ShowOk("محصول بروز رسانی شد");
                     }
                 }
                 var props = HccApp.CatalogServices.ProductPropertiesFindForType(lstProductType.SelectedValue);

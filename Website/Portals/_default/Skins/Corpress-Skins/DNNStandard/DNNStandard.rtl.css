@@ -1,0 +1,243 @@
+
+.DNNStandard .breadcrumb {
+    padding: inherit;
+    margin: inherit;
+    list-style: outside none none;
+    background:none;
+    border-radius: 0;
+}
+.DNNStandard ul {
+  position: relative;
+  margin:0;
+  padding:0;
+  display: table;
+  width:100%;
+}
+.DNNStandard li {
+    float: none;
+    list-style-type: none;
+    position: relative;
+    margin: 0;
+    padding: 0px;
+    text-align: center;
+	display:table-cell;
+	width: 12.5%;
+}
+
+.DNNStandard li.last a{
+	border-left:none;
+}
+.DNNStandard li a {
+    display: block;
+    color: #FFF;
+    font-size: 15px;
+    /*font-family: open sans;*/
+	-moz-transition:initial;
+	-webkit-transition:initial;
+	-o-transition:initial;
+    transition: initial;
+    font-weight: 600;
+    padding: 18px 0;
+	text-transform:uppercase;
+	position:relative;
+    border-left:1px solid rgba(0,0,0,0.5);
+	margin:0 0 15px 0;
+	background:#3E454C;
+}
+.menuicon {
+    display: block;
+    text-align: center;
+    font-size: 20px;
+    border: 1px solid rgb(255, 255, 255);
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    margin: 0px auto 10px auto;
+    line-height: 43px;
+}
+.is-sticky .menuicon { 
+	-moz-transition: all 0.7s ease 0s;
+	-webkit-transition: all 0.7s ease 0s;
+	-o-transition: all 0.7s ease 0s;
+	transition: all 0.7s ease 0s;
+	display:none;
+}
+.DNNStandard li a span {
+	display:block;
+}
+
+.DNNStandard li.haschild span:after {
+    /*content: "\f107";*/
+    left: 10px;
+    font-family: FontAwesome;
+	font-weight: normal;
+	padding: 0px 7px 0px 0px;
+	line-height: 1;
+}
+
+
+.DNNStandard li a div {
+  display: block;
+  line-height: 33px;
+  margin: 0;
+  padding: 0;
+}
+
+.DNNStandard .subLevel {
+    position: absolute;
+    width: auto;
+    padding:0;
+    z-index: 1210;
+    display: none;
+    min-width: 200px;
+	text-align:right;
+    background:#3E454C;
+	top:100%;
+	
+}
+
+.DNNStandard li.hover .subLevel{ display:block; }
+.DNNStandard li ul{margin:0;padding:0;position:relative;z-index:1200;}
+.DNNStandard li li {
+    float: none;
+    clear: both;
+    width: auto;
+	margin:0;
+	padding:0;
+	border:none;
+	text-align:right;
+	display:block;
+}
+.DNNStandard li li a {
+    text-transform: capitalize;
+    color: #fff;
+    font-weight: 400;
+    position: relative;
+    font-size: 13px;
+    transition: none;
+    margin: 0;
+    border-radius: 0;
+	border-left:none;
+	padding: 0 15px;
+	min-height: inherit;
+}
+.DNNStandard li li div{ display:block;  }
+.DNNStandard li li span {
+    padding: 5px !important;
+	position: relative;
+	display:block;
+	margin:0;
+	min-height: inherit;
+}
+
+/*submenu Level2*/
+.DNNStandard li.haschild li a span:after { content:"";}
+.DNNStandard li.haschild li.haschild a span:after{
+  content: "\f104";
+  font-family: FontAwesome;
+  padding:0;
+  font-size: 14px;
+  font-weight: normal;
+  position:absolute;
+  left:5px;
+  line-height:33px;
+}
+
+/*submenu Level3*/
+.DNNStandard li.haschild li.haschild li a span:after { content:"";}
+.DNNStandard li.haschild li.haschild li.haschild a span:after{
+  content: "\f104";
+  font-family: FontAwesome;
+  padding:0;
+  font-size: 14px;
+  font-weight: normal;
+  position:absolute;
+  left:5px;
+}
+
+/*submenu Level4*/
+.DNNStandard li.haschild li.haschild li.haschild li a span:after { content:"";}
+.DNNStandard li.haschild li.haschild li.haschild li.haschild a span:after{
+  content: "\f104";
+  font-family: FontAwesome;
+  padding:0;
+  font-size: 14px;
+  font-weight: normal;
+  position:absolute;
+  left:5px;
+}
+
+/*submenu Level5*/
+.DNNStandard li.haschild li.haschild li.haschild li.haschild li a span:after { content:"";}
+.DNNStandard li.haschild li.haschild li.haschild li.haschild li.haschild a span:after{
+  content: "\f104";
+  font-family: FontAwesome;
+  padding:0;
+  font-size: 14px;
+  font-weight: normal;
+  position:absolute;
+  left:5px;
+}
+
+/*submenu Level6*/
+.DNNStandard li.haschild li.haschild li.haschild li.haschild li.haschild li a span:after { content:"";}
+
+
+
+
+
+.DNNStandard li li div img{ margin-left:.5em;width:16px;height:16px;vertical-align:middle;}
+
+.DNNStandard .subLevelRight {
+    display: none;
+    position: absolute;
+    right: 200px;
+    width: auto;
+    top: 0;
+    padding:0;
+    background:#3E454C;
+    min-width: 200px;
+	
+}
+.DNNStandard .subLevel li.hover > .subLevelRight{display:block;}
+.DNNStandard .subLevelRight ul{ display:block;}
+.DNNStandard .subLevelRight ul li{ position:relative;}
+.DNNStandard .subLevelRight ul li a{ display:block;}
+.DNNStandard .subLevelRight ul li a div{ display:block; }
+
+
+
+/*---current---*/
+
+
+/*---isStuck---*/
+.is-sticky .DNNStandard {
+    padding: 0;
+}
+
+/*---lampback---*/
+#magic-line {
+    position: absolute;
+    bottom: -5px;
+    right: 0px;
+    width: 100px;
+    height: 5px;
+    padding: 0px;
+    background: #FFF none repeat scroll 0% 0%;
+}
+
+
+
+
+@media handheld, only screen and (max-width:900px) {
+.DNNStandard li a { font-size:13px;}
+}
+
+@media handheld, only screen and (max-width:860px) {
+.DNNStandard li a { font-size:12px;}
+}
+
+@media handheld, only screen and (max-width:767px) {
+
+.DNNStandard ul { display:none;}
+}

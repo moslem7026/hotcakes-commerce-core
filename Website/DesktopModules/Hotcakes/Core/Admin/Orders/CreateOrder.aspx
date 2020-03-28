@@ -16,7 +16,7 @@
         <hcc:PaymentInformation ID="ucPaymentInformation" runat="server" />
         <div class="hcForm">
             <div class="hcFormItem">
-                <label class="hcLabel">Codes Used</label>
+                <label class="hcLabel">کد های استفاده شده </label>
                 <div class="hcCouponCodes">
                     <asp:Label ID="CouponField" runat="server" />
                 </div>
@@ -82,10 +82,10 @@
                 });
             </script>
 
-            <h1>New Order</h1>
+            <h1>سفارش جدید</h1>
             <hcc:MessageBox ID="ucMessageBox" runat="server" />
 
-            <h2>Order Items</h2>
+            <h2>آیتم های سفارش</h2>
             <asp:UpdatePanel runat="server" UpdateMode="Conditional">
                 <ContentTemplate>
                     <hcc:OrderItems runat="server" Id="ucOrderItems" EditMode="True" AllowUpdateQuantities="True" />
@@ -94,11 +94,11 @@
 
             <div class="hcColumnLeft hcRightBorder" style="width: 30%">
                 <div class="hcForm hcShipToAddress">
-                    <h2>Ship To</h2>
+                    <h2>بارگیری به </h2>
                     <div class="hcFormMessage hcShipToAddressMessage" style="margin-left: 2px; margin-right: 2px;"></div>
                     <hcc:AddressEditor ID="ShipToAddress" ShowAddressLine3="false" CreateValidationInputs="True" FormSelector=".hcShipToAddress" ErrorMessageSelector=".hcShipToAddressMessage" runat="server" TabOrderOffSet="1000" />
                     <div class="hcFormItem">
-                        <asp:Label ID="EmailAddressLabel" CssClass="hcLabel" AssociatedControlID="EmailAddressTextBox" runat="server" Text="E-mail"></asp:Label>
+                        <asp:Label ID="EmailAddressLabel" CssClass="hcLabel" AssociatedControlID="EmailAddressTextBox" runat="server" Text="ایمیل"></asp:Label>
                         <asp:TextBox ID="EmailAddressTextBox" runat="server" TabIndex="3000" />
                         <asp:RegularExpressionValidator ID="EmailRegularExpressionValidator" runat="server"
                             ControlToValidate="EmailAddressTextBox" ErrorMessage="Invalid E-mail Address." CssClass="hcFormError"
@@ -108,14 +108,14 @@
             </div>
             <div class="hcColumn" style="width: 35%">
                 <div class="hcForm">
-                    <h2>Bill To</h2>
+                    <h2>صورتحساب</h2>
                     <asp:Panel ID="pnlBillTo" CssClass="hcBillToAddress" runat="server" Visible="false">
                         <div class="hcFormMessage hcBillToAddressMessage" style="margin-left: 2px; margin-right: 2px;"></div>
                         <hcc:AddressEditor ID="BillToAddress" ShowAddressLine3="false" CreateValidationInputs="True" FormSelector=".hcBillToAddress" ErrorMessageSelector=".hcBillToAddressMessage" runat="server" TabOrderOffSet="2000" />
                     </asp:Panel>
                     <div class="hcFormItem">
                         <asp:CheckBox ID="chkBillToSame" Checked="true" runat="server" AutoPostBack="true"
-                            Text="Bill to Same Address" OnCheckedChanged="chkBillToSame_CheckedChanged" />
+                            Text="صورتحساب به همان آدرس" OnCheckedChanged="chkBillToSame_CheckedChanged" />
                     </div>
                 </div>
             </div>
@@ -124,15 +124,15 @@
                 <table border="0" cellspacing="0" cellpadding="0">
                     <tr>
                         <td>
-                            <asp:Button ID="btnFindUsers" CausesValidation="false" Text="Find Customer"
+                            <asp:Button ID="btnFindUsers" CausesValidation="false" Text="پیدا کردن مشتری"
                                 runat="server" OnClick="btnFindUsers_Click" />
                         </td>
                         <td>
-                            <asp:Button ID="btnNewUsers" CausesValidation="false" Text="New Customer"
+                            <asp:Button ID="btnNewUsers" CausesValidation="false" Text="مشتری جدید"
                                 runat="server" OnClick="btnNewUsers_Click" />
                         </td>
                         <td>
-                            <asp:Button ID="btnFindOrders" CausesValidation="false" Text="Find Orders"
+                            <asp:Button ID="btnFindOrders" CausesValidation="false" Text="پیدا کردن سفارشات"
                                 runat="server" OnClick="btnFindOrders_Click" />
                         </td>
                     </tr>
@@ -140,19 +140,19 @@
                 <div class="controlarea1" style="padding: 10px;">
                     <asp:MultiView ID="viewFindUsers" runat="server" ActiveViewIndex="0">
                         <asp:View ID="ViewFind" runat="server">
-                            <strong>Search for Customer</strong><br />
+                            <strong>جستجو برای مشتری</strong><br />
                             <asp:Label ID="lblFindUserMessage" runat="server"></asp:Label>
                             <asp:Panel ID="pnlFindUser" runat="server" DefaultButton="btnFindUser">
                                 <table border="0" cellspacing="0" cellpadding="3">
                                     <tr>
-                                        <td class="formlabel">Keyword</td>
+                                        <td class="formlabel">کلید واژه</td>
                                         <td class="formfield">
                                             <asp:TextBox ID="FilterUserField" runat="server" Columns="15"></asp:TextBox></td>
                                     </tr>
                                     <tr>
                                         <td class="formlabel">&nbsp;</td>
                                         <td class="formfield">
-                                            <asp:Button ID="btnFindUser" runat="server" Text="Find Customer(s)"
+                                            <asp:Button ID="btnFindUser" runat="server" Text="پیدا کردن مشتری (ها)"
                                                 CausesValidation="false" OnClick="btnFindUser_Click" />
                                         </td>
                                     </tr>
@@ -181,22 +181,22 @@
                             </telerik:RadGrid>
                         </asp:View>
                         <asp:View ID="ViewNew" runat="server">
-                            <strong>Add New Customer</strong><br />
+                            <strong>ثبت یک مشتری جدید </strong><br />
                             <asp:Label ID="lblNewUserMessage" runat="server"></asp:Label>
                             <asp:Panel ID="pnlNewUser" runat="server" DefaultButton="btnNewUserSave">
                                 <table border="0" cellspacing="0" cellpadding="3">
                                     <tr>
-                                        <td class="formlabel">E-Mail</td>
+                                        <td class="formlabel">ایمیل</td>
                                         <td class="formfield">
                                             <asp:TextBox ID="NewUserEmailField" runat="server" Columns="15"></asp:TextBox></td>
                                     </tr>
                                     <tr>
-                                        <td class="formlabel">First Name</td>
+                                        <td class="formlabel">نام </td>
                                         <td class="formfield">
                                             <asp:TextBox ID="NewUserFirstNameField" runat="server" Columns="15"></asp:TextBox></td>
                                     </tr>
                                     <tr>
-                                        <td class="formlabel">Last Name</td>
+                                        <td class="formlabel">نام خانوادگی</td>
                                         <td class="formfield">
                                             <asp:TextBox ID="NewUserLastNameField" runat="server" Columns="15"></asp:TextBox></td>
                                     </tr>
@@ -211,12 +211,12 @@
                             </asp:Panel>
                         </asp:View>
                         <asp:View ID="ViewOrder" runat="server">
-                            <strong>Find Customer By Order</strong>
+                            <strong>یافتن مشتری بر اساس سفارش</strong>
                             <asp:Label ID="lblFindOrderMessage" runat="server"></asp:Label>
                             <asp:Panel ID="pnlFindUserByOrder" runat="server" DefaultButton="btnGoFindOrder">
                                 <table border="0" cellspacing="0" cellpadding="3">
                                     <tr>
-                                        <td class="formlabel" align="right">Order Number</td>
+                                        <td class="formlabel" align="right">شماره سفارش</td>
                                         <td>
                                             <asp:TextBox ID="FindOrderNumberField" runat="server" Columns="20"></asp:TextBox></td>
                                     </tr>
@@ -224,7 +224,7 @@
                                         <td>&nbsp;</td>
                                         <td>
                                             <asp:Button ID="btnGoFindOrder" CausesValidation="false" runat="server"
-                                                Text="Find This Order" OnClick="btnGoFindOrder_Click" /></td>
+                                                Text="یافتن سفارش" OnClick="btnGoFindOrder_Click" /></td>
                                     </tr>
                                 </table>
                             </asp:Panel>
@@ -237,23 +237,23 @@
             <hr />
             <div class="hcColumnLeft" style="width: 50%">
                 <div class="hcForm">
-                    <h2>Shipping</h2>
+                    <h2>بارگیری</h2>
                     <asp:RadioButtonList ID="ShippingRatesList" runat="server" TabIndex="4000"
                         OnSelectedIndexChanged="ShippingRatesList_SelectedIndexChanged">
                     </asp:RadioButtonList>
                     <div class="hcFormItem hcFormItem66p">
-                        <asp:LinkButton ID="btnCalculateShipping" runat="server" Text="Get Shipping Rates" CssClass="hcButton hcSmall"
+                        <asp:LinkButton ID="btnCalculateShipping" runat="server" Text="دریافت هزینه پستی" CssClass="hcButton hcSmall"
                             CausesValidation="False" TabIndex="4010" OnClick="btnCalculateShipping_Click" />
                     </div>
                     <div class="hcFormItem hcFormItem33p">
-                        <asp:LinkButton ID="btnUpdateShipping" runat="server" Text="Update" CssClass="hcButton hcSmall"
+                        <asp:LinkButton ID="btnUpdateShipping" runat="server" Text="بروزرسانی" CssClass="hcButton hcSmall"
                             CausesValidation="False" OnClick="btnUpdateShipping_Click" />
                     </div>
                 </div>
             </div>
             <div class="hcColumnRight hcLeftBorder" style="width: 49%">
                 <div class="hcForm hcPaymentForm">
-                    <h2>Payment</h2>
+                    <h2>پرداخت</h2>
                     <div runat="server" id="divNoPaymentNeeded" visible="false">
                         <asp:RadioButton ID="rbNoPayment" GroupName="PaymentGroup" runat="server" Checked="false" />
                     </div>
@@ -287,7 +287,7 @@
             <div class="hcColumnLeft hcRightBorder" style="width: 30%">
                 <asp:Panel ID="pnlInstructions" CssClass="hcFormItem" runat="server">
                     <div class="hcFormItemLabel">
-                        <label class="hcLabel">Customer's Instructions</label>
+                        <label class="hcLabel">دستورالعمل مشتری</label>
                     </div>
                     <div class="hcFormItem">
                         <asp:TextBox ID="txtInstructions" runat="server" Rows="5" TextMode="MultiLine" CssClass="hcOrderViewNotes" />
@@ -297,7 +297,7 @@
             <div class="hcColumn" style="width: 34%">
                 <asp:Panel ID="pnlCoupons" runat="server" CssClass="hcForm" DefaultButton="btnAddCoupon">
                     <div class="hcFormItemLabel">
-                        <label class="hcLabel">Add Promotional Code</label>
+                        <label class="hcLabel">افزودن کد تخفیف</label>
                     </div>
                     <div class="hcFormItem hcFormItem66p">
                         <asp:TextBox ID="txtCoupon" runat="server" TabIndex="9100" MaxLength="50" />
@@ -305,7 +305,7 @@
                             runat="server" EnableClientScript="false" CssClass="hcFormError" />
                     </div>
                     <div class="hcFormItem hcFormItem33p">
-                        <asp:LinkButton ID="btnAddCoupon" ValidationGroup="vgCoupon" CausesValidation="true" runat="server" CssClass="hcSecondaryAction hcSmall disabled" Text="Add" OnClick="btnAddCoupon_Click" />
+                        <asp:LinkButton ID="btnAddCoupon" ValidationGroup="vgCoupon" CausesValidation="true" runat="server" CssClass="hcSecondaryAction hcSmall disabled" Text="افزودن" OnClick="btnAddCoupon_Click" />
                     </div>
                     <div class="hcFormItem">
                         <asp:GridView CellPadding="3" CellSpacing="0" GridLines="none" ID="CouponGrid" runat="server"
@@ -330,11 +330,11 @@
             </div>
             <ul class="hcActions">
                 <li>
-                    <asp:LinkButton ID="btnSubmit" runat="server" Text="Place Order" CssClass="hcPrimaryAction" TabIndex="9999" OnClick="btnSubmit_Click" />
+                    <asp:LinkButton ID="btnSubmit" runat="server" Text="ثبت سفارش" CssClass="hcPrimaryAction" TabIndex="9999" OnClick="btnSubmit_Click" />
                 </li>
                 <li></li>
             </ul>
-            <hcc:AddressNormalizationDialog ID="AddressNormalizationDialog" PrimaryAddressLabel="Shipping Address" SecondaryAddressLabel="Billing Address" runat="server" />
+            <hcc:AddressNormalizationDialog ID="AddressNormalizationDialog" PrimaryAddressLabel="آدرس بارگیری" SecondaryAddressLabel="Billing Address" runat="server" />
 
             <script type="text/javascript">
                 $(function () {

@@ -1,0 +1,15 @@
+﻿<img class="img-cropper" />
+<label ng-hide="fieldData.hideSelectImageButton" ng-attr-disabled="{{disabled ? '' : undefined}}" class="btn btn-info btn-upload" for="{{cropperId}}" title="Upload image file">
+    <input type="file" class="sr-only file-input ignore" id="{{cropperId}}" name="inputImage" accept=".jpg,.jpeg,.png,.gif,.bmp,.tiff">
+    <span class="docs-tooltip" data-toggle="tooltip" data-animation="false" title="" data-original-title="Import image with Blob URLs">
+        {{buttonText}} <span class="fa fa-upload"></span>
+    </span>
+</label>
+<div class="btn-group" style="margin-left:10px" ng-if="hasImage">
+    <button type="button" class="btn btn-info" aria-label="Rotate Left" ng-click="rotate('-90')"><span class="fa fa-rotate-left"></span></button>
+    <button type="button" class="btn btn-info" aria-label="Rotate Right" ng-click="rotate('90')"><span class="fa fa-rotate-right"></span></button>
+</div>
+<div class="btn-group" style="margin-left:10px;" ng-if="hasImage">
+    <button type="button" class="btn btn-info" aria-label="Clear Crop" ng-click="clearCropBox()"><span class="fa fa-remove"></span></button>
+    <button type="button" class="btn btn-info" aria-label="Reset image editor" ng-show="fieldParameters.ResetButton" ng-click="reset()"><span class="fa fa-refresh"></span></button>
+</div>

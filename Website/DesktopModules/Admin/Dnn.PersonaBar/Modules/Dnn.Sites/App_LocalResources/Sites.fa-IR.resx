@@ -328,7 +328,7 @@
     <value>والد</value>
   </data>
   <data name="HomeDirectory.Label" xml:space="preserve">
-    <value>فهرست اصلی</value>
+    <value>Home Directory</value>
   </data>
   <data name="SiteTemplate.Label" xml:space="preserve">
     <value>قالب سایت</value>
@@ -429,11 +429,5 @@
   </data>
   <data name="Sites.Text" xml:space="preserve">
     <value>سایت ها</value>
-  </data>
-  <data name="CreatePortalHomeFolderExists.Error" xml:space="preserve">
-    <value>پوشه پرتال {0} از قبل استفاده شده است.</value>
-  </data>
-  <data name="Description.Text" xml:space="preserve">
-    <value>توضیحات</value>
   </data>
 </root>

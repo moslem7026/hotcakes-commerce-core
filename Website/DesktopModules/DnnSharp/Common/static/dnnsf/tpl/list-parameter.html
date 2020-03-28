@@ -1,0 +1,28 @@
+<div class="list-parameter">
+    <div data-ng-repeat="value in model track by $index" class="row" style="margin-bottom: 3px;">
+        <div class="col-sm-12" data-ng-if="!isEditMode($index)">
+            <a href="javascript:void(0)" data-ng-click="setEditMode($index)" style="padding-right: 10px;">{{value}}</a>
+            <button class="btn btn-link btn-sm" style="border: 2px solid; padding: 1px 3px;" type="button"
+                data-ng-click="removeValue($index)">
+                <i class="glyphicon glyphicon-remove" style="line-height: 18px;"></i>
+            </button>
+        </div>
+        <div data-ng-if="isEditMode($index)">
+            <div class="col-sm-4">
+                <input id="lp-item-{{$index}}" data-ng-init="focus($index)" data-ng-blur="unsetEditMode($index, value)"
+                    data-ng-keydown="keydownItem($event, $index, value)" type="text" class="form-control text"
+                    data-ng-model="value" />
+            </div>
+            <button data-ng-if="!value" class="btn btn-link" type="button" data-ng-click="removeValue($index)">
+                <i class="glyphicon glyphicon-remove"></i>
+            </button>
+        </div>
+    </div>
+    <div class="row" style="margin-bottom: 3px;">
+        <div class="col-sm-4">
+            <input type="text" placeholder="{{localize(def.Placeholder) || 'Add new item'}}" class="form-control text"
+                data-ng-blur="addNewValue()" data-ng-keydown="keydownNewValue($event)" data-ng-model="newValue" />
+        </div>
+
+    </div>
+</div>

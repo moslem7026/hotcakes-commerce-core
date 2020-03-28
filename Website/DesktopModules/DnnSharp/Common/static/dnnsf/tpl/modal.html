@@ -1,0 +1,22 @@
+﻿<div class="dnnsf-modal modal" tabindex="-1" role="dialog">
+    <div class="modal-dialog modal-lg" role="document" style="z-index:9999">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title">{{settings.modalTitle}}</h4>
+            </div>
+            <div class="modal-body">
+                <div data-dnnsf-calldirective=""
+                     data-pass-dnnsf-use-action-info="false"
+                     data-pass-dnnsf-params="settings.params"
+                     data-pass-dnnsf-item="item">
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button class="{{btn.cssClass}}" type="button" ng-click="btn.onClick($event,item)" ng-repeat="btn in settings.buttons">
+                    {{btn.text}}
+                </button>
+            </div>
+        </div><!-- /.modal-content -->
+    </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->

@@ -1,0 +1,198 @@
+/* Mega Menu Styles */
+ul.dnnmega {
+  list-style: none;
+  margin:0;
+  padding: 0;
+}
+
+
+ul.dnnmega ul {
+    padding: 5px 0;
+	margin:0;
+}
+
+/*WAM - removed z-index*/
+.dnnmega .breadcrumb { background:none;}
+
+ul.dnnmega li {
+	float: right;
+	list-style-type: none;
+	position: relative;
+	margin: 0px;
+	padding: 0px;
+}
+
+ul.dnnmega li a {
+    display: block;
+    color: #FFF;
+    line-height: 65px;
+    font-size: 14px;
+    text-transform: capitalize;
+    /*font-family: open sans;*/
+    margin: 0px;
+    font-weight: 600;
+}
+
+ul.dnnmega li span{
+    padding: 0px 20px;
+    display: block;
+}
+
+ul.dnnmega li.mmHasChild a span:after {
+    content: "\f0d7";
+    font-family: FontAwesome;
+    padding: 0px 7px 0px 0px;
+    font-size: 14px;
+    font-weight: normal;
+    line-height: 1;
+}
+ul.dnnmega li.mmHasChild li a span:after { content:"";}
+ul.dnnmega li.mmItemHover a:hover{ position:relative;z-index:1230; }
+
+
+
+ul.dnnmega li .megaborder {
+    position: absolute;
+    right: -120px;
+    z-index: 1200;
+    float: right;
+    display: none;
+    background: #FFF none repeat scroll 0% 0%;
+    text-align: right;
+    min-height: 180px;
+	min-width:380px;
+    box-shadow: 0px 0px 1px #ccc;
+}
+ul.dnnmega li.mmFirst .megaborder {
+    left:inherit;
+    right: 0;
+}
+ul.dnnmega li.child-2 .megaborder {
+    left:inherit;
+    right: 0;
+}
+
+/*
+ul.dnnmega li.mmLast .megaborder {
+    left: 0px;
+    right: inherit;
+}
+ul.dnnmega li:nth-last-child(2) .megaborder {
+    right: -100px;
+}
+ul.dnnmega li:nth-last-child(3) .megaborder {
+    left: -150px;
+    right: inherit;
+}
+*/
+ul.dnnmega .megaborder .M {
+    display: block;
+    border-top: 0px none;
+    border-bottom: 0px none;
+    min-height: 135px;
+    padding: 10px 10px 20px 0px;
+	margin:0;
+}
+
+
+
+
+ul.dnnmega li.category {display:block;width:180px;float:right;}
+ul.dnnmega li.category a {
+  display: block;
+  padding: 10px 0px;
+  line-height: 1.5;
+  margin: 0px 10px;
+  text-transform: capitalize;
+  background:none!important;
+  font-weight:400;
+  border-radius:0;
+  border-top:none!important;
+}
+ul.dnnmega li.category a:hover { background:none;}
+ul.dnnmega li.category li a {
+    border: medium none;
+    font-weight: 400;
+    margin: 0px!important;
+    padding: 0px 10px 0px 0px;
+	position:relative;
+	text-transform: capitalize;
+}
+
+ul.dnnmega li.category li a span:before { content: "\f104"; font-family:FontAwesome; display:inline-block; font-size:12px; position:absolute; right:0; vertical-align:top;}
+ul.dnnmega li.category a span {
+    display: block;
+    color: #333;
+    padding: 0px;
+}
+ul.dnnmega li.category li a span {
+    color: #666;
+    text-transform: capitalize;
+    padding: 8px 0px 8px 0px;
+    line-height: 1;
+}
+
+
+
+ul.dnnmega li.category li.leaf, ul.dnnmega li.category li.mmLast {
+    clear: right;
+    float: none;
+    position: static;
+    padding: 0px 15px 0px 0px;
+}
+
+ul.dnnmega li.category li.leaf a span{font-size:12px; border:0;}
+
+ul.dnnmega img.mmIcon { max-height: 24px; margin-left: 5px; vertical-align: middle;}
+ul.dnnmega li.root > a > span img.mmIcon { height: 16px;}
+
+/*---Current & Selected---*/
+ul.dnnmega li.mmBreadcrumb a,
+ul.dnnmega li a:hover,
+ul.dnnmega li.mmItemHover a { 
+	background-color:rgba(0,0,0,0.12);    
+}
+
+.dnnmega li.selected .subLevel li a{
+	border:none;
+}
+
+.dnnmega li.selected .subLevel li a{
+	border:none;
+}
+
+ul.dnnmega li.mmSelected li a span{ color:#888;}
+ul.dnnmega .megaborder li.mmSelected li a span{ color:#888;}
+
+.dnnmega .root.mmBreadcrumb li a {
+  background: none;
+  border-top: none!important;
+  border-bottom:1px solid #e6e6e6;
+  border-radius:0;
+}
+.dnnmega .root.mmBreadcrumb li li a { border:none;}
+.dnnmega .root li a {
+  background: none;
+  border: none;
+  border-bottom:1px solid #eee;
+  border-radius:0;
+}
+.dnnmega li li li a { border:none; }
+
+/*---isStuck---*/
+
+
+@media handheld, only screen and (max-width:880px) {
+
+ul.dnnmega li.root span {
+    padding: 0px 13px;
+}
+
+
+}
+
+
+
+
+
+

@@ -1,4 +1,4 @@
-<%@ Page Language="C#" MasterPageFile="../AdminNav.master" AutoEventWireup="True" Inherits="Hotcakes.Modules.Core.Admin.Orders.Default" Title="Untitled Page" CodeBehind="Default.aspx.cs" %>
+﻿<%@ Page Language="C#" MasterPageFile="../AdminNav.master" AutoEventWireup="True" Inherits="Hotcakes.Modules.Core.Admin.Orders.Default" Title="Untitled Page" CodeBehind="Default.aspx.cs" %>
 
 <%@ Register Src="../Controls/NavMenu.ascx" TagName="NavMenu" TagPrefix="hcc" %>
 <%@ Register Src="../Controls/MessageBox.ascx" TagName="MessageBox" TagPrefix="hcc" %>
@@ -62,44 +62,44 @@
     <%--<hcc:NavMenu ID="ucNavMenu" runat="server" />--%>
     <asp:Panel ID="pnlFilter" runat="server" CssClass="hcBlock hcBlockLight hcClearfix" DefaultButton="btnGo">
         <div class="hcForm">
-            <label class="hcLabel">Search</label>
+            <label class="hcLabel">جستجو</label>
             <div class="hcFormItem hcGo">
                 <div class="hcFieldOuter">
                     <asp:TextBox ID="FilterField" runat="server" />
-                    <asp:LinkButton ID="btnGo" runat="server" Text="Filter Results" CssClass="hcIconRight" OnClick="btnGo_Click" />
+                    <asp:LinkButton ID="btnGo" runat="server" Text="فیلتر کردن نتایج" CssClass="hcIconRight" OnClick="btnGo_Click" />
                 </div>
             </div>
             <div class="hcFormItem">
                 <asp:DropDownList ID="lstStatus" runat="server" OnSelectedIndexChanged="lstStatus_SelectedIndexChanged" AutoPostBack="True">
                     <asp:ListItem Value="" Text="- All Orders -" />
-                    <asp:ListItem Value="F37EC405-1EC6-4a91-9AC4-6836215FBBBC" Text="New Orders" />
-                    <asp:ListItem Value="e42f8c28-9078-47d6-89f8-032c9a6e1cce" Text="Ready for Payment" />
-                    <asp:ListItem Value="0c6d4b57-3e46-4c20-9361-6b0e5827db5a" Text="Ready for Shipping" />
-                    <asp:ListItem Value="09D7305D-BD95-48d2-A025-16ADC827582A" Text="Completed" />
-                    <asp:ListItem Value="88B5B4BE-CA7B-41a9-9242-D96ED3CA3135" Text="On Hold" />
-                    <asp:ListItem Value="A7FFDB90-C566-4cf2-93F4-D42367F359D5" Text="Cancelled" />
+                    <asp:ListItem Value="F37EC405-1EC6-4a91-9AC4-6836215FBBBC" Text="سفارش های جدید" />
+                    <asp:ListItem Value="e42f8c28-9078-47d6-89f8-032c9a6e1cce" Text="آماده برای پرداخت" />
+                    <asp:ListItem Value="0c6d4b57-3e46-4c20-9361-6b0e5827db5a" Text="آماده برای بارگیری" />
+                    <asp:ListItem Value="09D7305D-BD95-48d2-A025-16ADC827582A" Text="کامل شده" />
+                    <asp:ListItem Value="88B5B4BE-CA7B-41a9-9242-D96ED3CA3135" Text="پشت دست" />
+                    <asp:ListItem Value="A7FFDB90-C566-4cf2-93F4-D42367F359D5" Text="انصراف داده شده" />
                 </asp:DropDownList>
             </div>
             <div class="hcFormItem">
                 <asp:DropDownList ID="lstPaymentStatus" runat="server" OnSelectedIndexChanged="lstPaymentStatus_SelectedIndexChanged" AutoPostBack="True">
-                    <asp:ListItem Value="" Text="- Any Payment -" />
-                    <asp:ListItem Value="1" Text="Unpaid" />
-                    <asp:ListItem Value="2" Text="Partially Paid" />
-                    <asp:ListItem Value="3" Text="Paid" />
-                    <asp:ListItem Value="4" Text="Over Paid" />
+                    <asp:ListItem Value="" Text="- همه پرداخت ها -" />
+                    <asp:ListItem Value="1" Text="پرداخت نشده" />
+                    <asp:ListItem Value="2" Text="پرداخت های ناقص" />
+                    <asp:ListItem Value="3" Text="پرداخت شده" />
+                    <asp:ListItem Value="4" Text="بیش از فاکتور پرداخت شده" />
                 </asp:DropDownList>
             </div>
             <div class="hcFormItem hcFormItemNoPadding">
                 <asp:DropDownList ID="lstShippingStatus" runat="server" OnSelectedIndexChanged="lstShippingStatus_SelectedIndexChanged" AutoPostBack="True">
-                    <asp:ListItem Value="" Text="- Any Shipping -" />
-                    <asp:ListItem Value="1" Text="Unshipped" />
-                    <asp:ListItem Value="2" Text="Partially Shipped" />
-                    <asp:ListItem Value="3" Text="Shipped" />
+                    <asp:ListItem Value="" Text="- همه روش های بارگیری -" />
+                    <asp:ListItem Value="1" Text="بارگیری نشده" />
+                    <asp:ListItem Value="2" Text="بارگیری ناقص" />
+                    <asp:ListItem Value="3" Text="بارگیری شده" />
                 </asp:DropDownList>
             </div>
             <hcc:DateRangePicker ID="DateRangePicker1" runat="server" FormItemCssClass="hcFormItem" />
             <div class="hcFormItem">
-                <asp:CheckBox ID="chkNewestFirst" runat="server" Text="Newest Items First" AutoPostBack="True" OnCheckedChanged="chkNewestFirst_CheckedChanged" />
+                <asp:CheckBox ID="chkNewestFirst" runat="server" Text="جدید ترین آیتم ها در ابتدای لیست" AutoPostBack="True" OnCheckedChanged="chkNewestFirst_CheckedChanged" />
             </div>
         </div>
     </asp:Panel>
@@ -107,9 +107,9 @@
     <div class="hcBlock hcBlockLight" id="OrderManagerActions" runat="server" visible="false">
         <div class="hcForm">
             <div class="hcFormItem">
-                <asp:LinkButton ID="lnkAcceptAll" runat="server" CssClass="hcTertiaryAction" Text="Accept All New Orders" OnClick="lnkAcceptAll_Click" Visible="false" />
+                <asp:LinkButton ID="lnkAcceptAll" runat="server" CssClass="hcTertiaryAction" Text="پذیرش تمام سفارشات جدید" OnClick="lnkAcceptAll_Click" Visible="false" />
                 <asp:LinkButton ID="lnkChargeAll" runat="server" CssClass="hcTertiaryAction" Text="Charge All & Mark for Shipping" OnClick="lnkChargeAll_Click" Visible="false" />
-                <asp:LinkButton ID="lnkShipAll" runat="server" CssClass="hcPrimaryAction" Text="Ship All Orders" OnClick="lnkShipAll_Click" Visible="false" />
+                <asp:LinkButton ID="lnkShipAll" runat="server" CssClass="hcPrimaryAction" Text="بارگیری تمام سفارشات" OnClick="lnkShipAll_Click" Visible="false" />
                 <asp:LinkButton ID="lnkPrintPacking" runat="server" CssClass="hcTertiaryAction" Text="Print Packing Slips & Ship All" OnClick="lnkPrintPacking_Click" Visible="false" />
             </div>
         </div>
@@ -118,7 +118,7 @@
     <div class="hcBlock hcBlockLight hcClearfix">
         <div class="hcForm">
             <div class="hcFormItemLabel">
-                <label class="hcLabel">Print Selected Orders</label>
+                <label class="hcLabel">چاپ سفارش های انتخاب شده </label>
             </div>
             <div class="hcFormItem">
                 <asp:DropDownList ID="lstPrintTemplate" ClientIDMode="Static" runat="server" />
@@ -129,13 +129,13 @@
     <div class="hcBlock">
         <div class="hcForm">
             <div class="hcFormItem">
-                <asp:LinkButton ID="btnBatchPrint" ClientIDMode="Static" runat="server" Text="Print" CssClass="hcTertiaryAction" />
+                <asp:LinkButton ID="btnBatchPrint" ClientIDMode="Static" runat="server" Text="چاپ" CssClass="hcTertiaryAction" />
             </div>
         </div>
         <div runat="server" id="divExportLinks">
             <div class="hcForm">
                 <div class="hcFormItem">
-                    <asp:LinkButton CssClass="hcTertiaryAction" ID="lnkExportToExcel" Text="Export to Excel" runat="server" />
+                    <asp:LinkButton CssClass="hcTertiaryAction" ID="lnkExportToExcel" Text="خروجی به فایل اکسل" runat="server" />
                 </div>
                 <div class="hcFormItem hcFormItemNoPadding">
                     <asp:LinkButton CssClass="hcTertiaryAction" ID="lnkExportToQuickbooks" Text="Export to Quickbooks" runat="server" />
@@ -148,7 +148,7 @@
 
 <asp:Content ID="Main" ContentPlaceHolderID="MainContent" runat="server">
     <h1>
-        <asp:Literal ID="litH1" runat="server" Text="Order Manager" />
+        <asp:Literal ID="litH1" runat="server" Text="مدیریت سفارشات" />
     </h1>
 
     <hcc:MessageBox ID="hcMessageBox" runat="server" />
@@ -161,7 +161,7 @@
         <Columns>
             <asp:TemplateField ItemStyle-Width="20px">
                 <HeaderTemplate>
-                    <a href="#" class="pickerallbutton" data-all="All" data-none="None">All</a>
+                    <a href="#" class="pickerallbutton" data-all="All" data-none="None">همه</a>
                 </HeaderTemplate>
                 <ItemTemplate>
                     <div class="hcCheckboxOuter">
@@ -170,16 +170,16 @@
                     </div>
                 </ItemTemplate>
             </asp:TemplateField>
-            <asp:HyperLinkField HeaderText="Order #" ItemStyle-HorizontalAlign="Center"
+            <asp:HyperLinkField HeaderText="شماره سفارش" ItemStyle-HorizontalAlign="Center"
                 DataTextField="OrderNumber"
                 DataNavigateUrlFields="bvin"
                 DataNavigateUrlFormatString="ViewOrder.aspx?id={0}" />
-            <asp:TemplateField ItemStyle-Width="60px" HeaderText="Date">
+            <asp:TemplateField ItemStyle-Width="60px" HeaderText="تاریخ">
                 <ItemTemplate>
                     <%# GetTimeOfOrder(Container) %>
                 </ItemTemplate>
             </asp:TemplateField>
-            <asp:TemplateField ItemStyle-HorizontalAlign="Right" ItemStyle-Width="80px" HeaderText="Amount">
+            <asp:TemplateField ItemStyle-HorizontalAlign="Right" ItemStyle-Width="80px" HeaderText="مبلغ">
                 <ItemTemplate>
                     <strong runat="server" id="strongAmount" />
                     <span class="hcFormItemInline" runat="server" id="spanRecurringInfo" visible="false">
@@ -189,21 +189,21 @@
                     </span>
                 </ItemTemplate>
             </asp:TemplateField>
-            <asp:TemplateField HeaderText="Customer">
+            <asp:TemplateField HeaderText="مشتری">
                 <ItemTemplate>
                     <%# RenderCustomerMailToLink(Container) %>
                 </ItemTemplate>
             </asp:TemplateField>
-            <asp:TemplateField HeaderText="Status" ItemStyle-Width="120px">
+            <asp:TemplateField HeaderText="وضعیت" ItemStyle-Width="120px">
                 <ItemTemplate>
                     <%# RenderStatusHtml(Container) %>
                 </ItemTemplate>
             </asp:TemplateField>
             <asp:TemplateField ItemStyle-Width="90px">
                 <ItemTemplate>
-                    <asp:HyperLink ID="btnDetails" NavigateUrl='<%#Eval("bvin", "ViewOrder.aspx?id={0}") %>' runat="server"><i class="hcIconEdit"></i>Details</asp:HyperLink>
-                    <asp:HyperLink ID="btnPayment" NavigateUrl='<%#Eval("bvin", "OrderPayments.aspx?id={0}") %>' runat="server"><i class="hcIconEdit"></i>Payment</asp:HyperLink>
-                    <asp:HyperLink ID="btnShipping" NavigateUrl='<%#Eval("bvin", "ShipOrder.aspx?id={0}") %>' runat="server"><i class="hcIconEdit"></i>Shipping</asp:HyperLink>
+                    <asp:HyperLink ID="btnDetails" NavigateUrl='<%#Eval("bvin", "ViewOrder.aspx?id={0}") %>' runat="server"><i class="hcIconEdit"></i>جزییات</asp:HyperLink>
+                    <asp:HyperLink ID="btnPayment" NavigateUrl='<%#Eval("bvin", "OrderPayments.aspx?id={0}") %>' runat="server"><i class="hcIconEdit"></i>پرداخت</asp:HyperLink>
+                    <asp:HyperLink ID="btnShipping" NavigateUrl='<%#Eval("bvin", "ShipOrder.aspx?id={0}") %>' runat="server"><i class="hcIconEdit"></i>بارگیری</asp:HyperLink>
                 </ItemTemplate>
             </asp:TemplateField>
         </Columns>

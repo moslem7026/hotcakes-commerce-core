@@ -8,7 +8,7 @@
     <h1>@Model.LocalProduct.ProductName</h1>
     @Html.Raw((string)TempData["messages"])
     <div class="row-fluid">
-        <div class="span6">
+        <div class="col-md-4">
             <div class="hc-product-image">
                 <img id="hcProductImage" src="@Model.ImageUrls.MediumlUrl" alt="@Model.ImageUrls.MediumlAltText" />
             </div>
@@ -21,7 +21,7 @@
                 }
             </div>
         </div>
-        <div class="span6">
+        <div class="col-md-8">
             @Html.Partial("_ProductDetails", Model)
         </div>
     </div>

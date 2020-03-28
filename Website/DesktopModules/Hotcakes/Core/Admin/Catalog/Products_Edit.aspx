@@ -1,4 +1,4 @@
-<%@ Page ValidateRequest="false" Language="C#" MasterPageFile="../AdminNav.master" AutoEventWireup="True" Inherits="Hotcakes.Modules.Core.Admin.Catalog.Products_Edit" CodeBehind="Products_Edit.aspx.cs" %>
+﻿<%@ Page ValidateRequest="false" Language="C#" MasterPageFile="../AdminNav.master" AutoEventWireup="True" Inherits="Hotcakes.Modules.Core.Admin.Catalog.Products_Edit" CodeBehind="Products_Edit.aspx.cs" %>
 
 <%@ Register Assembly="Telerik.Web.UI" Namespace="Telerik.Web.UI" TagPrefix="telerik" %>
 <%@ Register Assembly="Hotcakes.Modules" Namespace="Hotcakes.Modules.Core.Admin.AppCode" TagPrefix="hcc" %>
@@ -15,14 +15,14 @@
     <div class="hcBlock hcBlockNotTopPadding">
         <div class="hcForm">
             <div class="hcFormItem">
-                <asp:HyperLink ID="lnkViewInStore" runat="server" CssClass="hcTertiaryAction" Target="_blank">View in Store</asp:HyperLink>
+                <asp:HyperLink ID="lnkViewInStore" runat="server" CssClass="hcTertiaryAction" Target="_blank">مشاهده محصول در فروشگاه</asp:HyperLink>
             </div>
             <div class="hcFormItem">
-                <asp:HyperLink ID="lnkClone" runat="server" CssClass="hcTertiaryAction">Clone Product</asp:HyperLink>
+                <asp:HyperLink ID="lnkClone" runat="server" CssClass="hcTertiaryAction">ایجاد کپی از محصول</asp:HyperLink>
             </div>
             <div class="hcFormItem">
-                <asp:LinkButton ID="btnDelete" runat="server" Text="Delete Product" CssClass="hcTertiaryAction" CausesValidation="false"
-                    OnClick="btnDelete_Click" OnClientClick="return hcConfirm(event,'Are you sure you want to delete this product?');" />
+                <asp:LinkButton ID="btnDelete" runat="server" Text="حذف محصول از فروشگاه" CssClass="hcTertiaryAction" CausesValidation="false"
+                    OnClick="btnDelete_Click" OnClientClick="return hcConfirm(event,'آیا این محصول حذف شود ؟');" />
             </div>
 			<div class="hcFormItem">
 				<asp:HyperLink ID="lnkBacktoAbandonedCartsReport" Text="Back to Abandoned Carts Report" CssClass="hcTertiaryAction" Target="_self" runat="server" />
@@ -111,31 +111,31 @@
 
     </script>
 
-    <h1>Edit Product</h1>
+    <h1>ویرایش محصول</h1>
     <hcc:MessageBox ID="ucMessageBox" runat="server" />
 
     <div class="hcColumnLeft" style="width: 50%">
         <div class="hcForm">
-            <h2>Main</h2>
+            <h2>اطلاعات اصلی</h2>
             <div class="hcFormItem">
-                <label class="hcLabel">Product Style</label>
+                <label class="hcLabel">استایل محصول</label>
                 <asp:RadioButtonList ID="rbBehaviour" AutoPostBack="true" CausesValidation="false"
                     RepeatLayout="Flow" RepeatDirection="Horizontal" runat="server" CssClass="hcProductBehaviour">
-                    <asp:ListItem Text="Product" Value="" Selected="True" />
-                    <asp:ListItem Text="Bundle" Value="B" />
-                    <asp:ListItem Text="Gift Card" Value="GC" />
+                    <asp:ListItem Text="محصول" Value="" Selected="True" />
+                    <asp:ListItem Text="بسته ای از محصولات" Value="B" />
+                    <asp:ListItem Text="کارت هدیه" Value="GC" />
                 </asp:RadioButtonList>
             </div>
             <div class="hcFormItem">
-                <label class="hcLabel">Name<i class="hcLocalizable"></i></label>
+                <label class="hcLabel">نام محصول<i class="hcLocalizable"></i></label>
                 <asp:TextBox ID="txtProductName" ClientIDMode="static" runat="server" Width="50%" />
                 <asp:RequiredFieldValidator ID="valNameRequired" runat="server" Display="Dynamic"
                     ControlToValidate="txtProductName" Text="Name is Required" CssClass="hcFormError" />
                 <hcc:TextBoxLengthValidator runat="server" ID="tlvNameLength" MaxLength="512" ControlToValidate="txtProductName" Display="Dynamic"
-                    Text="Name can not be longer than 255 characters" CssClass="hcFormError" />
+                    Text="نام محصول نباید بیش از 255 کارکتر باشد" CssClass="hcFormError" />
             </div>
             <div class="hcFormItem hcFormItem50p">
-                <label class="hcLabel">SKU</label>
+                <label class="hcLabel">SKU (کد انبار)</label>
                 <asp:TextBox ID="SkuField" runat="server" Width="100%" />
                 <asp:RequiredFieldValidator ID="valSkuRequired" runat="server" ControlToValidate="SkuField" Display="Dynamic"
                     Text="Sku is Required" CssClass="hcFormError" />
@@ -143,7 +143,7 @@
                     Text="Sku can not be more than 50 characters long" CssClass="hcFormError" />
             </div>
             <div class="hcFormItem hcFormItem50p hcAlignRight">
-                <label class="hcLabel">Product Type</label>
+                <label class="hcLabel">نوع محصول</label>
                 <telerik:RadComboBox ID="lstProductType" runat="server" AutoPostBack="True" CausesValidation="false" Width="95%" />
                 <asp:CustomValidator ID="ProductTypeCustomValidator" runat="server" Display="Dynamic" ErrorMessage="Test"
                     OnServerValidate="ProductTypeCustomValidator_ServerValidate" />
@@ -153,19 +153,19 @@
             </div>
         </div>
         <asp:Panel ID="pnlPricing" runat="server" class="hcForm">
-            <h2 class="hcClear">Pricing</h2>
+            <h2 class="hcClear">قیمت گذاری</h2>
             <div class="hcFormItem">
-                <asp:CheckBox CssClass="hcUserPrice" ID="chkUserPrice" Text="Allow User Supplied Price" runat="server" />
+                <asp:CheckBox CssClass="hcUserPrice" ID="chkUserPrice" Text="کاربر قیمت را مشخص کند" runat="server" />
             </div>
             <div class="hcFormItem">
-                <asp:CheckBox ID="chkHideQty" Text="Hide Quantity" runat="server" />
+                <asp:CheckBox ID="chkHideQty" Text="مخفی کرددن ورودی تعداد خرید " runat="server" />
             </div>
             <div class="hcFormItem">
-                <label class="hcLabel">User Price Label<i class="hcLocalizable"></i></label>
+                <label class="hcLabel">برچسب قیمت کاربر<i class="hcLocalizable"></i></label>
                 <asp:TextBox ID="txtUserPriceLabel" runat="server" CssClass="hcUserPriceLabel" />
             </div>
             <div class="hcFormItem hcFormItem50p">
-                <label class="hcLabel">MSRP</label>
+                <label class="hcLabel">MSRP (قیمت پیشنهادی کارخانه جهت خرده فروشی ها) </label>
                 <asp:TextBox ID="ListPriceField" runat="server" CssClass="FormInput hcPriceInput" style="width:200px"/>
                 <asp:RequiredFieldValidator ID="rfvListPrice" runat="server" CssClass="hcFormError" Display="Dynamic"
                     ControlToValidate="ListPriceField" Text="List Price is required" />
@@ -173,7 +173,7 @@
                     CssClass="hcFormError" Text="Msrp must be a currency value" />
             </div>
             <div class="hcFormItem hcFormItem50p">
-                <label class="hcLabel">Cost</label>
+                <label class="hcLabel">Cost (قیمت خرید)</label>
                 <asp:TextBox ID="CostField" runat="server" CssClass="hcPriceInput" style="width:200px" />
                 <asp:RequiredFieldValidator ID="rfvCostField" runat="server" ControlToValidate="CostField" Display="Dynamic"
                     CssClass="hcFormError" Text="Cost is required" />
@@ -181,7 +181,7 @@
                     CssClass="hcFormError" Text="Cost must be a currency value" />
             </div>
             <div class="hcFormItem hcFormItem50p">
-                <label class="hcLabel">Price</label>
+                <label class="hcLabel">Price (قیمت فروش)</label>
                 <asp:TextBox ID="SitePriceField" runat="server" Columns="10" CssClass="FormInput hcPriceInput" style="width:200px" />
                 <asp:RequiredFieldValidator ID="rfvSitePrice" runat="server" CssClass="hcFormError" Display="Dynamic"
                     ControlToValidate="SitePriceField" Text="Site Price is required" />
@@ -189,18 +189,18 @@
                     CssClass="hcFormError" Text="Price must be a currency value" />
             </div>
             <div class="hcFormItem hcFormItem50p">
-                <label class="hcLabel">Text<i class="hcLocalizable"></i></label>
+                <label class="hcLabel">متن جایگزین قیمت<i class="hcLocalizable"></i></label>
                 <asp:TextBox ID="PriceOverrideTextBox" runat="server" Columns="10" CssClass="hcPriceInput" style="width:200px"/>
             </div>
         </asp:Panel>
         <div class="hcForm">
-            <h2 class="hcClear">Properties</h2>
+            <h2 class="hcClear">مشخصات محصول</h2>
             <div class="hcFormItem hcFormItem50p">
-                <label class="hcLabel">Manufacturer</label>
+                <label class="hcLabel">کارخانه</label>
                 <telerik:RadComboBox ID="lstManufacturers" runat="server" />
             </div>
             <div class="hcFormItem hcFormItem50p">
-                <label class="hcLabel">Vendor</label>
+                <label class="hcLabel">تامین کننده</label>
                 <telerik:RadComboBox ID="lstVendors" runat="server" />
             </div>
 
@@ -208,43 +208,43 @@
     </div>
     <div class="hcColumnRight hcLeftBorder" style="width: 49%">
         <div class="hcForm">
-            <h2>Display</h2>
+            <h2>نمایش</h2>
             <div class="hcFormItem hcFormItem50p">
-                <asp:CheckBox Checked="true" ID="chkActive" Text="Active" runat="server" />
+                <asp:CheckBox Checked="true" ID="chkActive" Text="فعال" runat="server" />
             </div>
             <div class="hcFormItem hcFormItem50p">
-                <asp:CheckBox Checked="true" ID="chkSearchable" Text="Searchable" runat="server" />
+                <asp:CheckBox Checked="true" ID="chkSearchable" Text="قابل جستجو" runat="server" />
             </div>
             <div class="hcFormItem hcFormItem50p">
-                <asp:CheckBox ID="chkFeatured" Text="Featured" runat="server" />
+                <asp:CheckBox ID="chkFeatured" Text="ویژه" runat="server" />
             </div>
             <div class="hcFormItem">
-                <label class="hcLabel">Template</label>
+                <label class="hcLabel">قالب</label>
                 <telerik:RadComboBox ID="ddlTemplateList" runat="server" AutoPostBack="False" />
             </div>
             <div class="hcFormItem hcFormItem33p hcClear">
-                <label class="hcLabel">Large Image</label>
+                <label class="hcLabel">عکس بزرگ</label>
                 <hcc:ImageUploader runat="server" ID="ucImageUploadLarge" />
             </div>
             <div class="hcFormItem hcFormItem66p">
-                <label class="hcLabel">Image Description<i class="hcLocalizable"></i></label>
+                <label class="hcLabel">توضیحات عکس<i class="hcLocalizable"></i></label>
                 <asp:TextBox ID="MediumImageAlternateTextField" TextMode="MultiLine" Height="150px" runat="server" />
             </div>
             <div class="hcFormItem hcFormItem33p hcClear">
-                <label class="hcLabel">Small Image</label>
+                <label class="hcLabel">عکس کوچک</label>
                 <asp:Image ID="imgPreviewSmall" runat="server" ImageUrl="../images/NoImageAvailable.gif" Height="150px" />
             </div>
             <div class="hcFormItem hcFormItem66p">
-                <label class="hcLabel">Image Description<i class="hcLocalizable"></i></label>
+                <label class="hcLabel">توضیحات عکس<i class="hcLocalizable"></i></label>
                 <asp:TextBox ID="SmallImageAlternateTextField" TextMode="MultiLine" Height="150px" runat="server" />
             </div>
         </div>
     </div>
 
-    <div class="hcForm hcClear">
-        <h2>Description<i class="hcLocalizable"></i></h2>
-        <div class="hcFormItem">
-            <hcc:HtmlEditor ID="LongDescriptionField" runat="server" EditorHeight="300" EditorWidth="1340"
+    <div class="hcForm hcClear" >
+        <h2>توضیح محصول<i class="hcLocalizable"></i></h2>
+        <div class="hcFormItem" style="width:100%; padding:10px;">
+            <hcc:HtmlEditor ID="LongDescriptionField" runat="server" EditorHeight="300"
                 EditorWrap="true" />
         </div>
         <div class="hcFormItem hcFormItemLeft">
@@ -276,18 +276,18 @@
     </div>
 
     <div class="hcForm hcClear">
-        <h2>Tax</h2>
+        <h2>مالیات</h2>
         <div class="hcFormItem hcFormItemLeft">
-            <label class="hcLabel">Tax Schedule</label>
+            <label class="hcLabel">برنامه مالیاتی</label>
             <asp:DropDownList ID="lstTaxClasses" runat="server" />
         </div>
         <div class="hcFormItem hcFormItemRight">
             <label class="hcLabel">&nbsp;</label>
-            <asp:CheckBox Checked="false" ID="TaxExemptField" Text="Tax Exempt?" runat="server" />
+            <asp:CheckBox Checked="false" ID="TaxExemptField" Text="معاف از مالیات است" runat="server" />
         </div>
     </div>
 
-    <h2 class="hcClear">Shipping</h2>
+    <h2 class="hcClear">بارگیری و حمل و نقل</h2>
 
     <div class="hcColumnLeft" style="width: 50%">
         <div class="hcForm">
@@ -303,7 +303,7 @@
 					ErrorMessage="Not a valid number." runat="server" CssClass="hcFormError"/>
             </div>
             <div class="hcFormItem">
-                <label class="hcLabel">Extra Ship Fee</label>
+                <label class="hcLabel">هزینه اضافی برای بارگیری</label>
                 <asp:TextBox ID="ExtraShipFeeField" runat="server" />
                 <asp:RequiredFieldValidator ID="RequiredFieldValidator9" runat="server" ControlToValidate="ExtraShipFeeField"
                     Display="Dynamic" Text="Extra Ship Fee is required." CssClass="hcFormError" />
@@ -311,19 +311,19 @@
                     Display="Dynamic" Text="Extra Ship Fee must be a numeric value." CssClass="hcFormError" />
             </div>
             <div class="hcFormItem">
-                <asp:CheckBox ID="chkNonShipping" runat="server" Text="Non-Shipping Product"/>
+                <asp:CheckBox ID="chkNonShipping" runat="server" Text="محصول نیاز به بارگیری ندارد"/>
             </div>
             <div class="hcFormItem">
-                <label class="hcLabel">Shipping Charges
+                <label class="hcLabel">هزینه بارگیری
                     <i class="hcIconInfo">
                         <span class="hcFormInfo" style="display: none">This should not be used as a promotion, but to define products that always or never charge the specified fees.</span>
                     </i>
                 </label>
                 <asp:DropDownList ID="lstShippingCharge" runat="server" CssClass="hcShippingChargeInput">
-                    <asp:ListItem Text="No Charge" Value="0" />
-                    <asp:ListItem Text="Charge Shipping &amp; Handling" Value="1" />
-                    <asp:ListItem Text="Charge Shipping Only" Value="2" />
-                    <asp:ListItem Text="Charge Handling Only" Value="3" />
+                    <asp:ListItem Text="هزینه ای ندارد" Value="0" />
+                    <asp:ListItem Text="حمل و نقل + بسته بندی" Value="1" />
+                    <asp:ListItem Text="فقط هزینه حمل و نقل" Value="2" />
+                    <asp:ListItem Text="فقط هزینه بسته بندی" Value="3" />
                 </asp:DropDownList>
             </div>
         </div>
@@ -331,7 +331,7 @@
     <div class="hcColumnRight" style="width: 49%">
         <div class="hcForm">
             <div class="hcFormItemLabel">
-                <label class="hcLabel">Dimensions</label>
+                <label class="hcLabel">ابعاد</label>
             </div>
             <div class="hcFormItem hcFormItem33p">
                 <asp:TextBox ID="txtLength" runat="server" CssClass="RadComboBox" /><span class="hcInset">L</span>
@@ -362,24 +362,24 @@
 					ErrorMessage="Not a valid number." runat="server" CssClass="hcFormError"/>
             </div>
             <div class="hcFormItem">
-                <label class="hcLabel">Ship Mode</label>
+                <label class="hcLabel">حالت بارگیری</label>
                 <asp:DropDownList ID="ddlShipType" runat="server">
-                    <asp:ListItem Text="Ship from Store" Value="1" />
-                    <asp:ListItem Text="Drop Ship from Manufacturer" Value="3" />
-                    <asp:ListItem Text="Drop Ship from Vendor" Value="2" />
+                    <asp:ListItem Text="بارگیری از مغازه" Value="1" />
+                    <asp:ListItem Text="بارگیری از کارخانه" Value="3" />
+                    <asp:ListItem Text="بارگیری از تامین کننده" Value="2" />
                 </asp:DropDownList>
             </div>
             <div class="hcFormItem">
-                <asp:CheckBox ID="chkShipSeparately" runat="server" Text="Ships in a Separate Box" />
+                <asp:CheckBox ID="chkShipSeparately" runat="server" Text="در بسته جداگانه بارگیری شود" />
             </div>
         </div>
     </div>
 
-    <h2 class="hcClear">Advanced</h2>
+    <h2 class="hcClear">پیشرفته</h2>
 
     <div class="hcForm">
         <div class="hcFormItem hcFormItemLeft">
-            <label class="hcLabel">Minimum Quantity</label>
+            <label class="hcLabel">حداقل سفارش</label>
             <asp:TextBox ID="txtMinimumQty" runat="server" Columns="5" Rows="1" TabIndex="6050" Text="0" />
             <asp:RequiredFieldValidator ID="RequiredFieldValidator10" runat="server" ControlToValidate="txtMinimumQty"
                 Display="Dynamic" Text="Minimum Quantity is required." CssClass="hcFormError" />
@@ -387,7 +387,7 @@
                 Display="Dynamic" Text="Minimum Quantity must be numeric." ValidationExpression="[0-9]{1,6}" CssClass="hcFormError" />
         </div>
         <div class="hcFormItem hcFormItemRight">
-            <label class="hcLabel">Allow Reviews</label>
+            <label class="hcLabel">اجازه نقد و بررسی محصول</label>
             <asp:RadioButtonList runat="server" ID="rblAllowReviews" RepeatLayout="Flow" RepeatDirection="Horizontal">
                 <asp:ListItem Text="Inherit" Value="" Selected="True" />
                 <asp:ListItem Text="Yes" Value="True" />
@@ -395,7 +395,7 @@
             </asp:RadioButtonList>
         </div>
         <div class="hcFormItem hcFormItemLeft">
-            <label class="hcLabel">Page URL</label>
+            <label class="hcLabel">لینک صفحه</label>
             <asp:TextBox ID="txtRewriteUrl" ClientIDMode="Static" runat="server" />
             <hcc:UrlsAssociated ID="UrlsAssociated1" runat="server" />
         </div>
@@ -434,13 +434,13 @@
         </tr>--%>
     <ul class="hcActions">
         <li>
-            <asp:LinkButton runat="server" Text="Save" CssClass="hcPrimaryAction" OnClick="btnUpdate_Click" />
+            <asp:LinkButton runat="server" Text="ذخیره" CssClass="hcPrimaryAction" OnClick="btnUpdate_Click" />
         </li>
         <li>
-            <asp:LinkButton runat="server" Text="Save and Close" CssClass="hcSecondaryAction" OnClick="btnSave_Click" />
+            <asp:LinkButton runat="server" Text="ذخیره و بستن" CssClass="hcSecondaryAction" OnClick="btnSave_Click" />
         </li>
         <li>
-            <asp:LinkButton runat="server" Text="Cancel" CssClass="hcSecondaryAction" CausesValidation="False" OnClick="btnCancel_Click" />
+            <asp:LinkButton runat="server" Text="انصراف" CssClass="hcSecondaryAction" CausesValidation="False" OnClick="btnCancel_Click" />
         </li>
     </ul>
 </asp:Content>

@@ -1,0 +1,11 @@
+﻿<div places-lazy-load="{{googleUrl}}"
+     places-lazy-load-params="{{googleUrlWithKey}}">
+
+    <input class="form-control"
+           type="text"
+           places-auto-complete
+           types="{{type}}"
+           on-place-changed="placeChanged()"
+           fields="{{placesFields}}" />
+
+</div>

@@ -133,13 +133,12 @@
     <value>محصولات مرتبط</value>
   </data>
   <data name="Reviews.Text" xml:space="preserve">
-    <value>نقد و بررسی ها</value>
+    <value>نقد و بررسی های محصول </value>
   </data>
   <data name="Submit.Text" xml:space="preserve">
     <value>ارسال</value>
   </data>
-<data name="Description.Text" xml:space="preserve">
+  <data name="Description.Text" xml:space="preserve">
     <value>توضیحات محصول</value>
   </data>
-
 </root>

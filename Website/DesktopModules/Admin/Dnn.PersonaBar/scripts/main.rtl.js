@@ -53,7 +53,6 @@
             throw err;
         }
     };
-
 })();
 
 // Enable React Dev Tools inside the iframe, this should be loaded before React has been loaded
@@ -925,7 +924,8 @@ require(['jquery', 'knockout', 'moment', '../util', '../sf', '../config', './../
                                 }());
 
                                 (function setupHoverMenu() {
-                                    
+
+
                                     var showMenuHandlers = [];
                                     var leaveSubMenuHandlers = [];
                                     var mouseOnHovermenu = false;

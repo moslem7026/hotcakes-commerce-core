@@ -1,0 +1,477 @@
+/*Color Css*/
+.TextColor { color:#F99122;}
+.BackgroundColor { background:#F99122;}
+.DefaultBackground { background:#F99122;}
+.DefaultBorderColor{ border-color:#F99122;}
+.DefaultColor  { color:#F99122;}
+.MultiColor-bg { background:#F99122; }
+A, A:link, A:active, A:visited{
+    color: #F99122;
+}
+.how-to-use h3 {
+    border-left: 3px solid #F99122;
+}
+/*Button*/
+.button, .button:link, .button:active, .button:visited {
+    padding: 10px 20px;
+    display: inline-block;
+    font-size: 14px;
+
+}
+.btn-text, .btn-text:link, .btn-text:active, .btn-text:visited {
+    background: #F99122;
+    color: #fff;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+.btn-text:hover { background:#333;}
+
+.btn-text-dark, .btn-text-dark:link, .btn-text-dark:active, .btn-text-dark:visited {
+    background: #F99122;
+    color: #fff;
+    font-weight: bold;
+    text-transform: uppercase;
+	border:2px solid #F99122;
+	padding: 8px 15px;
+}
+.btn-text-dark:hover { background:none;}
+
+
+/*Login*/
+a.login:hover { color:#F99122;}
+
+/*Search*/
+.search_bg a, .search_bg a:link, .search_bg a:active, .search_bg a:visited { background:#F99122;}
+
+/*Footer*/
+.TermsCss:hover {
+  color: #F99122;
+}
+/*back to top*/
+.goup a img {
+    border: 2px solid #F99122;
+}
+/*breadcrumb*/
+.skin-breadcrumb a:hover { text-decoration:underline; color:#F99122;}
+
+/*HomePage*/
+.home-top-box .box:hover { background:#F99122; color:#fff; }
+.home-top-box .box em { color:#F99122; }
+.home-top-box .box:hover em,
+.home-top-box .box:hover h4,
+.home-top-box .box:hover p { color:#fff;}
+.top-contact .icon {
+    color: #F99122;
+    font-size: 25px;
+    float: left;
+    padding: 10px 0 0 0;
+}
+
+.plus-mask .box a {
+    color: #F99122;
+}
+.gallery-item .box a:hover{ background:#F99122; color:#fff;}
+.quote-name {
+    border-left: 2px solid #F99122;
+    border-right: 2px solid #F99122;
+}
+
+.top-social a:hover { color:#F99122;}
+.service-tabs ul li.active a {
+    background:#F99122;
+	color:#fff;
+}
+.home-WhyUs em {
+    font-size: 24px;
+    background: #F99122;
+    float: left;
+    color: #fff;
+    border-radius: 100%;
+    width: 50px;
+    height: 50px;
+    text-align: center;
+    line-height: 50px;
+}
+.TopService .details h5 a:hover { color:#F99122;}
+.home-accordion .panel-title a {
+  color: #fff;
+  background-color:#F99122;
+}
+.WhoWeAre .box:hover .image{    
+	background:#F99122;
+	border:1px solid #F99122;
+ }
+.TopService .details:hover em { background:#F99122; color:#fff;}
+.home-team .box:hover .details { background:#F99122; color:#fff;}
+.home-contact .social-icon a:hover { background:#F99122; border:1px solid #F99122;}
+.latest-news .NewsIcon {
+    background: #F99122;
+}
+.news-left .date { background:#F99122;}
+.news-list h5 a:hover { color:#F99122;}
+.footer-social a:hover { color:#F99122;}
+.home-other-links li a:hover { color:#F99122; }
+.home-other-links li em { margin:0 6px 0 0; color:#F99122;}
+h1.footer-logo span { color:#F99122;}
+.footer-row1 .social-icon a:hover { background:#F99122;}
+.ServiceBottomLeft .details { margin:0 0 20px 0;}
+.ServiceBottomLeft .details h4 { color:#333;}
+.ServiceBottomLeft .details em {
+    background: #F99122;
+    color: #FFF;
+    border-radius: 50%;
+    width: 45px;
+    height: 45px;
+    text-align: center;
+    line-height: 45px;
+    margin: 0 15px 0 0;
+}
+.ServiceBottomLeft .details p { padding:5px 0 0 60px;}
+
+.TestimonialsTabs ul li.active .img { border:1px solid #F99122;    opacity: 1; width:90px;}
+.TestimonialsTabs ul li:hover .img {  border:1px solid #F99122;opacity: 1;}
+.latest-news .details a:hover { color:#F99122;}
+.home-team .box .social a:hover { color:#F99122;}
+.PageTeam-top h6 { color:#F99122; font-weight:bold;}
+.PageTeam-top .box em { font-size:30px; color:#F99122;}
+.PageTeam-top .box:hover { background:#F99122;}
+
+.page-service .box:hover em { background:none; color:#F99122;}
+.page-service .box em { background-color: #F99122; border:2px solid #F99122;}
+
+.TeamNews .date { background:#F99122;}
+.home-contact .contact-info a:hover{ color:#F99122;}
+.TeamStyle01 h6 {
+    color: #F99122;
+    font-weight: 300;
+}
+
+.TeamStyle02 .box h6 {
+    color: #F99122;
+    padding: 10px 0 10px 0;
+    position: relative;
+    margin: 10px 0 0 0;
+}
+
+.TeamStyle02 .box .social a {
+    background: #F99122;
+    width: 35px;
+    height: 35px;
+    line-height: 35px;
+    color: #fff;
+    border-radius: 50%;
+}
+.PhotoGallery .hover-text h5 { color:#F99122; font-weight:bold;}
+.PhotoGallery .hover-icon span {
+    color: #F99122;
+}
+.PhotoGallery .hover-icon span:hover { background:#F99122; color:#fff;}
+
+.footer-links a:hover { color:#F99122; }
+.HomeTabs ul {  background:#F99122;}
+.footer-row1 .link-history:hover { background:#F99122; color:#fff; border:1px solid #F99122; }
+
+/*inner page*/
+.ColorIcons .col-icon {
+    color: #F99122;
+}
+.featured-pro h5:after { 
+    background: #F99122;
+}
+
+
+.page-about-top h4:after {
+    content: "";
+    height: 2px;
+    background: #F99122;
+    position: absolute;
+    width: 30px;
+    bottom: 0;
+    left: 0;
+}
+
+.plan_col.plan_column1 > h6{
+	color:#F99122;
+}
+
+.plan_col.plan_column1:hover > h6, .plan_col.plan_column1.active_plan > h6 {
+    background: #F99122;
+}
+
+.plan_col li i.wrong_icon {
+    color: #F99122;
+}
+
+.hm-popular header {
+    color: #F99122;
+}
+
+.hm-popular .hm-pricing-footer { background:#F99122;}
+.hm-pricing-list .box:hover .hm-pricing-footer{ background:#F99122;}
+
+
+
+
+
+/*Container*/
+.Container002 .dnntitle:after {
+    background: #F99122;
+}
+.Container004 {
+    border-bottom: 3px solid #F99122;
+}
+.Container004 .dnntitle {
+    color: #F99122;
+}
+.Container007 .dnntitle .title-bg:after {
+  border-bottom: 45px solid #F99122;
+}
+
+.Container013 .dnntitle:after {
+    background: #F99122;
+}
+.Container014 .dnntitle:after {
+    background: #F99122;
+}
+
+
+
+
+/*Standard Menu*/
+.DNNStandard li.hover a{ background:#F99122; }
+.DNNStandard li.hover li a{ background:none; }
+.DNNStandard li.current li a{ background:none; }
+.DNNStandard li a:hover{ background:#F99122; }
+.DNNStandard li.selected a{ background:#F99122; }
+.DNNStandard li.current a { background:#F99122; }
+.DNNStandard li.selected a:hover{ background:#F99122; }
+.DNNStandard li.current a:hover { background:#F99122;}
+.DNNStandard li.hover a:after { 
+	content: "";
+	position: absolute;
+	border-style: solid;
+	border-width: 10px 10px 0px;
+	border-color: #F99122 transparent;
+	display: block;
+	width: 0px;
+	bottom: -10px;
+	left: 0px;
+	right: 0px;
+	margin: 0px auto;
+	z-index: 9999;
+}
+.DNNStandard li.hover li a:after{ display:none;}
+.DNNStandard li a:hover:after { 
+	content: "";
+	position: absolute;
+	border-style: solid;
+	border-width: 10px 10px 0px;
+	border-color: #F99122 transparent;
+	display: block;
+	width: 0px;
+	bottom: -10px;
+	left: 0px;
+	right: 0px;
+	margin: 0px auto;
+	z-index: 9999;
+}
+.DNNStandard li li a:hover:after{ display:none;}
+.DNNStandard li.hover a:hover:after { 
+	content: "";
+	position: absolute;
+	border-style: solid;
+	border-width: 10px 10px 0px;
+	border-color: #F99122 transparent;
+	display: block;
+	width: 0px;
+	bottom: -10px;
+	left: 0px;
+	right: 0px;
+	margin: 0px auto;
+	z-index: 9999;
+}
+.DNNStandard li.hover li a:hover:after{ display:none;}
+
+.DNNStandard li.current a:hover:after { 
+	content: "";
+	position: absolute;
+	border-style: solid;
+	border-width: 10px 10px 0px;
+	border-color: #F99122 transparent;
+	display: block;
+	width: 0px;
+	bottom: -10px;
+	left: 0px;
+	right: 0px;
+	margin: 0px auto;
+	z-index: 9999;
+}
+.DNNStandard li.current a:after { 
+	content: "";
+	position: absolute;
+	border-style: solid;
+	border-width: 10px 10px 0px;
+	border-color: #F99122 transparent;
+	display: block;
+	width: 0px;
+	bottom: -10px;
+	left: 0px;
+	right: 0px;
+	margin: 0px auto;
+	z-index: 9999;
+
+}
+.DNNStandard li.current li a:after { display:none;}
+
+.DNNStandard li li a:hover { background:#F99122; color:#fff;}
+
+.DNNStandard li li.selected a{ color:#F99122;}
+.DNNStandard li li.selected li a { color:#fff;}
+.DNNStandard li li.selected a:hover { color:#fff;}
+/*Mega Menu*/
+ul.dnnmega li a:hover {
+	background:#F99122;
+}
+.dnnmega li.mmBreadcrumb a:after {
+    content: "";
+    position: absolute;
+    border-style: solid;
+    border-width: 10px 10px 0px;
+    border-color: #F99122 transparent;
+    display: block;
+    width: 0px;
+    bottom: -10px;
+    left: 0px;
+    right: 0px;
+    margin: 0px auto;
+    z-index: 9999;
+}
+
+
+ul.dnnmega li a:hover:after{
+    content: "";
+    position: absolute;
+    border-style: solid;
+    border-width: 10px 10px 0px;
+    border-color: #F99122 transparent;
+    display: block;
+    width: 0px;
+    bottom: -10px;
+    left: 0px;
+    right: 0px;
+    margin: 0px auto;
+    z-index: 9999;
+}
+ul.dnnmega li.mmItemHover a:after{
+    content: "";
+    position: absolute;
+    border-style: solid;
+    border-width: 10px 10px 0px;
+    border-color: #F99122 transparent;
+    display: block;
+    width: 0px;
+    bottom: -10px;
+    left: 0px;
+    right: 0px;
+    margin: 0px auto;
+    z-index: 9999;
+}
+
+ul.dnnmega li.mmItemHover a {
+	background:#F99122;
+}
+
+ul.dnnmega li .megaborder {
+    border-bottom: 2px solid #F99122;
+}
+
+ul.dnnmega li.category a:hover { color:#F99122;}
+.dnnmega li.selected a {
+    color: #F99122;
+	border-top-color:#F99122;
+}
+.dnnmega li.mmBreadcrumb li.mmSelected a{ color:#F99122;}
+ul.dnnmega .megaborder li.mmSelected li a:hover { color:#F99122;}
+.dnnmega li.mmBreadcrumb a {
+	background:#F99122;
+}
+
+
+
+/*Left Menu*/
+.LeftMenu .treeview a.selected {
+  color: #fff;
+  background: #F99122;
+}
+.LeftMenu .treeview a:hover { color: #fff; cursor: pointer; background:#F99122; }
+
+.LeftMenu .treeview li a.current,
+.LeftMenu .treeview li.collapsable a{ background: #F99122; color:#fff;}
+.LeftMenu .treeview li.collapsable ul a:hover { color:#F99122; background:rgba(255,255,255,0.05);}
+.LeftMenu .treeview li.collapsable ul a.selected { color:#F99122;background: none; border-right: none;}
+.LeftMenu .treeview li.collapsable ul a.selected:hover { color:#F99122; background:rgba(255,255,255,0.05);}
+
+/*Mobile Menu*/
+.MobileMenu .treeview a.current,
+.MobileMenu .treeview a.selected {
+	background:#F99122;
+	color:#fff;
+}
+
+.MobileMenu .treeview a:hover {
+	background:#F99122;
+	color:#fff;
+}
+
+.MobileMenu .treeview li li a:hover { background:rgba(255,255,255,0.05); color:#F99122;}
+.MobileMenu .treeview li li.collapsable a:hover { color: #F99122;}
+.MobileMenu .treeview li.collapsable ul a:hover { color:#F99122; background:rgba(255,255,255,0.05);}
+.MobileMenu .treeview li li a.selected { color:#F99122;background: none;}
+.MobileMenu .treeview li li a.selected:hover { background:rgba(255,255,255,0.05); color:#F99122;}
+
+
+
+
+
+
+/*Slider*/
+.btn-style1 .bx-wrapper .bx-pager.bx-default-pager a { background:#F99122; opacity:0.5;}
+
+.bx-wrapper .bx-controls-direction a {
+    background-color: #F99122;
+}
+.btn-style2 .bx-wrapper .bx-controls-direction a{
+    background-color: #F99122;
+}
+
+
+.btn-style2 .bx-wrapper .bx-pager.bx-default-pager a:hover, 
+.btn-style2 .bx-wrapper .bx-pager.bx-default-pager a.active {
+    background: #F99122;
+}
+
+.button-controls a, .button-controls a:link, .button-controls a:active, .button-controls a:visited {
+  color: #F99122;
+  text-align: center;
+  top: inherit;
+  border: 1px solid #F99122;
+  border-radius:50%;
+  width: 35px;
+  height: 35px;
+  line-height: 35px;
+  font-size: 18px;
+}
+.button-controls a:hover { color:#fff; background:#F99122;}
+#bx-thumbnail-pager a.active img,
+#bx-thumbnail-pager img:hover { border:2px solid #F99122;}
+
+.owl-theme .owl-controls .owl-buttons div:hover { background:#F99122;}
+.owl-theme .owl-controls .owl-page span { background:#F99122;}
+
+
+
+
+
+
+
+

@@ -267,6 +267,7 @@
     <Content Include="Core\Admin\Dashboard\Dashboard.ascx" />
     <Content Include="Core\Admin\Dashboard\TopFive.ascx" />
     <Content Include="Core\Admin\default.css" />
+    <Content Include="Core\Admin\default.rtl.css" />
     <Content Include="Core\Admin\HostAdmin.aspx" />
     <Content Include="Core\Admin\Images\admin_form_sprite.png" />
     <Content Include="Core\Admin\Images\admin_loc_icon.png" />
@@ -4013,6 +4014,14 @@
     <Content Include="Providers\DataProviders\SqlDataProvider\02.00.01.SqlDataProvider" />
     <Content Include="Providers\DataProviders\SqlDataProvider\03.00.00.SqlDataProvider" />
     <Content Include="Providers\DataProviders\SqlDataProvider\03.02.02.SqlDataProvider" />
+    <Content Include="Core\Admin\fonts\IRANSansWeb_Light.eot" />
+    <Content Include="Core\Admin\fonts\IRANSansWeb_Light.ttf" />
+    <Content Include="Core\Admin\fonts\IRANSansWeb_Light.woff" />
+    <Content Include="Core\Admin\fonts\IRANSansWeb_Light.woff2" />
+    <Content Include="Core\Admin\fonts\IRANSansWeb_Medium.eot" />
+    <Content Include="Core\Admin\fonts\IRANSansWeb_Medium.ttf" />
+    <Content Include="Core\Admin\fonts\IRANSansWeb_Medium.woff" />
+    <Content Include="Core\Admin\fonts\IRANSansWeb_Medium.woff2" />
     <None Include="web.Debug.config">
       <DependentUpon>web.config</DependentUpon>
     </None>
@@ -4318,7 +4327,9 @@
     <Content Include="Core\Admin\Catalog\App_LocalResources\Products_Edit_Images.aspx.resx" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Core\Admin\Catalog\App_LocalResources\ProductTypesEdit.aspx.resx" />
+    <Content Include="Core\Admin\Catalog\App_LocalResources\ProductTypesEdit.aspx.resx">
+      <SubType>Designer</SubType>
+    </Content>
   </ItemGroup>
   <ItemGroup>
     <Content Include="Core\Admin\Marketing\Qualifications\App_LocalResources\VendorOrManufacturerEditor.ascx.resx" />
@@ -4344,6 +4355,18 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Core\Admin\Controls\App_LocalResources\MembershipTypeEdit.ascx.resx" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Core\Admin\Dashboard\App_LocalResources\Dashboard.ascx.fa-ir.resx" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Core\Admin\Dashboard\App_LocalResources\DashboardHandler.ashx.fa-ir.resx" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Core\Admin\Orders\App_LocalResources\Default.aspx.fa-ir.resx" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Core\Admin\Orders\App_LocalResources\OrderItems.ascx.fa-ir.resx" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

@@ -354,7 +354,7 @@ namespace Hotcakes.Commerce.Orders
             {
                 return sb.ToString();
             }
-            return "No Payment Methods Selected";
+            return "هیچ روش پرداختی یافت نشد";
         }
 
         public bool AddPaymentTransactionToOrder(Order o, Transaction t)

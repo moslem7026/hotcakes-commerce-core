@@ -194,10 +194,15 @@ namespace Hotcakes.Commerce.Contacts
             {
                 try
                 {
-                    var countryRepo = Factory.CreateRepo<CountryRepository>();
-                    return countryRepo.Find(CountryBvin).Regions.
-                        Where(r => r.Abbreviation == RegionBvin).
-                        FirstOrDefault();
+                    if (string.IsNullOrEmpty(CountryBvin))
+                        return null;
+                    else
+                    {
+                        var countryRepo = Factory.CreateRepo<CountryRepository>();
+                        return countryRepo.Find(CountryBvin).Regions.
+                            Where(r => r.Abbreviation == RegionBvin).
+                            FirstOrDefault();
+                    }
                 }
                 catch
                 {

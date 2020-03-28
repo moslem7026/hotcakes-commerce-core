@@ -1298,7 +1298,4 @@
   <data name="CouldNotRemoveAll.Text" xml:space="preserve">
     <value>Could not remove all users</value>
   </data>
-  <data name="LastName.Text2" xml:space="preserve">
-    <value />
-  </data>
 </root>

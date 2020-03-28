@@ -13,7 +13,7 @@
     <div class="hcBlock hcBlockNotTopPadding">
         <div class="hcForm">
             <div class="hcFormItem">
-                <asp:HyperLink ID="lnkViewInStore" runat="server" CssClass="hcTertiaryAction" Target="_blank">View in Store</asp:HyperLink>
+                <asp:HyperLink ID="lnkViewInStore" runat="server" CssClass="hcTertiaryAction" Target="_blank"><%=Localization.GetString("Viewinstore") %></asp:HyperLink>
             </div>
             <div class="hcFormItem">
                 <asp:HyperLink ID="lnkBacktoAbandonedCartsReport" Text="Back to Abandoned Carts Report" CssClass="hcButton" Target="_self" runat="server" />

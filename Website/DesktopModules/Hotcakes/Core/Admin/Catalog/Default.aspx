@@ -1,4 +1,4 @@
-<%@ Page Language="C#" MasterPageFile="../AdminNav.master" AutoEventWireup="True" Inherits="Hotcakes.Modules.Core.Admin.Catalog.Default" Title="Hotcakes Admin" CodeBehind="Default.aspx.cs" %>
+﻿<%@ Page Language="C#" MasterPageFile="../AdminNav.master" AutoEventWireup="True" Inherits="Hotcakes.Modules.Core.Admin.Catalog.Default" Title="Hotcakes Admin" CodeBehind="Default.aspx.cs" %>
 
 <%@ Register Src="../Controls/NavMenu.ascx" TagName="NavMenu" TagPrefix="hcc" %>
 <%@ Register Src="../Controls/SimpleProductFilter.ascx" TagName="SimpleProductFilter" TagPrefix="hcc" %>
@@ -16,13 +16,13 @@
     <div class="hcBlock hcNavContentBottom">
         <div class="hcForm">
             <div class="hcFormItem">
-                <asp:HyperLink NavigateUrl="Products_Edit.aspx" Text="+ Add New Product" CssClass="hcTertiaryAction" runat="server" />
+                <asp:HyperLink NavigateUrl="Products_Edit.aspx" Text="+ ایجاد یک محصول جدید" CssClass="hcTertiaryAction" runat="server" />
             </div>
             <div class="hcFormItem">
-                <asp:HyperLink ID="lnkImport" CssClass="hcTertiaryAction" NavigateUrl="Products_Import.aspx" Text="Import from Excel" runat="server" />
+                <asp:HyperLink ID="lnkImport" CssClass="hcTertiaryAction" NavigateUrl="Products_Import.aspx" Text="ورود محصولات از فایل اکسل" runat="server" />
             </div>
             <div class="hcFormItem">
-                <asp:LinkButton ID="lnkExport" CssClass="hcTertiaryAction" Text="Export to Excel" Visible="true" runat="server" />
+                <asp:LinkButton ID="lnkExport" CssClass="hcTertiaryAction" Text="صدور محصولات به فایل اکسل" Visible="true" runat="server" />
             </div>
         </div>
     </div>
@@ -39,7 +39,7 @@
             })
         });
     </script>
-    <h1><%=PageTitle %></h1>
+    <h1>لیست محصولات موجود در فروشگاه</h1>
 
     <hcc:MessageBox ID="ucMessageBox" runat="server" />
     <asp:Panel ID="pnlSamples" runat="server" Visible="false" CssClass="hcFormMessage hcFormInfo">
@@ -75,7 +75,7 @@
 
     <asp:Panel ID="pnlMain" runat="server">
         <hcc:Pager ID="ucPager" PageSize="50" LinkedPagerID="ucPager2" runat="server" />
-        <div class="hcInfoLabel"><%=RowCount %> Products Found</div>
+        <div class="hcInfoLabel"><%=RowCount %> محصول موجود می باشد</div>
 
         <asp:GridView ID="gvProducts" DataKeyNames="Bvin" CssClass="hcGrid" AutoGenerateColumns="false" runat="server">
             <HeaderStyle CssClass="hcGridHeader" />
@@ -88,9 +88,9 @@
                         </asp:HyperLink>
                     </ItemTemplate>
                 </asp:TemplateField>
-                <asp:BoundField DataField="ProductName" HeaderText="Name" />
-                <asp:BoundField DataField="Sku" HeaderText="SKU" />
-                <asp:TemplateField HeaderText="Price">
+                <asp:BoundField DataField="ProductName" HeaderText="نام محصول" />
+                <asp:BoundField DataField="Sku" HeaderText="کد محصول" />
+                <asp:TemplateField HeaderText="قیمت">
                     <ItemTemplate>
                         <%#GetProductPrice(Container) %>
                     </ItemTemplate>
@@ -98,11 +98,11 @@
                 <asp:TemplateField>
                     <ItemStyle Width="80px" />
                     <ItemTemplate>
-                        <asp:HyperLink runat="server" ID="lnkEdit" CssClass="hcIconEdit" Text="Edit" />
+                        <asp:HyperLink runat="server" ID="lnkEdit" CssClass="hcIconEdit" Text="ویرایش" />
 
-                        <asp:LinkButton OnClientClick="return hcConfirm(event, 'Delete this product?');"
+                        <asp:LinkButton OnClientClick="return hcConfirm(event, 'این محصول حذف شود?');"
                             runat="server" CssClass="hcIconDelete"
-                            CausesValidation="False" CommandName="Delete" Text="Delete" />
+                            CausesValidation="False" CommandName="Delete" Text="حذف" />
                     </ItemTemplate>
                 </asp:TemplateField>
             </Columns>
@@ -112,7 +112,7 @@
         <ul class="hcActions">
             <li>
                 <asp:LinkButton runat="server" ID="btnRemoveSamples" CssClass="hcButton"
-                    Text="Remove Sample Products and Categories" OnClick="btnRemoveSamples_Click" />
+                    Text="حذف محصولات و دسته بندی های که به عنوان نمونه افزوده شده است" OnClick="btnRemoveSamples_Click" />
             </li>
         </ul>
     </asp:Panel>

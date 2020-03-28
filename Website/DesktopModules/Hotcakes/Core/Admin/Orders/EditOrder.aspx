@@ -24,7 +24,7 @@
                     <div class="hcFormItem">
                         <asp:LinkButton
                             ID="btnDelete" runat="server" CssClass="hcTertiaryAction"
-                            Text="Delete Order" CausesValidation="false" OnClick="btnDelete_Click" />
+                            Text="حذف سفارش" CausesValidation="false" OnClick="btnDelete_Click" />
                     </div>
                 </div>
             </div>
@@ -119,7 +119,7 @@
                 }
 
             </script>
-            <h1>Edit Order
+            <h1>ویرایش سفارش شماره 
                 <asp:Label ID="OrderNumberField" runat="server" Text="000000" />
             </h1>
 
@@ -146,14 +146,14 @@
 
             <div class="hcColumnLeft" style="width: 50%">
                 <div class="hcForm hcBillToAddress">
-                    <h2>Bill To</h2>
+                    <h2>صورتحساب</h2>
                     <div class="hcFormMessage hcBillToAddressMessage"></div>
                     <hcc:AddressEditor TabOrderOffSet="2000" ID="ucBillingAddress" CreateValidationInputs="True" FormSelector=".hcBillToAddress" ErrorMessageSelector=".hcBillToAddressMessage" runat="server" />
                 </div>
             </div>
             <div class="hcColumnRight hcLeftBorder" style="width: 49%">
                 <div class="hcForm hcShipToAddress">
-                    <h2>Ship To</h2>
+                    <h2>بارگیری</h2>
                     <div runat="server" id="divShipToAddress">
                         <div class="hcFormMessage hcShipToAddressMessage"></div>
                         <hcc:AddressEditor TabOrderOffSet="2500" ID="ucShippingAddress" CreateValidationInputs="True" FormSelector=".hcShipToAddress" ErrorMessageSelector=".hcShipToAddressMessage" runat="server" />
@@ -180,7 +180,7 @@
             <div class="hcColumnLeft" style="width: 50%">
                 <div class="hcForm">
                     <div class="hcFormItem">
-                        <label class="hcLabel">Customer's Instructions</label>
+                        <label class="hcLabel">دستورالعمل مشتری</label>
                         <asp:TextBox ID="txtInstructions" runat="server" TextMode="multiLine" Wrap="true" Rows="5" CssClass="hcOrderViewNotes" />
                     </div>
                 </div>
@@ -196,30 +196,30 @@
             <div class="hcColumnLeft" style="width: 50%">
                 <asp:Panel ID="pnlCoupons" runat="server" CssClass="hcForm" DefaultButton="btnAddCoupon">
                     <div class="hcFormItemLabel">
-                        <label class="hcLabel">Add Promotional Code</label>
+                        <label class="hcLabel">افزودن کد تخفیف</label>
                     </div>
                     <div class="hcFormItem hcFormItem66p">
                         <asp:TextBox ID="txtCoupon" runat="server" MaxLength="50" ValidationGroup="vgCoupon" />
                         <asp:RequiredFieldValidator ID="rfCoupon" ValidationGroup="vgCoupon" ErrorMessage="Coupon Code is required" ControlToValidate="txtCoupon" Display="Dynamic"
                             runat="server" EnableClientScript="false" CssClass="hcFormError" />
-                        <asp:LinkButton ID="btnAddCoupon" runat="server" CssClass="hcSecondaryAction hcSmall disabled" Text="Add" CausesValidation="true" OnClick="btnAddCoupon_Click" ValidationGroup="vgCoupon" />
+                        <asp:LinkButton ID="btnAddCoupon" runat="server" CssClass="hcSecondaryAction hcSmall disabled" Text="افزودن" CausesValidation="true" OnClick="btnAddCoupon_Click" ValidationGroup="vgCoupon" />
                     </div>
                     <div class="hcFormItem">
                         <asp:ListBox ID="lstCoupons" runat="server" DataTextField="CouponCode" DataValueField="CouponCode" Height="150px" SelectionMode="Multiple" CssClass="RadComboBox" />
                     </div>
                     <div class="hcFormItem hcFormItem50p">
-                        <asp:LinkButton ID="btnDeleteCoupon" CausesValidation="false" runat="server"  CssClass="hcSecondaryAction hcSmall disabled" Text="Delete Selected" OnClick="btnDeleteCoupon_Click" />
+                        <asp:LinkButton ID="btnDeleteCoupon" CausesValidation="false" runat="server"  CssClass="hcSecondaryAction hcSmall disabled" Text="حذف آیتم انتخابی" OnClick="btnDeleteCoupon_Click" />
                     </div>
                 </asp:Panel>
             </div>
             <div class="hcColumnRight hcLeftBorder" style="width: 49%">
                 <div class="hcForm">
                     <div class="hcFormItem hcProductEditChoice">
-                        <label class="hcLabel">Shipping Method</label>
+                        <label class="hcLabel">روش بارگیری</label>
                         <asp:Literal ID="litShippingMethods" runat="server"></asp:Literal>
                     </div>
                     <div class="hcFormItem">
-                        <label class="hcLabel">Force Shipping Price</label>
+                        <label class="hcLabel">اعمال اجباری هزینه بارگیری</label>
                         <asp:TextBox ID="ShippingOverride" runat="server" />
                     </div>
                 </div>
@@ -227,10 +227,10 @@
 
             <ul class="hcActions">
                 <li>
-                    <asp:LinkButton ID="btnSaveChanges" runat="server" Text="Save Changes" CssClass="hcPrimaryAction" OnClick="btnSaveChanges_Click" />
+                    <asp:LinkButton ID="btnSaveChanges" runat="server" Text="ذخیره تغییرات" CssClass="hcPrimaryAction" OnClick="btnSaveChanges_Click" />
                 </li>
                 <li>
-                    <asp:HyperLink runat="server" Text="Cancel" CssClass="hcSecondaryAction" NavigateUrl="Default.aspx" />
+                    <asp:HyperLink runat="server" Text="انصراف" CssClass="hcSecondaryAction" NavigateUrl="Default.aspx" />
                 </li>
             </ul>
         </ContentTemplate>

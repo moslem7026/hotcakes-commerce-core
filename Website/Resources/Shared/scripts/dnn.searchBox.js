@@ -79,19 +79,19 @@
                     this.realInput.next().addClass('dnnShow').css({ left: realInputLeft - 15 });
                 }
             } else {
-            var realInputRight = 50;
-            var advancedDropdown = $('.dnnSearchBox_advanced_dropdown', this.$wrap);
-            var advancedForm = $('#' + this.options.advancedId);
-            if (advancedEnabled) {
-                advancedForm.appendTo(advancedDropdown);
-                var w = $('.dnnSearchBox_advanced', this.$wrap).width();
-                var w2 = $('.dnnSearchBox_advanced_query', this.$wrap).width();
-                realInputRight = w + w2 + 50;
-                $('.dnnSearchBox_advanced_query', this.$wrap).hide();
-            }
-            this.realInput.css({ right: realInputRight, width: wrapWidth - realInputRight - 8 });
-            if (originalVal) {
-                this.realInput.next().addClass('dnnShow').css({ right: realInputRight - 15 });
+                var realInputRight = 50;
+                var advancedDropdown = $('.dnnSearchBox_advanced_dropdown', this.$wrap);
+                var advancedForm = $('#' + this.options.advancedId);
+                if (advancedEnabled) {
+                    advancedForm.appendTo(advancedDropdown);
+                    var w = $('.dnnSearchBox_advanced', this.$wrap).width();
+                    var w2 = $('.dnnSearchBox_advanced_query', this.$wrap).width();
+                    realInputRight = w + w2 + 50;
+                    $('.dnnSearchBox_advanced_query', this.$wrap).hide();
+                }
+                this.realInput.css({ right: realInputRight, width: wrapWidth - realInputRight - 8 });
+                if (originalVal) {
+                    this.realInput.next().addClass('dnnShow').css({ right: realInputRight - 15 });
                 }
             }
             //END persian-dnnsoftware
@@ -237,9 +237,9 @@
                             left: right
                         }).addClass('dnnShow');
                     } else {
-                    clearTextBtn.css({
-                    	right: right
-                    }).addClass('dnnShow');
+                        clearTextBtn.css({
+                            right: right
+                        }).addClass('dnnShow');
                     }
                     //END persian-dnnsoftware
                     if (self.options.enablePreview &&

@@ -1,4 +1,4 @@
-<%@ Page Language="C#" MasterPageFile="../AdminNav.master" AutoEventWireup="True" Inherits="Hotcakes.Modules.Core.Admin.Orders.ViewOrder" Title="Untitled Page" CodeBehind="ViewOrder.aspx.cs" %>
+﻿<%@ Page Language="C#" MasterPageFile="../AdminNav.master" AutoEventWireup="True" Inherits="Hotcakes.Modules.Core.Admin.Orders.ViewOrder" Title="Untitled Page" CodeBehind="ViewOrder.aspx.cs" %>
 
 <%@ Register Src="../Controls/MessageBox.ascx" TagName="MessageBox" TagPrefix="hcc" %>
 <%@ Register Src="OrderStatusDisplay.ascx" TagName="OrderStatusDisplay" TagPrefix="hcc" %>
@@ -13,7 +13,7 @@
         <hcc:PaymentInformation ID="ucPaymentInformation" runat="server" />
         <div class="hcForm">
             <div class="hcFormItem">
-                <label class="hcLabel">Codes Used</label>
+                <label class="hcLabel">کد های استفاده شده</label>
                 <div class="hcCouponCodes">
                     <asp:Label ID="CouponField" runat="server" />
                 </div>
@@ -26,7 +26,7 @@
             <div class="hcFormItem">
                 <asp:LinkButton
                     ID="btnDelete" runat="server" CssClass="hcTertiaryAction"
-                    Text="Delete Order" CausesValidation="false" OnClick="btnDelete_Click" />
+                    Text="حذف سفارش" CausesValidation="false" OnClick="btnDelete_Click" />
             </div>
         </div>
     </div>
@@ -65,7 +65,7 @@
 
 	</script>
 
-    <h1>Order
+    <h1>سفارش شماره 
         <asp:Label ID="OrderNumberField" runat="server" Text="000000" />
     </h1>
     <hcc:MessageBox ID="ucMessageBox" runat="server" />
@@ -73,7 +73,7 @@
     <div class="hcColumn" style="width: 30%">
         <asp:Label ID="TimeOfOrderField" runat="server" />
         <br />
-        Fraud Score:
+        امتیاز تقلب:
         <asp:Label ID="lblFraudScore" runat="server" />
     </div>
     <div class="hcColumnRight" style="width: 70%;">
@@ -83,14 +83,14 @@
 
     <div class="hcColumnLeft" style="width: 50%">
         <div class="hcForm">
-            <h2>Bill To</h2>
+            <h2>صورتحساب </h2>
             <asp:Label ID="lblBillingAddress" runat="server" />
             <asp:Literal ID="ltEmailAddress" runat="server" />
         </div>
     </div>
     <div class="hcColumnRight hcLeftBorder" style="width: 49%">
         <div class="hcForm">
-            <h2>Ship To</h2>
+            <h2>بارگیری</h2>
             <asp:Label ID="lblShippingAddress" runat="server" />
         </div>
     </div>
@@ -104,7 +104,7 @@
     <div class="hcColumnLeft" style="width: 50%">
         <asp:Panel ID="pnlInstructions" CssClass="hcForm" runat="server" Visible="false">
             <div class="hcFormItem">
-                <label class="hcLabel">Customer's Instructions</label>
+                <label class="hcLabel">دستورالعمل مشتری</label>
                 <asp:Label ID="lblInstructions" runat="server" CssClass="hcInstructions" />
             </div>
         </asp:Panel>
@@ -118,7 +118,7 @@
             </div>
             <div class="hcFormItem hcFormItem33p" id="EmailSend">
                 <asp:LinkButton CssClass="hcButton hcSmall" ID="btnSendStatusEmail" runat="server" ToolTip="Send Update by E-Mail"
-                    Text="E-Mail" OnClick="btnSendStatusEmail_Click" />
+                    Text="ایمیل" OnClick="btnSendStatusEmail_Click" />
             </div>
         </div>
     </div>
@@ -126,7 +126,7 @@
     <hr />
     <div class="hcColumnLeft" style="width: 50%">
         <div class="hcForm">
-            <h2>Private Notes</h2>
+            <h2>یادداشت های خصوصی</h2>
             <asp:GridView ID="PrivateNotesField" runat="server" CssClass="hcGrid"
                 ShowHeader="false" AutoGenerateColumns="False"
                 DataKeyNames="Id" OnRowDeleting="PrivateNotesField_RowDeleting">
@@ -139,9 +139,9 @@
                     </asp:TemplateField>
                     <asp:TemplateField ItemStyle-Width="30px">
                         <ItemTemplate>
-                            <asp:LinkButton ID="btnDeleteNote" OnClientClick="return hcConfirm(event, 'Delete this note?');"
+                            <asp:LinkButton ID="btnDeleteNote" OnClientClick="return hcConfirm(event, 'این یادداشت حذف شود ?');"
                                 runat="server" CssClass="hcIconDelete" CommandArgument='<%# Bind("Id") %>'
-                                CausesValidation="False" CommandName="Delete" Text="Delete" />
+                                CausesValidation="False" CommandName="Delete" Text="حذف" />
                         </ItemTemplate>
                     </asp:TemplateField>
                 </Columns>
@@ -151,12 +151,12 @@
                 <asp:TextBox ID="NewPrivateNoteField" runat="server" ToolTip="Add a new note to this order" Rows="3" TextMode="MultiLine" CssClass="hcOrderViewNotes" />
             </div>
 
-            <asp:LinkButton ID="btnNewPrivateNote" runat="server" Text="New" CssClass="hcSecondaryAction hcSmall" OnClick="btnNewPrivateNote_Click" />
+            <asp:LinkButton ID="btnNewPrivateNote" runat="server" Text="جدید" CssClass="hcSecondaryAction hcSmall" OnClick="btnNewPrivateNote_Click" />
         </div>
     </div>
     <div class="hcColumnRight hcLeftBorder" style="width: 49%">
         <div class="hcForm">
-            <h2>Public Notes</h2>
+            <h2>یادداشت های عمومی</h2>
             <asp:GridView ID="PublicNotesField" runat="server" ShowHeader="False" AutoGenerateColumns="False" CssClass="hcGrid"
                 DataKeyNames="Id" OnRowDeleting="PublicNotesField_RowDeleting">
                 <Columns>
@@ -168,9 +168,9 @@
                     </asp:TemplateField>
                     <asp:TemplateField ItemStyle-Width="30px">
                         <ItemTemplate>
-                            <asp:LinkButton ID="btnDeleteNote" OnClientClick="return hcConfirm(event, 'Delete this note?');"
+                            <asp:LinkButton ID="btnDeleteNote" OnClientClick="return hcConfirm(event, 'این یادداشت حذف شود?');"
                                 runat="server" CssClass="hcIconDelete" CommandArgument='<%# Bind("Id") %>'
-                                CausesValidation="False" CommandName="Delete" Text="Delete" />
+                                CausesValidation="False" CommandName="Delete" Text="حذف" />
                         </ItemTemplate>
                     </asp:TemplateField>
                 </Columns>
@@ -180,7 +180,7 @@
                 <asp:TextBox ID="NewPublicNoteField" runat="server" ToolTip="Add a new note to this order" Rows="3" TextMode="MultiLine" CssClass="hcOrderViewNotes" />
             </div>
 
-            <asp:LinkButton ID="btnNewPublicNote" runat="server" Text="New" CssClass="hcSecondaryAction hcSmall" OnClick="btnNewPublicNote_Click" />
+            <asp:LinkButton ID="btnNewPublicNote" runat="server" Text="جدید" CssClass="hcSecondaryAction hcSmall" OnClick="btnNewPublicNote_Click" />
         </div>
     </div>
 

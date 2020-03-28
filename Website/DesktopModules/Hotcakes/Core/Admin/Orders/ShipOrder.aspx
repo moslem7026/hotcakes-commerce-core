@@ -1,4 +1,4 @@
-<%@ Page Language="C#" MasterPageFile="../AdminNav.master" AutoEventWireup="True" Inherits="Hotcakes.Modules.Core.Admin.Orders.ShipOrder" Title="Untitled Page" CodeBehind="ShipOrder.aspx.cs" %>
+﻿<%@ Page Language="C#" MasterPageFile="../AdminNav.master" AutoEventWireup="True" Inherits="Hotcakes.Modules.Core.Admin.Orders.ShipOrder" Title="Untitled Page" CodeBehind="ShipOrder.aspx.cs" %>
 
 <%@ Register Src="../Controls/MessageBox.ascx" TagName="MessageBox" TagPrefix="hcc" %>
 <%@ Register Src="OrderStatusDisplay.ascx" TagName="OrderStatusDisplay" TagPrefix="hcc" %>
@@ -11,14 +11,14 @@
 <asp:Content ID="Main" ContentPlaceHolderID="MainContent" runat="Server">
 	<hcc:MessageBox ID="MessageBox1" runat="server" />
 
-	<h1>
-		<asp:Label ID="lblOrderNumber" runat="server"></asp:Label>Shipping</h1>
+	<h1>بارگیری
+		<asp:Label ID="lblOrderNumber" runat="server"></asp:Label></h1>
 	<div class="hcColumn" style="width: 30%">
-		<label class="hcLabel">Ship To:</label>
+		<label class="hcLabel">بارگیری به:</label>
 		<asp:Label ID="lblShippingAddress" runat="server" />
 
 		<div class="hcFormItem">
-			<h4>Shipping/Handling Total:
+			<h4>جمع کل هزینه بسته بندی/بارگیری :
 				 <asp:Label ID="lblShippingTotal" runat="server" /></h4>
 		</div>
 	</div>
@@ -31,32 +31,32 @@
 		DataKeyNames="Id" OnRowDataBound="ItemsGridView_RowDataBound">
 		<HeaderStyle CssClass="hcGridHeader" />
 		<Columns>
-			<asp:TemplateField HeaderText="SKU">
+			<asp:TemplateField HeaderText="کد محصول">
 				<ItemTemplate>
 					<asp:Label ID="SKUField" runat="server" />
 				</ItemTemplate>
 			</asp:TemplateField>
-			<asp:TemplateField HeaderText="Item">
+			<asp:TemplateField HeaderText="آیتم">
 				<ItemTemplate>
 					<asp:Label ID="DescriptionField" runat="server" />
 					<asp:PlaceHolder ID="CartInputModifiersPlaceHolder" runat="server" />
 				</ItemTemplate>
 			</asp:TemplateField>
-			<asp:TemplateField HeaderText="Ordered" ItemStyle-Width="40" HeaderStyle-Width="40">
+			<asp:TemplateField HeaderText="سفارش داده شده" ItemStyle-Width="40" HeaderStyle-Width="40">
 				<ItemTemplate>
 					<asp:Label ID="QuantityField" runat="server" Text='<%# Bind("Quantity","{0:#}") %>' />
 				</ItemTemplate>
 				<ItemStyle HorizontalAlign="Right" />
 				<HeaderStyle HorizontalAlign="Right" />
 			</asp:TemplateField>
-			<asp:TemplateField HeaderText="Shipped" ItemStyle-Width="40" HeaderStyle-Width="40">
+			<asp:TemplateField HeaderText="بارگیری شده" ItemStyle-Width="40" HeaderStyle-Width="40">
 				<ItemTemplate>
 					<asp:Label ID="shipped" runat="server" Text="0" />
 				</ItemTemplate>
 				<ItemStyle HorizontalAlign="Right" />
 				<HeaderStyle HorizontalAlign="Right" />
 			</asp:TemplateField>
-			<asp:TemplateField HeaderText="To Be Shipped" ItemStyle-Width="90" HeaderStyle-Width="90" >
+			<asp:TemplateField HeaderText="بارگیری خواهد شد" ItemStyle-Width="90" HeaderStyle-Width="90" >
 				<ItemTemplate>
 					<asp:TextBox ID="QtyToShip" runat="server" Text="0" Columns="5" />
 				</ItemTemplate>
@@ -73,12 +73,12 @@
 		<asp:UpdatePanel runat="server" UpdateMode="Always">
 			<ContentTemplate>
 				<div class="hcFormItem hcFormItem33p">
-					<asp:Label ID="lblShippingBy" runat="server" Text="Shipping By:" CssClass="hcLabel" />
+					<asp:Label ID="lblShippingBy" runat="server" Text="بارگیری شده توسط :" CssClass="hcLabel" />
 					<asp:DropDownList ID="lstTrackingProvider" runat="server" AutoPostBack="true" EnableViewState="true" ViewStateMode="Enabled">
 					</asp:DropDownList>
 
 					<br />
-					<asp:Label ID="lblShippingServices" runat="server" CssClass="hcLabel">Shipping Services:</asp:Label>
+					<asp:Label ID="lblShippingServices" runat="server" CssClass="hcLabel">سرویس دهنده های بارگیری:</asp:Label>
 					<asp:DropDownList ID="lstTrackingProviderServices" runat="server" ViewStateMode="Enabled" EnableViewState="true">
 					</asp:DropDownList>
 				</div>
@@ -86,12 +86,12 @@
 		</asp:UpdatePanel>
 		
 		<div class="hcFormItem hcFormItem66p">
-			<span class="hcLabel">Tracking Number:</span>
+			<span class="hcLabel">شماره پیگیری :</span>
 			<asp:TextBox ID="TrackingNumberField" runat="Server" Columns="20" Width="250px" MaxLength="254" />
 
-			<asp:LinkButton ID="btnShipItems" runat="Server" Text="Ship Items"
+			<asp:LinkButton ID="btnShipItems" runat="Server" Text="بارگیری شد!"
 				OnClick="btnShipItems_Click" CssClass="hcPrimaryAction hcSmall" />
-			<asp:LinkButton ID="btnCreatePackage" runat="Server" Text="Create Package"
+			<asp:LinkButton ID="btnCreatePackage" runat="Server" Text="ایجاد یک بسته "
 				OnClick="btnCreatePackage_Click" CssClass="hcSecondaryAction" Visible="False" />
 		</div>
 
@@ -99,7 +99,7 @@
 
 	<hr />
 
-	<h2 id="hPackage" runat="server">Packages</h2>
+	<h2 id="hPackage" runat="server">بسته</h2>
 	<asp:GridView ID="PackagesGridView" GridLines="none" BorderWidth="0"
 		ShowHeader="true" DataKeyNames="Id" runat="server"
 		AutoGenerateColumns="False" OnRowCommand="PackagesGridView_RowCommand"
@@ -109,13 +109,13 @@
 		<RowStyle CssClass="hcGridRow" />
 
 		<Columns>
-			<asp:TemplateField HeaderText="Ship Date" HeaderStyle-Width="9%" ItemStyle-Width="9%">
+			<asp:TemplateField HeaderText="تاریخ بارگیری" HeaderStyle-Width="9%" ItemStyle-Width="9%">
 				<ItemTemplate>
 					<asp:Label ID="ShipDateField" runat="server" Text='<%# Bind("ShipDateUtc") %>' />
 				</ItemTemplate>
 			</asp:TemplateField>
 
-			<asp:TemplateField HeaderText="Shipped By">
+			<asp:TemplateField HeaderText="بارگیری شده توسط">
 				<ItemTemplate>
 					<asp:Label ID="ShippedByField" runat="server" Text='<%# Bind("ShippingProviderId") %>' />
 				</ItemTemplate>

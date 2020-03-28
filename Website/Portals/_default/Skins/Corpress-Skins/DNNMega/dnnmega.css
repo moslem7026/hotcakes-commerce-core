@@ -1,0 +1,241 @@
+/* Mega Menu Styles */
+ul.dnnmega {
+  list-style: none;
+  margin:0;
+  padding: 0;
+  width:100%;
+  position:relative;
+  display: table;
+}
+
+
+ul.dnnmega ul {
+    padding:0;
+	margin:0;
+	
+}
+ul.dnnmega ul ul ul{ padding:0;}
+/*WAM - removed z-index*/
+.dnnmega .breadcrumb { background:none;}
+
+ul.dnnmega li{
+    list-style-type: none;
+    position: relative;
+    margin: 0;
+    padding: 0px;
+ 	display:table-cell;
+    text-align: center;
+    width: 12.5%;
+}
+
+ul.dnnmega li.mmLast a{ 
+	border-right:none;
+}
+ul.dnnmega li a {
+    display: block;
+    color: #FFF;
+    font-size: 15px;
+    font-family: open sans;
+    transition: initial;
+    font-weight: 600;
+    padding: 18px 0;
+    text-transform: uppercase;
+    position: relative;
+	-moz-transition:initial;
+	-webkit-transition:initial;
+	-o-transition:initial;
+    transition: initial;
+    border-right: 1px solid rgba(0,0,0,0.5);
+	margin:0 0 15px 0;
+	background:#3E454C;
+}
+
+.dnnmega li.mmBreadcrumb li a:after { display:none;}
+ul.dnnmega li.mmItemHover li a:after { display:none;}
+.menuicon {
+    display: block;
+    text-align: center;
+    font-size: 20px;
+    border: 1px solid rgb(255, 255, 255);
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    margin: 0px auto 10px auto;
+    line-height: 43px;
+}
+ul.dnnmega li li .menuicon { display:none;}
+ul.dnnmega li.mmHasChild li span{ padding:0;}
+ul.dnnmega li span {
+    display: block;
+}
+
+/*
+ul.dnnmega li.mmHasChild a span:after {
+    content: "\f107";
+    right: 10px;
+    font-family: FontAwesome;
+    font-weight: normal;
+    padding: 0px 0px 0px 7px;
+    line-height: 1;
+}
+*/
+ul.dnnmega li.mmHasChild li a span:after { content:"";}
+
+
+
+ul.dnnmega li .megaborder {
+    position: absolute;
+    left: -120px;
+    z-index: 1200;
+    float: left;
+    display: none;
+    background:#3E454C;
+    text-align: left;
+    min-height: 180px;
+	min-width:380px;
+}
+ul.dnnmega li.mmFirst .megaborder {
+    right:inherit;
+    left: 0;
+}
+ul.dnnmega li.child-2 .megaborder {
+    right:inherit;
+    left: 0;
+}
+
+
+ul.dnnmega li.mmLast .megaborder {
+    right: -100px;
+    left:inherit;
+}
+/*
+ul.dnnmega li:nth-last-child(2) .megaborder {
+    left: -100px;
+}
+ul.dnnmega li:nth-last-child(3) .megaborder {
+    right: -150px;
+    left: inherit;
+}
+*/
+ul.dnnmega .megaborder .M {
+    display: block;
+    border-top: 0px none;
+    border-bottom: 0px none;
+    min-height: 135px;
+    padding: 10px 0 20px 10px;
+	margin:0;
+}
+
+
+
+
+ul.dnnmega li li {
+    display: block;
+    width: 180px;
+    float: left;
+    margin: 0;
+    height: auto !important;
+	text-align: left;
+	border: none;
+}
+
+
+ul.dnnmega li li a {
+  display: block;
+  padding: 10px 0px;
+  line-height: 1.5;
+  margin: 0px 10px;
+  text-transform: capitalize;
+  background:none!important;
+  font-weight:400;
+  border-radius:0;
+  border-bottom:1px solid rgba(255, 255, 255, 0.15);
+  border-top:none!important;
+  color:#fff;
+  font-size:14px;
+  min-height: initial;
+  border-right:none;
+}
+ul.dnnmega li li a span {
+    display: block;
+    padding: 0px;
+	margin: 0;
+}
+ul.dnnmega li li a:hover { background:none;}
+ul.dnnmega li li li a {
+    border: medium none;
+    font-weight: 400;
+    margin: 0px!important;
+    padding: 0px 0px 0px 10px;
+	position:relative;
+	text-transform: capitalize;
+	color:#ccc;
+}
+
+ul.dnnmega li li li a span:before { content: "\f105"; font-family:FontAwesome; display:inline-block; font-size:12px; position:absolute; left:0; vertical-align:top;}
+
+ul.dnnmega li li li a span {
+    text-transform: capitalize;
+    padding:8px 0 8px 5px !important;
+    line-height: 1;
+	font-size:12px;
+}
+
+ul.dnnmega li.mmItemHover li li a { color:#ccc;}
+
+ul.dnnmega li.category li.leaf, ul.dnnmega li.category li.mmLast {
+    clear: left;
+    float: none;
+    position: static;
+    padding: 0px 0px 0px 15px;
+}
+
+
+ul.dnnmega img.mmIcon { 
+    margin-right: 0.5em;
+    width: 16px;
+    height: 16px;
+    vertical-align: middle;
+}
+ul.dnnmega li.root > a > span img.mmIcon { height: 16px;}
+
+/*---Current & Selected---*/
+ul.dnnmega li.mmBreadcrumb li a { color:#fff;}
+ul.dnnmega li.mmSelected li a { color:#ccc;}
+.dnnmega li.selected .subLevel li a{
+	border:none;
+}
+.dnnmega li.mmBreadcrumb li.mmSelected li a{ color:#ccc;}
+.dnnmega li.selected .subLevel li a{
+	border:none;
+}
+
+
+.dnnmega li.mmBreadcrumb li a {
+  background: none;
+  border-top: none!important;
+  border-radius:0;
+}
+.dnnmega li.mmBreadcrumb li li a { 
+	border:none;  
+	color:#ccc;
+}
+
+
+@media handheld, only screen and (max-width:900px) {
+ul.dnnmega li a { font-size:13px;}
+}
+
+@media handheld, only screen and (max-width:860px) {
+ul.dnnmega li a { font-size:12px;}
+}
+
+
+
+
+
+
+@media handheld, only screen and (max-width:767px) {
+
+ul.dnnmega { display:none;}
+}

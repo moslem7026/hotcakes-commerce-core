@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <root>
   <!-- 
-   Microsoft ResX Schema_Localized
+    Microsoft ResX Schema 
     
     Version 2.0
     
@@ -246,13 +246,25 @@
   <data name="ThemeLevelSite.Text" xml:space="preserve">
     <value>پوسته سایت</value>
   </data>
-  <data name="ShowFilterLabel">
+  <data name="ShowFilterLabel" xml:space="preserve">
     <value>نمایش:</value>
   </data>
-  <data name="NoThemes">
+  <data name="NoThemes" xml:space="preserve">
     <value>پوسته ای پیدا نشد.</value>
   </data>
-  <data name="NoThemesMessage">
+  <data name="NoThemesMessage" xml:space="preserve">
     <value>مجدد با فیلتر جستجو کنید یا یک پوسته جدید به کتابخانه نصب کنید</value>
+  </data>
+  <data name="NoneSpecified.Text" xml:space="preserve">
+    <value>--انتخاب--</value>
+  </data>
+  <data name="ApplyTheme.Text" xml:space="preserve">
+    <value>اعمال کردن</value>
+  </data>
+  <data name="DeleteTheme.Text" xml:space="preserve">
+    <value>حذف</value>
+  </data>
+  <data name="PreviewTheme.Text" xml:space="preserve">
+    <value>پیش‌نمایش</value>
   </data>
 </root>

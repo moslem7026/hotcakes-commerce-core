@@ -130,16 +130,16 @@
     <value>جزئیات محصول</value>
   </data>
   <data name="Quantity.Text" xml:space="preserve">
-    <value>تعداد</value>
+    <value>تعداد : </value>
   </data>
   <data name="SitePrice.Text" xml:space="preserve">
-    <value>قیمت</value>
+    <value>قیمت مصرف کننده :</value>
   </data>
   <data name="SKU.Text" xml:space="preserve">
-    <value>کد انبار</value>
+    <value>کد انبار و موجودی :</value>
   </data>
   <data name="YouSave.Text" xml:space="preserve">
-    <value>تخفیف شما</value>
+    <value>تخفیف شما :</value>
   </data>
   <data name="UserPrice.Text" xml:space="preserve">
     <value>قیمت پیشنهادی شما:</value>

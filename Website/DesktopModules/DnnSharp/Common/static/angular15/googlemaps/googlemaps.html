@@ -1,0 +1,32 @@
+﻿<div ng-if="!googleplacesField && googleUrlWithKey" map-lazy-load="{{googleUrl}}"
+     map-lazy-load-params="{{googleUrlWithKey}}">
+    <ng-map id="{{'map'+ fieldData.id}}" center="{{fieldData.center || '40.730610, -73.935242'}}" zoom="{{zoomLevel}}" zoomToIncludeMarkers="{{zoomToMarkers}}">
+        <marker label="{{marker.Label}}" position="{{marker.Latitude + ',' + marker.Longitude}}" ng-repeat="marker in fieldData.markers"></marker>
+        <shape name="circle"
+               ng-repeat="circle in fieldData.circles"
+               no-watcher="true"
+               stroke-color="{{circle.StrokeColor || '#FF0000'}}"
+               stroke-opacity="{{circle.StrokeOpacity || '0.8'}}"
+               stroke-weight="{{circle.StrokeWeight || '2'}}"
+               fill-color="{{circle.FillColor || '#FF0000'}}"
+               fill-opacity="{{circle.FillOpacity || '0.35'}}"
+               center="[{{(circle.Latitude || 40.730610) + ',' + (circle.Longitude || -73.935242)}}]"
+               radius="{{circle.Radius || 25000}}"></shape>
+    </ng-map>
+</div>
+
+<div ng-if="googleplacesField && googleLoaded">
+    <ng-map id="{{'map'+ fieldData.id}}"  center="{{fieldData.center || '40.730610, -73.935242'}}" zoom="{{zoomLevel}}" zoomToIncludeMarkers="{{zoomToMarkers}}">
+        <marker label="{{marker.Label}}" position="{{marker.Latitude + ',' + marker.Longitude}}" ng-repeat="marker in fieldData.markers"></marker>
+        <shape name="circle"
+               ng-repeat="circle in fieldData.circles"
+               no-watcher="true"
+               stroke-color="{{circle.StrokeColor || '#FF0000'}}"
+               stroke-opacity="{{circle.StrokeOpacity || '0.8'}}"
+               stroke-weight="{{circle.StrokeWeight || '2'}}"
+               fill-color="{{circle.FillColor || '#FF0000'}}"
+               fill-opacity="{{circle.FillOpacity || '0.35'}}"
+               center="[{{(circle.Latitude || 40.730610) + ',' + (circle.Longitude || -73.935242)}}]"
+               radius="{{circle.Radius || 25000}}"></shape>
+    </ng-map>
+</div>

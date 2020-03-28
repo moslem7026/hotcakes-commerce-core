@@ -174,7 +174,7 @@ dnnModule.digitalAssets = function ($, $find, $telerik, dnnModal) {
                 }
                 //END persian-dnnsoftware
 
-                //START persian-dnnsoftware  set buttom default image
+                //START persian-dnnsoftware // Added by M.Kermani to set buttom default image
                 if ($('body').hasClass('r' + 't' + 'l')) {
                     var toggleButton = $("#DigitalAssetsToggleLeftPaneBtnId span", "#" + controls.scopeWrapperId);
                     toggleButton.css("background-image", "url(" + settings.toggleLeftPaneShowImageUrl + ")");
@@ -1841,7 +1841,7 @@ dnnModule.digitalAssets = function ($, $find, $telerik, dnnModal) {
         var node = treeView.get_nodes().getItem(0);
         node.expand();
         var p = path.split('/');
-        for (var i = 1; i < p.length; i++) {
+        for (var i = 0; i < p.length; i++) {
             var name = p[i];
             if (name != '') {
                 var nodes = node.get_nodes();

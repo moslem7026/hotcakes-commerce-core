@@ -264,13 +264,4 @@
   <data name="Promp_PositiveValueRequired.Text" xml:space="preserve">
     <value>'[0]' must be greater than 0.\n</value>
   </data>
-  <data name="AllSites.Text" xml:space="preserve">
-    <value>تمام سایت ها</value>
-  </data>
-  <data name="SwitchOff.Text" xml:space="preserve">
-    <value>خاموش</value>
-  </data>
-  <data name="SwitchOn.Text" xml:space="preserve">
-    <value>روشن</value>
-  </data>
 </root>

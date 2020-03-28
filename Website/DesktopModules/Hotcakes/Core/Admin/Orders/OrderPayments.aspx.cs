@@ -1,4 +1,4 @@
-#region License
+﻿#region License
 
 // Distributed under the MIT License
 // ============================================================
@@ -98,7 +98,7 @@ namespace Hotcakes.Modules.Core.Admin.Orders
 			transactions = transactions.OrderByDescending(y => y.TimeStampUtc).ToList();
             if (transactions == null || transactions.Count < 1)
             {
-                litTransactions.Text = "No Transactions Found";
+                litTransactions.Text = "هیچ تراکنشی یافت نشد";
                 return;
             }
 

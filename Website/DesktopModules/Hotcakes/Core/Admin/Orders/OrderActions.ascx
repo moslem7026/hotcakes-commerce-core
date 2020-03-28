@@ -23,16 +23,16 @@
 <%if(!AreMultipleTemplates){ %>
 <ul class="hcNavMenu">
     <li class='<%=GetCurrentCssClass("Details") %>'>
-        <asp:HyperLink ID="lnkDetails" runat="server" Text="Order Details" />
+        <asp:HyperLink ID="lnkDetails" runat="server" Text="جزییات سفارش" />
     </li>
     <li class='<%=GetCurrentCssClass("Edit") %>'>
-        <asp:HyperLink ID="lnkEditOrder" runat="server" Text="Edit Order" />
+        <asp:HyperLink ID="lnkEditOrder" runat="server" Text="ویرایش سفارش" />
     </li>
     <li class='<%=GetCurrentCssClass("Payment") %>'>
-        <asp:HyperLink ID="lnkPayment" runat="server" Text="Payment" />
+        <asp:HyperLink ID="lnkPayment" runat="server" Text="پرداخت ها" />
     </li>
     <li class='<%=GetCurrentCssClass("Shipping") %>'>
-        <asp:HyperLink ID="lnkShipping" runat="server" Text="Shipping" />
+        <asp:HyperLink ID="lnkShipping" runat="server" Text="بارگیری" />
     </li>
 </ul>
 <%} %>
@@ -40,13 +40,13 @@
 <div class="hcBlock" >
     <div class="hcForm">
         <div class="hcFormItem">
-            <asp:HyperLink ID="lnkPrintNow" runat="server" Text="Print" CssClass="hcTertiaryAction" />
+            <asp:HyperLink ID="lnkPrintNow" runat="server" Text="چاپ" CssClass="hcTertiaryAction" />
         </div>
         <div class="hcFormItem">
-            <asp:HyperLink ID="lnkPrint" runat="server" Text="Options" CssClass="hcTertiaryAction" />
+            <asp:HyperLink ID="lnkPrint" runat="server" Text="آپشن ها" CssClass="hcTertiaryAction" />
         </div>
         <div class="hcFormItem">
-            <asp:HyperLink ID="lnkManager" runat="server" Text="Close" CssClass="hcTertiaryAction" />
+            <asp:HyperLink ID="lnkManager" runat="server" Text="بستن" CssClass="hcTertiaryAction" />
         </div>
     </div>
 </div>

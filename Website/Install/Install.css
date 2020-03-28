@@ -1,6 +1,6 @@
 
 body {
-    background: #f4f4f4 url(body_bg.jpg) repeat-x 0 0; 
+    background: #f4f4f4 url(../portals/_default/skins/Gravity/images/body_bg.jpg) repeat-x 0 0; 
     width: 900px;
     margin-right: auto;
     margin-left: auto;
@@ -145,10 +145,10 @@ div#installation-steps > p {
 div#installation-steps > p > span{
     display: inline-block;    
 }
-span.states-icons {
+span.states-icons{
     width: 25px;
     height: 16px;
-    background-image: url("../images/installer-feedback-states-sprite.png"); /*persian-dnnsoftware*/
+    background-image: url("../images/installer-feedback-states-sprite.png");/*persian-dnnsoftware*/
     background-repeat: no-repeat;
 }
 
@@ -348,9 +348,9 @@ a.videoLink:hover {
     background-color: white;
     padding: 20px 20px 20px 20px;
     margin-top: 20px;
-    box-shadow: 5px 5px 20px grey;
-    /*IE8*/ -ms-filter: "progid:DXImageTransform.Microsoft.Shadow(Strength=4, Direction=135, Color='#808080')";
-    text-align: right; /*persian-dnnsoftware*/
+	box-shadow: 5px 5px 20px grey;
+	/*IE8*/ -ms-filter: "progid:DXImageTransform.Microsoft.Shadow(Strength=4, Direction=135, Color='#808080')";
+    text-align:right;/*persian-dnnsoftware*/
 }
 
 .rtl div#tabs .installIntro {

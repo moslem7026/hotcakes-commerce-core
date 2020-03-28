@@ -43,15 +43,15 @@
 
 	<div class="hcForm hcClearfix">
 		<div class="hcFormItemInline hcFormItem50p">
-			<label class="hcLabel">Add SKU</label>
+			<label class="hcLabel">کد انبار </label>
 			<asp:TextBox ID="NewSkuField" runat="Server" Columns="20" TabIndex="200" />
-			<asp:LinkButton ID="btnBrowseProducts" runat="server" Text="Browse" CausesValidation="False" CssClass="hcSecondaryAction hcSmall disabled" OnClick="btnBrowseProducts_Click" />
+			<asp:LinkButton ID="btnBrowseProducts" runat="server" Text="جستجو" CausesValidation="False" CssClass="hcSecondaryAction hcSmall disabled" OnClick="btnBrowseProducts_Click" />
 		</div>
 		<div class="hcFormItemInline hcFormItem50p">
-			<label class="hcLabel">Quantity</label>
+			<label class="hcLabel">تعداد</label>
 			<asp:TextBox ID="NewProductQuantity" runat="server" Text="1" Columns="4" TabIndex="210" ValidationGroup="vgQuantity" />
 			<asp:RangeValidator ID="rvNewProductQuantity" runat="server" Type="Integer" Display="Dynamic" MinimumValue="1" MaximumValue="99999999" ControlToValidate="NewProductQuantity" CssClass="hcFormError" ErrorMessage="Enter a valid number for Quantity." ValidationGroup="vgQuantity" EnableClientScript="false"></asp:RangeValidator>
-			<asp:LinkButton CausesValidation="true" ID="btnAddProductBySku" runat="server" Text="+ Add To Order" CssClass="hcSecondaryAction hcSmall"
+			<asp:LinkButton CausesValidation="true" ID="btnAddProductBySku" runat="server" Text="+ افزودن به سفارش" CssClass="hcSecondaryAction hcSmall"
 				TabIndex="220" OnClick="btnAddProductBySku_Click" ValidationGroup="vgQuantity" />
 		</div>
 		<asp:HiddenField ID="AddProductSkuHiddenField" runat="server" />

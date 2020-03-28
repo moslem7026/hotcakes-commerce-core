@@ -21,46 +21,46 @@
 
     <div class="hcColumnLeft" style="width: 60%">
         <div class="hcForm">
-            <h2>Main</h2>
+            <h2>تنظیمات پایه</h2>
             <div class="hcFormItem">
-                <label class="hcLabel">Name<i class="hcLocalizable"></i></label>
+                <label class="hcLabel">نام<i class="hcLocalizable"></i></label>
                 <asp:TextBox ID="NameField" runat="server" ClientIDMode="Static" />
                 <asp:RequiredFieldValidator ID="valName" runat="server" CssClass="hcFormError" Display="Dynamic"
-                    ErrorMessage="Please enter a name" ControlToValidate="NameField" />
+                    ErrorMessage="لطفا نام را وارد نمایید" ControlToValidate="NameField" />
             </div>
             <div class="hcFormItem">
-                <label class="hcLabel">Link To<i class="hcLocalizable"></i></label>
+                <label class="hcLabel">لینک به <i class="hcLocalizable"></i></label>
                 <asp:TextBox ID="LinkToField" runat="server" Columns="30" MaxLength="1024" />
             </div>
             <div class="hcFormItem">
-                <label class="hcLabel">Page Title<i class="hcLocalizable"></i></label>
+                <label class="hcLabel">عنوان صفحه<i class="hcLocalizable"></i></label>
                 <asp:TextBox ID="MetaTitleField" runat="server" Columns="30" MaxLength="512" />
             </div>
             <div class="hcFormItem">
-                <asp:CheckBox ID="chkHidden" runat="server" Text="Hide Category" />
+                <asp:CheckBox ID="chkHidden" runat="server" Text="مخفی کردن این دسته بندی" />
             </div>
         </div>
     </div>
 
     <div class="hcColumnRight hcLeftBorder" style="width: 39%">
         <div class="hcForm">
-            <h2>Display</h2>
+            <h2>نمایش</h2>
             <div class="hcFormItem">
-                <label class="hcLabel">Icon</label>
+                <label class="hcLabel">آیکون</label>
                 <hcc:ImageUploader runat="server" ShowRemoveAction="true" ID="ucIconImage" />
             </div>
         </div>
     </div>
     <ul class="hcActions">
         <li>
-            <asp:LinkButton ID="UpdateButton" runat="server" Text="Save" CssClass="hcPrimaryAction" OnClick="UpdateButton_Click" />
+            <asp:LinkButton ID="UpdateButton" runat="server" Text="بروزرسانی" CssClass="hcPrimaryAction" OnClick="UpdateButton_Click" />
         </li>
         <li>
-            <asp:LinkButton ID="btnSaveChanges" runat="server" Text="Save Changes" CssClass="hcSecondaryAction"
+            <asp:LinkButton ID="btnSaveChanges" runat="server" Text="ذخیره تغییرات" CssClass="hcSecondaryAction"
                 OnClick="btnSaveChanges_Click" />
         </li>
         <li>
-            <asp:LinkButton ID="btnCancel" runat="server" Text="Cancel" CssClass="hcSecondaryAction" CausesValidation="False"
+            <asp:LinkButton ID="btnCancel" runat="server" Text="انصراف" CssClass="hcSecondaryAction" CausesValidation="False"
                 OnClick="btnCancel_Click" />
         </li>
     </ul>

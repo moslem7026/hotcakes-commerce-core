@@ -1,4 +1,4 @@
-<%@ Page Language="C#" MasterPageFile="../AdminNav.master" AutoEventWireup="True" Inherits="Hotcakes.Modules.Core.Admin.Catalog.Categories_ManualSelection"
+﻿<%@ Page Language="C#" MasterPageFile="../AdminNav.master" AutoEventWireup="True" Inherits="Hotcakes.Modules.Core.Admin.Catalog.Categories_ManualSelection"
 	Title="Category Selection" CodeBehind="Categories_ManualSelection.aspx.cs" %>
 
 <%@ Register Assembly="Telerik.Web.UI" Namespace="Telerik.Web.UI" TagPrefix="telerik" %>
@@ -11,7 +11,7 @@
 	 <div class="hcBlock">
         <div class="hcForm">
             <div class="hcFormItem">
-                <asp:HyperLink ID="hypClose" runat="server" Text="Close" CssClass="hcTertiaryAction" NavigateUrl="Categories.aspx"/>
+                <asp:HyperLink ID="hypClose" runat="server" Text="بستن" CssClass="hcTertiaryAction" NavigateUrl="Categories.aspx"/>
             </div>
         </div>
     </div>
@@ -19,7 +19,7 @@
 	 <div class="hcBlock hcBlockNotTopPadding">
         <div class="hcForm">
             <div class="hcFormItem">
-                <asp:HyperLink ID="lnkViewInStore" runat="server" CssClass="hcTertiaryAction" Target="_blank">View in Store</asp:HyperLink>
+                <asp:HyperLink ID="lnkViewInStore" runat="server" CssClass="hcTertiaryAction" Target="_blank">مشاهده در فروشگاه</asp:HyperLink>
             </div>
         </div>
     </div>
@@ -75,28 +75,28 @@
 		
 	</script>
 
-	<h1>Select Products for Category</h1>
+	<h1>محصولات برای این دسته بندی را انتخاب نمایید</h1>
 	<uc2:MessageBox ID="msg" runat="server" />
 	<div class="hcColumnLeft" style="width: 50%">
 		<div class="hcForm">
-			<h2>Pick Products To Add</h2>
+			<h2>محصولات برای افزودن را انتخاب نمایید</h2>
 			<div class="hcFormItem">
 				<uc1:ProductPicker ID="ProductPicker1" runat="server" />
-				<asp:LinkButton runat="server" ID="btnAdd" CssClass="hcPrimaryAction" Text="Add &raquo;" OnClick="btnAdd_Click" />
+				<asp:LinkButton runat="server" ID="btnAdd" CssClass="hcPrimaryAction" Text="افزودن &raquo;" OnClick="btnAdd_Click" />
 			</div>
 		</div>
 	</div>
 
 	<div class="hcColumnRight hcLeftBorder" style="width: 49%">
 		<div class="hcForm">
-			<h2>Selected Products</h2>
+			<h2>محصولات انتخاب شده</h2>
 			<div class="hcFormItem">
 				<asp:UpdatePanel ID="UpdatePanel1" runat="server" UpdateMode="Always">
 					<ContentTemplate>
 						<asp:Literal ID="litProducts" runat="server"></asp:Literal>
 					</ContentTemplate>
 				</asp:UpdatePanel>
-				<asp:HyperLink class="actionlink" ID="lnkBack" CssClass="hcPrimaryAction" runat="server">&laquo; Return to Category</asp:HyperLink>
+				<asp:HyperLink class="actionlink" ID="lnkBack" CssClass="hcPrimaryAction" runat="server">&laquo; بازگشت به دسته بندی</asp:HyperLink>
 			</div>
 		</div>
 	</div>

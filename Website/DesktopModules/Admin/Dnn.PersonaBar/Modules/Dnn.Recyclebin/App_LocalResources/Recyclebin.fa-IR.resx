@@ -440,10 +440,4 @@
   <data name="Service_RemoveTabParentTabError" xml:space="preserve">
     <value>Page {0} cannot be deleted until its children have been deleted first.</value>
   </data>
-  <data name="recyclebin_RestoreUserConfirm.Text" xml:space="preserve">
-    <value>&lt;p&gt; لطفا تأیید کنید که می خواهید این کاربر را بازیابی کنید. &lt;/p&gt;</value>
-  </data>
-  <data name="recyclebin_RestoreUsersConfirm.Text" xml:space="preserve">
-    <value>&lt;p&gt; لطفا تأیید کنید که می خواهید کاربران انتخاب شده را بازیابی کنید. &lt;/p&gt;</value>
-  </data>
 </root>

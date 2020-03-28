@@ -4,28 +4,28 @@
 <hcc:MessageBox ID="ucMessageBox" runat="server" />
 <ul class="hcRibbonTabs">
     <li>
-        <asp:LinkButton ID="lnkCC" runat="server" Text="Credit Cards" OnClick="lnkCC_Click" />
+        <asp:LinkButton ID="lnkCC" runat="server" Text="کارت اعتباری" OnClick="lnkCC_Click" />
     </li>
     <li>
-        <asp:LinkButton ID="lnkGiftCard" runat="server" Text="Gift Card" OnClick="lnkGiftCard_Click" />
+        <asp:LinkButton ID="lnkGiftCard" runat="server" Text="کارت هدیه" OnClick="lnkGiftCard_Click" />
     </li>
     <li>
-        <asp:LinkButton ID="lnkPayPal" runat="server" Text="PayPal" OnClick="lnkPayPal_Click" />
+        <asp:LinkButton ID="lnkPayPal" runat="server" Text="پی پال" OnClick="lnkPayPal_Click" />
     </li>
     <li>
         <asp:LinkButton ID="lnkPO" runat="server" Text="PO" OnClick="lnkPO_Click" />
     </li>
     <li>
-        <asp:LinkButton ID="lnkCompanyAccount" runat="server" Text="Comp. Acct." OnClick="lnkCompanyAccount_Click" />
+        <asp:LinkButton ID="lnkCompanyAccount" runat="server" Text="واریز به حساب شرکن" OnClick="lnkCompanyAccount_Click" />
     </li>
     <li>
-        <asp:LinkButton ID="lnkCash" runat="server" Text="Cash" OnClick="lnkCash_Click" />
+        <asp:LinkButton ID="lnkCash" runat="server" Text="نقدی" OnClick="lnkCash_Click" />
     </li>
     <li>
-        <asp:LinkButton ID="lnkCheck" runat="server" Text="Check" OnClick="lnkCheck_Click" />
+        <asp:LinkButton ID="lnkCheck" runat="server" Text="چک" OnClick="lnkCheck_Click" />
     </li>
     <li>
-        <asp:LinkButton ID="lnkPoints" runat="server" Text="Points" OnClick="lnkPoints_Click" />
+        <asp:LinkButton ID="lnkPoints" runat="server" Text="امتیاز" OnClick="lnkPoints_Click" />
     </li>
 </ul>
 <asp:MultiView ID="mvPayments" runat="server">
@@ -356,11 +356,11 @@
     </asp:View>
     <asp:View ID="viewCash" runat="server">
         <div class="hcBlock">
-            <h4>Cash</h4>
+            <h4>پرداخت نقدی</h4>
             <div class="hcForm">
                 <table class="hcFormTable">
                     <tr>
-                        <td class="formlabel">Amount</td>
+                        <td class="formlabel">مبلغ : </td>
                         <td class="formfield">
                             <asp:TextBox ID="CashAmount" runat="server" Columns="10"></asp:TextBox></td>
                     </tr>
@@ -368,9 +368,9 @@
             </div>
             <div class="hcTransactionLink">
                 <asp:LinkButton ID="btnCashRefund" runat="server" class="btn"
-                    Text="<b>Refund Cash</b>" OnClick="btnCashRefund_Click" />
+                    Text="<b>پس دادن پول</b>" OnClick="btnCashRefund_Click" />
                 <asp:LinkButton ID="btnCashReceive" runat="server"
-                    class="btn" Text="<b>Receive Cash</b>" OnClick="btnCashReceive_Click" />
+                    class="btn" Text="<b>دریافت شد</b>" OnClick="btnCashReceive_Click" />
             </div>
             <br />
             &nbsp;

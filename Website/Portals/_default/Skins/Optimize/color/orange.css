@@ -1,0 +1,339 @@
+/*Color Css*/
+.TextColor { color:#F67234;}
+.BackgroundColor { background:#F67234;}
+.DefaultBackground { background:#F67234;}
+.DefaultBorderColor{ border-color:#F67234;}
+.DefaultColor  { color:#F67234;}
+.MultiColor-bg { background:#F67234; }
+A, A:link, A:active, A:visited{
+    color: #F67234;
+}
+
+.how-to-use h3 {
+    border-left: 3px solid #F67234;
+}
+.is-sticky .StickyNav {
+    z-index: 905;
+	background:#F67234;
+}
+/*Button*/
+.button .btn-default {
+    background: #F67234;
+    color: #fff;
+    display: inline-block;
+    padding: 8px 15px;
+    text-transform: capitalize;
+    font-size: 14px;
+	border-radius: 3px;
+	border:2px solid #F67234;
+}
+.button .btn-default:hover { background:none; color:#F67234; }
+
+.button .btn-white-o {
+    color: #fff;
+    display: inline-block;
+    padding: 8px 15px;
+    text-transform: capitalize;
+    font-size: 14px;
+	border-radius: 3px;
+	border:2px solid #fff;
+}
+.button .btn-white-o:hover { background:#fff; color:#000; }
+
+.button .btn-black {
+    background: #333;
+    color: #fff;
+    display: inline-block;
+    padding: 8px 15px;
+    text-transform: capitalize;
+    font-size: 14px;
+	border-radius: 3px;
+	border:2px solid #333;
+}
+.button .btn-black:hover { border:2px solid #F67234;color:#F67234; background:none; }
+
+
+.button .btn-default-o {
+  border: 2px solid #fff;
+  color: #fff;
+}
+
+.button .btn-default-o:hover { background:#fff; color:#333;}
+
+.button, .button:link, .button:active, .button:visited {
+    padding: 10px 20px;
+    display: inline-block;
+    font-size: 14px;
+
+}
+.btn-text, .btn-text:link, .btn-text:active, .btn-text:visited {
+    background: #F67234;
+    color: #fff;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+.btn-text:hover { background:#333;}
+
+.btn-black, .btn-black:link, .btn-black:active, .btn-black:visited {
+    background: #333;
+    color: #fff;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+.btn-black:hover { background:#F67234;}
+
+
+/*Login*/
+
+/*Search*/
+
+/*Footer*/
+.TermsCss:hover {
+  color: #F67234;
+}
+/*back to top*/
+.goup a img {
+    border: 2px solid #F67234;
+}
+/*breadcrumb*/
+.skin-breadcrumb a:hover { text-decoration:underline; color:#F67234;}
+
+/*============Homepage=============*/
+.TopSocial a:hover {
+  color: #F67234;
+
+}
+.home-top-box .box em {
+  text-align: center;
+  font-size: 42px;
+  color: #F67234;
+  -webkit-transition: all 0.3s ease-out 0s;
+  -moz-transition:all 0.3s ease-out 0s;
+  -ms-transition:all 0.3s ease-out 0s;
+  -o-transition:all 0.3s ease-out 0s;
+  transition:all 0.3s ease-out 0s;
+}
+.home-top-box .box:hover { background:#F67234;}
+.home-welcome .ContentTitle .MainTitle:after {
+	background: #F67234;
+}
+.ContentTitle .MainTitle:after {
+	background: #F67234;
+}
+
+.page-about-icon h4 em {
+    color: #F67234;
+}
+
+.testimonial-slider h2:after {
+	background: #F67234;
+}
+.service-tabs ul li a:hover { color:#F67234;}
+.service-tabs ul li.active a {
+  color: #F67234;
+  border-bottom: 5px solid #F67234;
+}
+.home-accordion .panel-title a {
+  color: #fff;
+  background-color: #F67234;
+}
+.home-contact .contact-info a:hover{ color:#F67234;}
+.latest-news ul li a:hover { color: #F67234;}
+.home-other-links li a:hover { color:#F67234; }
+.footer-links a:hover { color:#F67234; }
+.quick-contact .btn-send {
+	background: #F67234;
+}
+.footer-social A:hover { color: #F67234;}
+.home-other-links li em {
+    margin: 0px 8px 0px 0px;
+    color: #F67234;
+    font-size: 16px;
+}
+
+.page-service .box em {
+	background: #F67234;
+}
+.home-about .featured-pro:hover a { background:#F67234; color:#fff;}
+.home-about .featured-pro .overlay {
+	background: #F67234;
+}
+.home-about ul li a:hover { color:#F67234;}
+.home-about .featured-pro:hover { border-bottom:2px solid #F67234;}
+.TitleBar h2 span { color:#F67234; }
+.home-about-us .button a {
+	background: #F67234;
+}
+
+.home-about-us h3 {
+  color: #F67234;
+}
+
+.home-about-us h3:after {
+	background: #F67234;
+}
+.WorkProcess .box em {
+	background: #F67234;
+}
+.WorkProcess .box:hover em { background:#fff; color:#F67234;}
+.accordion-style .panel-title em {
+	background: #F67234;
+}
+.home-team .mask {
+	background: #F67234;
+
+}
+.home-team .box h6 {
+	color:#F67234;
+}
+.home-team .box .details {
+	border-bottom: 3px solid #F67234;
+}
+.contact-section input[type="submit"] {
+	background: #F67234;
+		border: 1px solid #F67234;
+
+}
+.grid figcaption {
+	color:#F67234;
+}
+.grid figcaption a {
+	background:#F67234;
+}
+.plus-mask{
+  background-color: #F67234;
+}
+.Page404 h1 {
+	color:#F67234;
+}
+.home-offer ul li a:hover { color:#F67234;}
+
+.home-offer .featured-pro a:before {
+	background:#F67234;
+}
+.home-offer .featured-pro a {
+    color: #F67234;
+}
+
+
+/*============Pricing=============*/
+
+.plan_col.plan_column1 > h6{
+	color:#F67234;
+}
+
+.plan_col.plan_column1:hover > h6, .plan_col.plan_column1.active_plan > h6 {
+    background: #F67234;
+}
+
+.plan_col li i.wrong_icon {
+    color: #F67234;
+}
+
+.hm-popular header {
+    color: #F67234;
+}
+
+.hm-popular .hm-pricing-footer { background:#F67234;}
+.hm-pricing-list .box:hover .hm-pricing-footer{ background:#F67234;}
+
+
+/*============DNNStandard=============*/
+.dnnMenu .subLevel li.item a:hover { background-color:#F67234; }
+.dnnMenu .subLevel li.selected a div{ color: #F67234;}
+
+
+/*============DNNMega=============*/
+.dnnmega li.selected a {
+    color: #F67234;
+    border-top: 3px solid #F67234;
+}
+ul.dnnmega li.category a:hover span{color:#F67234;}
+
+ul.dnnmega .megaborder li.mmSelected a span{ color:#F67234;}
+ul.dnnmega .megaborder li.mmSelected li a span:hover { color:#F67234;}
+
+ul.dnnmega li .megaborder {
+    border-bottom: 2px solid #F67234;
+}
+
+/*============LeftMenu =============*/
+.LeftMenu .treeview a.selected {
+  color: #fff;
+  background: #F67234;
+}
+.LeftMenu .treeview a.selected:hover { color:#fff;}
+
+.LeftMenu .treeview a:hover { color: #fff; cursor: pointer; background:#F67234; }
+
+.LeftMenu .treeview li a.current,
+.LeftMenu .treeview li.collapsable a{ background: #F67234; color:#fff;}
+.LeftMenu .treeview li.collapsable ul a:hover { color:#F67234; background:#f5f5f5;}
+.LeftMenu .treeview li li a.selected { color:#F67234;background: none;}
+.LeftMenu .treeview li.collapsable li a.selected { color:#F67234; }
+
+/*============MobileMenu=============*/
+.MobileMenu .treeview a.selected {
+    background: #F67234;
+}
+.MobileMenu .treeview a.current {
+    background: #F67234;
+}
+.MobileMenu .treeview li li a.current {
+    background: none;
+}
+.MobileMenu .treeview a:hover { color: #F67234; cursor: pointer; }
+.MobileMenu .treeview li li.collapsable a:hover { color: #F67234;}
+
+.MobileMenu .treeview li.collapsable ul a:hover { color:#F67234;}
+.MobileMenu .treeview li li a.selected { color:#F67234;background: none;}
+.MobileMenu .treeview li li a.selected:hover { color:#F67234;}
+.MenuName:before {
+  color: #F67234;
+}
+
+
+/*============Container Css=============*/
+
+.Container007 .dnntitle {
+  border-bottom: 2px solid #F67234;
+}
+.Container007 .dnntitle .title-bg {
+    background:#F67234;
+}
+.Container007 .dnntitle .title-bg:after {
+  border-bottom: 40px solid #F67234;
+}
+.Container008 .dnntitle {
+  background-color: #F67234;
+}
+.Container013 .titleline {
+    background: none repeat scroll 0 0 #F67234;
+}
+.Container014 .titleline {
+	background:#F67234;
+}
+
+.Container015 .titleline {
+  background: #F67234;
+}
+
+
+/*============Slider=============*/
+#bx-thumbnail-pager a.active img,
+#bx-thumbnail-pager img:hover { border:3px solid #F67234;}
+
+.bx-wrapper .bx-controls-direction a:hover { 	
+	background-color:#F67234;
+}
+
+.btn-style1 .button-controls a {
+	background:#F67234;
+}
+
+.testimonial-slider .bx-wrapper .bx-pager.bx-default-pager a:hover, 
+.testimonial-slider .bx-wrapper .bx-pager.bx-default-pager a.active {
+    background: #F67234;
+}
+
+

@@ -1,0 +1,40 @@
+﻿<div style="display:inline" class="agreement-links-popup">
+    <span class="agree-title">
+        {{field.Title}}
+        <span class="agree-link" ng-repeat="link in content">
+            <a type="button" ng-click="openModal(enforce? content[index] : link)">{{link.LinkText}}</a>
+            <span class="agree-separator" ng-if="!$last">
+                {{separator}}
+            </span>
+        </span>
+    </span>
+    <div class="modal-bs3 modal fade" id="{{field.TitleCompacted + field.FormFieldId + 'terms'}}">
+        <div class="modal-dialog" style="height:{{popupHeight}}; width:{{popupWidth}}">
+            <div class="modal-content" style="min-height:{{height + 'px'}};">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                    <h4 class="modal-title">
+                        {{field.Title}} {{contentId}}
+                    </h4>
+                </div>
+                <div class="modal-body">
+                    <div class="row">
+                        <ng-bind-html ng-bind-html="contentHtml" ng-if="contentHtml">
+                            ...
+                        </ng-bind-html>
+                        <iframe ng-if="termsUrl" name="" ng-src="{{termsUrl}}" style="border:none;width:100%;height: {{height +'px' }}; min-height: {{popupHeight}}; overflow-x:auto;" class="col-md-12"></iframe>
+                    </div>
+
+                    <div class="modal-footer" ng-if="closeButton">
+                        <button type="button" class="btn btn-primary" ng-click="closeModal()">
+                            {{closeButton}}
+                        </button>
+                    </div>
+                    <!-- /.modal-content -->
+                </div>
+                <!-- /.modal-dialog -->
+            </div>
+            <!-- /.modal -->
+        </div>
+    </div>
+</div>

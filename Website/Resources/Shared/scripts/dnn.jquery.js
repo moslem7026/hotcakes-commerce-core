@@ -493,12 +493,12 @@
                     //START persian-dnnsoftware
                     if ($('body').hasClass('r' + 't' + 'l')) {
                         helpSelector.css({ "right": '0', "top": '0' })
-                            .css('visibility', 'hidden')
-                            .draggable('destroy');
-                    } else {
-                    helpSelector.css({ "left": '0', "top": '0' })
                         .css('visibility', 'hidden')
-                            .draggable('destroy');
+                        .draggable('destroy');
+                    } else {
+                        helpSelector.css({ "left": '0', "top": '0' })
+                        .css('visibility', 'hidden')
+                        .draggable('destroy');
                     }
                     //END persian-dnnsoftware
                     $this.removeClass(opts.pinnedClass);
@@ -2134,7 +2134,7 @@
                     }
                     //START persian-dnnsoftware
                     //if (event.which == event.data.delimiter.charCodeAt(0) || event.which == 13 || event.which == 9 || event.type == "blur") {
-                        if (event.which == event.data.delimiter.charCodeAt(0) || event.which == 13 || event.which == 9 || event.type == "blur" || event.which == 1548 || event.which == 1563) {
+                    if (event.which == event.data.delimiter.charCodeAt(0) || event.which == 13 || event.which == 9 || event.type == "blur" || event.which == 1548 || event.which == 1563) {
                         //END persian-dnnsoftware
                         event.preventDefault();
                         if (!clickedOnAutoComplete) {

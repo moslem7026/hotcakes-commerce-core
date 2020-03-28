@@ -1286,7 +1286,7 @@ namespace Hotcakes.Modules.Core.Controllers
 
                 if (freeItem != null)
                 {
-                    var ids = freeItem.Value.Split(new[] { ',' }, StringSplitOptions.RemoveEmptyEntries);
+                    var ids = freeItem.Value.Split(new[] { ',' },StringSplitOptions.RemoveEmptyEntries);
 
                     if (ids.Any())
                     {
